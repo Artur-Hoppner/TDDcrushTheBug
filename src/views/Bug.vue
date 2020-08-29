@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <h1>Bugs To chrush!</h1>
     <img class="bug-img" src="../assets/BugOne.png" alt="">
   </div>
 </template>
