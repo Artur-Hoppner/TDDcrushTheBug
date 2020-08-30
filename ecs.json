@@ -2,7 +2,6 @@
   "family": "first-run-task-definition",
   "taskRoleArn": "arn:aws:iam::633069736176:role/ecsTaskExecutionRole",
   "executionRoleArn": "",
-  "networkMode": "awsvpc",
   "containerDefinitions": [
     {
       "name": "crush",
