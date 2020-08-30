@@ -10,110 +10,13 @@
       "repositoryCredentials": {
         "credentialsParameter": ""
       },
-      "memoryReservation": 0,
-      "links": [""],
       "essential": true,
-      "entryPoint": [""],
-      "command": [""],
-      "environment": [
+      "portMappings": [
         {
-          "name": "",
-          "value": ""
+          "containerPort": 80,
+          "hostPort": 80
         }
-      ],
-      "mountPoints": [
-        {
-          "sourceVolume": "",
-          "containerPath": "",
-          "readOnly": true
-        }
-      ],
-      "volumesFrom": [
-        {
-          "sourceContainer": "",
-          "readOnly": true
-        }
-      ],
-      "secrets": [
-        {
-          "name": "",
-          "valueFrom": ""
-        }
-      ],
-      "dependsOn": [
-        {
-          "containerName": "crush",
-          "condition": "SUCCESS"
-        }
-      ],
-      "startTimeout": 0,
-      "stopTimeout": 0,
-      "hostname": "",
-      "user": "",
-      "workingDirectory": "",
-      "disableNetworking": true,
-      "privileged": true,
-      "readonlyRootFilesystem": true,
-      "dnsServers": [""],
-      "dnsSearchDomains": [""],
-      "extraHosts": [
-        {
-          "hostname": "",
-          "ipAddress": ""
-        }
-      ],
-      "dockerSecurityOptions": [""],
-      "interactive": true,
-      "pseudoTerminal": true,
-      "dockerLabels": {
-        "KeyName": ""
-      },
-      "ulimits": [
-        {
-          "name": "nproc",
-          "softLimit": 0,
-          "hardLimit": 0
-        }
-      ],
-      "logConfiguration": {
-        "logDriver": "splunk",
-        "options": {
-          "KeyName": ""
-        },
-        "secretOptions": [
-          {
-            "name": "",
-            "valueFrom": ""
-          }
-        ]
-      },
-      "systemControls": [
-        {
-          "namespace": "",
-          "value": ""
-        }
-      ],
-      "firelensConfiguration": {
-        "type": "fluentbit",
-        "options": {
-          "KeyName": ""
-        }
-      }
-    }
-  ],
-  "requiresCompatibilities": ["EC2"],
-  "tags": [
-    {
-      "key": "",
-      "value": ""
-    }
-  ],
-  "pidMode": "task",
-  "ipcMode": "none",
-  "inferenceAccelerators": [
-    {
-      "deviceName": "",
-      "deviceType": ""
+      ]
     }
   ]
 }
