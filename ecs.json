@@ -7,9 +7,8 @@
     {
       "name": "crush",
       "image": "633069736176.dkr.ecr.eu-north-1.amazonaws.com/crushthebug",
-      "repositoryCredentials": {
-        "credentialsParameter": ""
-      },
+      "cpu": 10,
+      "memory": 200,
       "essential": true,
       "portMappings": [
         {
