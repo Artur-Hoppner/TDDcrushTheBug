@@ -10,8 +10,6 @@
       "repositoryCredentials": {
         "credentialsParameter": ""
       },
-      "cpu": 0,
-      "memory": 0,
       "memoryReservation": 0,
       "links": [""],
       "essential": true,
@@ -104,8 +102,6 @@
     }
   ],
   "requiresCompatibilities": ["EC2"],
-  "cpu": "",
-  "memory": "",
   "tags": [
     {
       "key": "",
