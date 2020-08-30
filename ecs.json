@@ -1,12 +1,12 @@
 {
-    "family": "",
-    "taskRoleArn": "",
+    "family": "first-run-task-definition_1",
+    "taskRoleArn": "arn:aws:iam::633069736176:role/ecsTaskExecutionRole",
     "executionRoleArn": "",
     "networkMode": "host",
     "containerDefinitions": [
         {
             "name": "crush",
-            "image": "",
+            "image": "633069736176.dkr.ecr.eu-north-1.amazonaws.com/crushthebug",
             "repositoryCredentials": {
                 "credentialsParameter": ""
             },
