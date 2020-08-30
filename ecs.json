@@ -14,13 +14,6 @@
       "memory": 0,
       "memoryReservation": 0,
       "links": [""],
-      "portMappings": [
-        {
-          "containerPort": 0,
-          "hostPort": 0,
-          "protocol": "tcp"
-        }
-      ],
       "essential": true,
       "entryPoint": [""],
       "command": [""],
