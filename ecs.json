@@ -1,19 +1,22 @@
 {
-  "family": "first-run-task-definition:1",
+  "family": "first-run-task-definition",
   "executionRoleArn": "arn:aws:iam::633069736176:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
   "containerDefinitions": [
     {
       "name": "crush",
       "image": "633069736176.dkr.ecr.eu-north-1.amazonaws.com/crushthebug",
-      "cpu": 10,
-      "memoryReservation": 512,
-      "essential": true,
       "portMappings": [
         {
           "containerPort": 80,
-          "hostPort": 80
+          "hostPort": 80,
+          "protocol": "tcp"
         }
-      ]
+      ],
+      "essential": true
     }
-  ]
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": 256,
+  "memory": 1024
 }
