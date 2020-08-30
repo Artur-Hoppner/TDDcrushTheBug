@@ -114,16 +114,6 @@
   ],
   "pidMode": "task",
   "ipcMode": "none",
-  "proxyConfiguration": {
-    "type": "APPMESH",
-    "containerName": "crush",
-    "properties": [
-      {
-        "name": "",
-        "value": ""
-      }
-    ]
-  },
   "inferenceAccelerators": [
     {
       "deviceName": "",
