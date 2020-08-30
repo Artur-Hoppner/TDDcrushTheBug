@@ -110,25 +110,6 @@
       }
     }
   ],
-  "volumes": [
-    {
-      "name": "crush",
-      "host": {
-        "sourcePath": ""
-      },
-      "dockerVolumeConfiguration": {
-        "scope": "task",
-        "autoprovision": true,
-        "driver": "",
-        "driverOpts": {
-          "KeyName": ""
-        },
-        "labels": {
-          "KeyName": ""
-        }
-      }
-    }
-  ],
   "placementConstraints": [
     {
       "type": "memberOf",
