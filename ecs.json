@@ -103,12 +103,6 @@
       }
     }
   ],
-  "placementConstraints": [
-    {
-      "type": "memberOf",
-      "expression": ""
-    }
-  ],
   "requiresCompatibilities": ["EC2"],
   "cpu": "",
   "memory": "",
