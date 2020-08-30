@@ -1,5 +1,6 @@
 {
-  "family": "first-run-task-definition",
+  "family": "first-run-task-definition:1",
+  "executionRoleArn": "arn:aws:iam::633069736176:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "crush",
