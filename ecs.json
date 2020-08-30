@@ -17,6 +17,6 @@
     }
   ],
   "requiresCompatibilities": ["FARGATE"],
-  "cpu": "128",
-  "memory": "512"
+  "cpu": "512",
+  "memory": "1024"
 }
