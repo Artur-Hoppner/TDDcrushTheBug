@@ -1,242 +1,165 @@
 {
-    "family": "first-run-task-definition_1",
-    "taskRoleArn": "arn:aws:iam::633069736176:role/ecsTaskExecutionRole",
-    "executionRoleArn": "",
-    "networkMode": "host",
-    "containerDefinitions": [
+  "family": "first-run-task-definition_1",
+  "taskRoleArn": "arn:aws:iam::633069736176:role/ecsTaskExecutionRole",
+  "executionRoleArn": "",
+  "networkMode": "host",
+  "containerDefinitions": [
+    {
+      "name": "crush",
+      "image": "633069736176.dkr.ecr.eu-north-1.amazonaws.com/crushthebug",
+      "repositoryCredentials": {
+        "credentialsParameter": ""
+      },
+      "cpu": 0,
+      "memory": 0,
+      "memoryReservation": 0,
+      "links": [""],
+      "portMappings": [
         {
-            "name": "crush",
-            "image": "633069736176.dkr.ecr.eu-north-1.amazonaws.com/crushthebug",
-            "repositoryCredentials": {
-                "credentialsParameter": ""
-            },
-            "cpu": 0,
-            "memory": 0,
-            "memoryReservation": 0,
-            "links": [
-                ""
-            ],
-            "portMappings": [
-                {
-                    "containerPort": 0,
-                    "hostPort": 0,
-                    "protocol": "tcp"
-                }
-            ],
-            "essential": true,
-            "entryPoint": [
-                ""
-            ],
-            "command": [
-                ""
-            ],
-            "environment": [
-                {
-                    "name": "",
-                    "value": ""
-                }
-            ],
-            "environmentFiles": [
-                {
-                    "value": "",
-                    "type": "s3"
-                }
-            ],
-            "mountPoints": [
-                {
-                    "sourceVolume": "",
-                    "containerPath": "",
-                    "readOnly": true
-                }
-            ],
-            "volumesFrom": [
-                {
-                    "sourceContainer": "",
-                    "readOnly": true
-                }
-            ],
-            "linuxParameters": {
-                "capabilities": {
-                    "add": [
-                        ""
-                    ],
-                    "drop": [
-                        ""
-                    ]
-                },
-                "devices": [
-                    {
-                        "hostPath": "",
-                        "containerPath": "",
-                        "permissions": [
-                            "mknod"
-                        ]
-                    }
-                ],
-                "initProcessEnabled": true,
-                "sharedMemorySize": 0,
-                "tmpfs": [
-                    {
-                        "containerPath": "",
-                        "size": 0,
-                        "mountOptions": [
-                            ""
-                        ]
-                    }
-                ],
-                "maxSwap": 0,
-                "swappiness": 0
-            },
-            "secrets": [
-                {
-                    "name": "",
-                    "valueFrom": ""
-                }
-            ],
-            "dependsOn": [
-                {
-                    "containerName": "",
-                    "condition": "SUCCESS"
-                }
-            ],
-            "startTimeout": 0,
-            "stopTimeout": 0,
-            "hostname": "",
-            "user": "",
-            "workingDirectory": "",
-            "disableNetworking": true,
-            "privileged": true,
-            "readonlyRootFilesystem": true,
-            "dnsServers": [
-                ""
-            ],
-            "dnsSearchDomains": [
-                ""
-            ],
-            "extraHosts": [
-                {
-                    "hostname": "",
-                    "ipAddress": ""
-                }
-            ],
-            "dockerSecurityOptions": [
-                ""
-            ],
-            "interactive": true,
-            "pseudoTerminal": true,
-            "dockerLabels": {
-                "KeyName": ""
-            },
-            "ulimits": [
-                {
-                    "name": "nproc",
-                    "softLimit": 0,
-                    "hardLimit": 0
-                }
-            ],
-            "logConfiguration": {
-                "logDriver": "splunk",
-                "options": {
-                    "KeyName": ""
-                },
-                "secretOptions": [
-                    {
-                        "name": "",
-                        "valueFrom": ""
-                    }
-                ]
-            },
-            "healthCheck": {
-                "command": [
-                    ""
-                ],
-                "interval": 0,
-                "timeout": 0,
-                "retries": 0,
-                "startPeriod": 0
-            },
-            "systemControls": [
-                {
-                    "namespace": "",
-                    "value": ""
-                }
-            ],
-            "resourceRequirements": [
-                {
-                    "value": "",
-                    "type": "GPU"
-                }
-            ],
-            "firelensConfiguration": {
-                "type": "fluentbit",
-                "options": {
-                    "KeyName": ""
-                }
-            }
+          "containerPort": 0,
+          "hostPort": 0,
+          "protocol": "tcp"
         }
-    ],
-    "volumes": [
+      ],
+      "essential": true,
+      "entryPoint": [""],
+      "command": [""],
+      "environment": [
         {
+          "name": "",
+          "value": ""
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "",
+          "containerPath": "",
+          "readOnly": true
+        }
+      ],
+      "volumesFrom": [
+        {
+          "sourceContainer": "",
+          "readOnly": true
+        }
+      ],
+      "secrets": [
+        {
+          "name": "",
+          "valueFrom": ""
+        }
+      ],
+      "dependsOn": [
+        {
+          "containerName": "crush",
+          "condition": "SUCCESS"
+        }
+      ],
+      "startTimeout": 0,
+      "stopTimeout": 0,
+      "hostname": "",
+      "user": "",
+      "workingDirectory": "",
+      "disableNetworking": true,
+      "privileged": true,
+      "readonlyRootFilesystem": true,
+      "dnsServers": [""],
+      "dnsSearchDomains": [""],
+      "extraHosts": [
+        {
+          "hostname": "",
+          "ipAddress": ""
+        }
+      ],
+      "dockerSecurityOptions": [""],
+      "interactive": true,
+      "pseudoTerminal": true,
+      "dockerLabels": {
+        "KeyName": ""
+      },
+      "ulimits": [
+        {
+          "name": "nproc",
+          "softLimit": 0,
+          "hardLimit": 0
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "splunk",
+        "options": {
+          "KeyName": ""
+        },
+        "secretOptions": [
+          {
             "name": "",
-            "host": {
-                "sourcePath": ""
-            },
-            "dockerVolumeConfiguration": {
-                "scope": "task",
-                "autoprovision": true,
-                "driver": "",
-                "driverOpts": {
-                    "KeyName": ""
-                },
-                "labels": {
-                    "KeyName": ""
-                }
-            },
-            "efsVolumeConfiguration": {
-                "fileSystemId": "",
-                "rootDirectory": "",
-                "transitEncryption": "DISABLED",
-                "transitEncryptionPort": 0,
-                "authorizationConfig": {
-                    "accessPointId": "",
-                    "iam": "DISABLED"
-                }
-            }
-        }
-    ],
-    "placementConstraints": [
-        {
-            "type": "memberOf",
-            "expression": ""
-        }
-    ],
-    "requiresCompatibilities": [
-        "EC2"
-    ],
-    "cpu": "",
-    "memory": "",
-    "tags": [
-        {
-            "key": "",
-            "value": ""
-        }
-    ],
-    "pidMode": "task",
-    "ipcMode": "none",
-    "proxyConfiguration": {
-        "type": "APPMESH",
-        "containerName": "",
-        "properties": [
-            {
-                "name": "",
-                "value": ""
-            }
+            "valueFrom": ""
+          }
         ]
-    },
-    "inferenceAccelerators": [
+      },
+      "systemControls": [
         {
-            "deviceName": "",
-            "deviceType": ""
+          "namespace": "",
+          "value": ""
         }
+      ],
+      "firelensConfiguration": {
+        "type": "fluentbit",
+        "options": {
+          "KeyName": ""
+        }
+      }
+    }
+  ],
+  "volumes": [
+    {
+      "name": "",
+      "host": {
+        "sourcePath": ""
+      },
+      "dockerVolumeConfiguration": {
+        "scope": "task",
+        "autoprovision": true,
+        "driver": "",
+        "driverOpts": {
+          "KeyName": ""
+        },
+        "labels": {
+          "KeyName": ""
+        }
+      }
+    }
+  ],
+  "placementConstraints": [
+    {
+      "type": "memberOf",
+      "expression": ""
+    }
+  ],
+  "requiresCompatibilities": ["EC2"],
+  "cpu": "",
+  "memory": "",
+  "tags": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "pidMode": "task",
+  "ipcMode": "none",
+  "proxyConfiguration": {
+    "type": "APPMESH",
+    "containerName": "crush",
+    "properties": [
+      {
+        "name": "",
+        "value": ""
+      }
     ]
+  },
+  "inferenceAccelerators": [
+    {
+      "deviceName": "",
+      "deviceType": ""
+    }
+  ]
 }
