@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User enters a searchword into the searchbar Test so that everything renders correctly 1`] = `
+<div>
+  <input
+    type="text"
+  />
+</div>
+`;
