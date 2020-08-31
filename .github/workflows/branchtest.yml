@@ -6,12 +6,15 @@ name: Test in Docker Container
 on:
   push:
     branches:
-      - master
       - dev
+    branches-ignore:
+      - master
   pull_request:
     branches:
-      - master
       - dev
+    branches-ignore:
+      - master
+
 
 jobs:
   build:
