@@ -1,6 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Bug from "../views/Bug.vue";
+import Landing from "../views/Landing.vue"
+import Cart from "../views/Cart.vue"
+import Order from "../views/Order.vue"
+import Shopping from "../views/Shopping.vue"
 
 Vue.use(VueRouter);
 
@@ -9,6 +13,26 @@ const routes = [
     path: "/",
     name: "Bug",
     component: Bug,
+  },
+  {
+    path: "/landing",
+    name: "Landing",
+    component: Landing,
+  },
+  {
+    path: "/cart",
+    name: "Cart",
+    component: Cart,
+  },
+  {
+    path: "/order",
+    name: "Order",
+    component: Order,
+  },
+  {
+    path: "/shopping",
+    name: "Shopping",
+    component: Shopping,
   },
 ];
 
