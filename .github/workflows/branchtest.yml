@@ -11,37 +11,35 @@ on:
     branches-ignore:
       - master
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      
-    - name: Set environment variables
-      run: |
-        # skapar variabel
-        echo "::set-env name=SHORT_SHA::$(echo ${GITHUB_SHA::7})"
-        echo "::set-env name=BRANCH::$(echo ${GITHUB_REF##*/})"
-    - name: Concatenate environment varibles
-      run: |
-        echo "::set-env name=IMAGE_TAGS::${SHORT_SHA}"
-        #skapar variabel för repositopry och unika commit id
-    - name: Tag latest Docker image
-      # om man pushar till masterbranchen ska man tagga dockerimage med en latest, för att kunna se senaste dockerimagen i dockerhub
-      if: env.BRANCH == 'master'
-      run: echo "::set-env name=IMAGE_TAGS::${IMAGE_TAGS},latest"
-      
-      # måste göra en checkout för att kolna repo för att komma åt filen docker. Docker ger i sin tur angivna instruktioner.
-    - name: Checkout
-      uses: actions/checkout@v2
-      
-    - name: Build & Publish Docker image
-      uses: whoan/docker-build-with-cache-action@v5
-      with:
-      # username och password ska i vanliga fall vara dolt för att motverka säkerhetsbrister.
-        username: arturhoppner
-        #secret är ett kommande. Hämtar från github settings secrets.
-        password: "${{ secrets.DOCKER_HUB_PASSWORD }}"
-        image_name: arturhoppner/interpret42
-        image_tag: "${{ env.IMAGE_TAGS }}"      
+      - name: Set environment variables
+        run: |
+          # skapar variabel
+          echo "::set-env name=SHORT_SHA::$(echo ${GITHUB_SHA::7})"
+          echo "::set-env name=BRANCH::$(echo ${GITHUB_REF##*/})"
+      - name: Concatenate environment varibles
+        run: |
+          echo "::set-env name=IMAGE_TAGS::${SHORT_SHA}"
+          #skapar variabel för repositopry och unika commit id
+      - name: Tag latest Docker image
+        # om man pushar till masterbranchen ska man tagga dockerimage med en latest, för att kunna se senaste dockerimagen i dockerhub
+        if: env.BRANCH == 'master'
+        run: echo "::set-env name=IMAGE_TAGS::${IMAGE_TAGS},latest"
+
+        # måste göra en checkout för att kolna repo för att komma åt filen docker. Docker ger i sin tur angivna instruktioner.
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build & Publish Docker image
+        uses: whoan/docker-build-with-cache-action@v5
+        with:
+          # username och password ska i vanliga fall vara dolt för att motverka säkerhetsbrister.
+          username: arturhoppner
+          #secret är ett kommande. Hämtar från github settings secrets.
+          password: '${{ secrets.DOCKER_HUB_PASSWORD }}'
+          image_name: arturhoppner/interpret42
+          image_tag: '${{ env.IMAGE_TAGS }}'
