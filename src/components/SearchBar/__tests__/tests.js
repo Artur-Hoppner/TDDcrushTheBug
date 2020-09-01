@@ -1,9 +1,6 @@
 import { shallowMount, mount, createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 import searchbar from '../../../store/SearchBar/index.js';
-// import getters from '../../../store/SearchBar/getters.js';
-// import actions from '../../../store/actions/actions.js';
-// import mutations from '../../../store/SearchBar/mutations.js';
 import SearchBar from '@/components/SearchBar/SearchBar.vue';
 
 //create a local instance of our vue
@@ -30,7 +27,7 @@ describe('User enters a searchword into the searchbar', () => {
     expect(wrapper.element).toMatchSnapshot();
   });
 
-  test('check so that an input empty string makes Store.filteredArray full with all products', async () => {
+  test('Test so that an input empty string makes Store.filteredArray full with all products', async () => {
     //Arrange
     const wrapper = shallowMount(SearchBar, { store, localVue });
     const input = wrapper.find('input');
@@ -42,7 +39,7 @@ describe('User enters a searchword into the searchbar', () => {
     expect(searchbar.state.filteredProducts.length).toBeGreaterThan(0);
   });
 
-  test('check so that searchword returns items with matching letters', async () => {
+  test('Test so that searchword returns items with matching letters', async () => {
     //Arrange
     const wrapper = shallowMount(SearchBar, { store, localVue });
     const input = wrapper.find('input');
@@ -54,7 +51,7 @@ describe('User enters a searchword into the searchbar', () => {
     expect(searchbar.state.filteredProducts).toContain('goldfish');
   });
 
-  test('check so that searchword with capital letters becomes lowercase', async () => {
+  test('Test so that searchword with capital letters becomes lowercase', async () => {
     //Arrange
     const wrapper = shallowMount(SearchBar, { store, localVue });
     const input = wrapper.find('input');
@@ -66,14 +63,17 @@ describe('User enters a searchword into the searchbar', () => {
     expect(searchbar.state.filteredProducts).toContain('goldfish');
   });
 
-  test('check so that action getByThisKeywrod in vuex is called on keyup from component', async () => {
+  test('Test so that action getByThisKeyword in vuex is called on keyup from component', async () => {
     // Arrange
     const searchbar = {
       namespaced: true,
       state: {},
       mutations: {},
       actions: {
-        getByThisKeyword: jest.fn()
+        getByThisKeyword: jest.fn(),
+        displayThisEntireArray() {
+          return false;
+        }
       },
       getters: {}
     };
