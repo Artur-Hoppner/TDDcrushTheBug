@@ -1,9 +1,17 @@
 <template>
-  <div></div>
+  <div>
+    <Footer />
+  </div>
 </template>
 
 <script>
-export default {};
+import Footer from '@/components/Footer/Footer.vue';
+export default {
+  name: 'Landing',
+  components: {
+    Footer
+  }
+};
 </script>
 
 <style></style>

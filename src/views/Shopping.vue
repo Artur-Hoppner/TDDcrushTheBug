@@ -1,15 +1,18 @@
 <template>
   <div>
     <SearchBar />
+    <Footer />
   </div>
 </template>
 
 <script>
 import SearchBar from '@/components/SearchBar/SearchBar.vue';
+import Footer from '@/components/Footer/Footer.vue';
 export default {
   name: 'Shopping',
   components: {
-    SearchBar
+    SearchBar,
+    Footer
   }
 };
 </script>

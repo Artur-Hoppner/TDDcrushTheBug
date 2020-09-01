@@ -4,6 +4,9 @@ import searchbar from './SearchBar/index.js';
 import actions from './actions.js';
 import mutations from './mutations.js';
 import getters from './SearchBar/getters.js';
+import actions from './actions.js';
+import mutations from './mutations.js';
+import getters from './SearchBar/getters.js';
 import hamburgerIcon from './HamburgerIcon/index.js'
 
 Vue.use(Vuex);

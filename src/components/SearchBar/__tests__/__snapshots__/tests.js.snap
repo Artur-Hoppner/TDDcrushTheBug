@@ -3,7 +3,12 @@
 exports[`User enters a searchword into the searchbar Test so that everything renders correctly 1`] = `
 <div>
   <input
+    placeholder="Search..."
     type="text"
   />
+   
+  <button>
+    Reset
+  </button>
 </div>
 `;
