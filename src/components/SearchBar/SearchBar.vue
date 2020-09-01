@@ -14,7 +14,6 @@ export default {
   name: 'SearchBar',
   methods: {
     ...mapActions('searchbar', ['getByThisKeyword', 'displayThisEntireArray'])
-    //TODO: add another action/mutation to initiate filteredArray instead of mounting to getByThiskeyWord, so resetting search and showing all products again is possible.
   },
   mounted() {
     this.displayThisEntireArray();
