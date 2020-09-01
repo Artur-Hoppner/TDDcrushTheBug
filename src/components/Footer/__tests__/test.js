@@ -7,12 +7,12 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 
 describe('test ', () => {
-  // test('check that component is rendered', () => {
-  //   //Arrange
-  //   const wrapper = shallowMount(Footer, { localVue });
-  //   //Assert
-  //   expect(wrapper.element).toMatchSnapshot();
-  // });
+  test('check that component is rendered', () => {
+    //Arrange
+    const wrapper = shallowMount(Footer, { localVue });
+    //Assert
+    expect(wrapper.element).toMatchSnapshot();
+  });
 
   test('Check if static element values exists', () => {
     const wrapper = shallowMount(Footer, { localVue });

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test  check that component is rendered 1`] = `
+<div>
+  <p>
+    2020 stop bugging me
+  </p>
+</div>
+`;
