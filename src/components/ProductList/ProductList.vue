@@ -12,6 +12,9 @@ import ProductItem from '../ProductItem/ProductItem.vue';
 import { mapGetters } from 'vuex';
 export default {
   name: 'ProductList',
+  components: {
+    ProductItem
+  },
   computed: {
     ...mapGetters('searchbar', ['filteredByKeyword'])
   }
