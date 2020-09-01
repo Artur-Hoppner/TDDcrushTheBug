@@ -30,10 +30,20 @@ describe('User enters a searchword into the searchbar', () => {
     const wrapper = shallowMount(SearchBar, { store, localVue });
     const input = wrapper.find('input');
     //Act
-    input.setValue('goldfish');
+    input.setValue('saltgunv3');
     await input.trigger('keyup');
     //Assert
-    expect(store.state.filteredProducts).toContain('goldfish');
+    //Find object containing tag: saltgunv3 in array
+    expect(store.state.filteredProducts).toEqual(
+      // 1
+      expect.arrayContaining([
+        // 2
+        expect.objectContaining({
+          // 3
+          tag: 'saltgunv3' // 4
+        })
+      ])
+    );
   });
 
   test('Test so that searchword with capital letters becomes lowercase', async () => {
@@ -41,10 +51,20 @@ describe('User enters a searchword into the searchbar', () => {
     const wrapper = shallowMount(SearchBar, { store, localVue });
     const input = wrapper.find('input');
     //Act
-    input.setValue('GOLDFISH');
+    input.setValue('SALTGUNV3');
     await input.trigger('keyup');
     //Assert
-    expect(store.state.filteredProducts).toContain('goldfish');
+    //Find object containing tag: saltgunv3 in array
+    expect(store.state.filteredProducts).toEqual(
+      // 1
+      expect.arrayContaining([
+        // 2
+        expect.objectContaining({
+          // 3
+          tag: 'saltgunv3' // 4
+        })
+      ])
+    );
   });
 
   test('Test so that action getByThisKeyword in vuex is called on keyup from component', async () => {

@@ -4,8 +4,9 @@ const actions = {
     if (!search.length) {
       context.rootState.filteredProducts = context.rootState.allProducts;
     } else {
-      const foundProducts = context.rootState.allProducts.filter(item =>
-        item.match(search)
+      let foundProducts = [];
+      foundProducts = context.rootState.allProducts.filter(item =>
+        item.tag.match(search)
       );
       context.rootState.filteredProducts = foundProducts;
     }

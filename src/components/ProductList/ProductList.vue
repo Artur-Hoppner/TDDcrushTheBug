@@ -1,9 +1,9 @@
 <template>
   <div class="products">
     <ProductItem
-      v-for="product in productItems"
+      v-for="product in filteredByKeyword"
       v-bind:key="product.id"
-      v-bind:item="product"
+      v-bind:product="product"
     />
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
     ProductItem
   },
   computed: {
-    ...mapGetters('searchbar', ['filteredByKeyword'])
+    ...mapGetters(['filteredByKeyword'])
   }
 };
 </script>
