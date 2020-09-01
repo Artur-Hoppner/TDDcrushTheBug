@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User navigates to this page, component renders Test so that everything renders correctly 1`] = `
+<section
+  class="product"
+>
+  <aside
+    class="add"
+  >
+    <img />
+  </aside>
+   
+  <div>
+    <img
+      alt="Hiroshima Bugspray"
+    />
+  </div>
+   
+  <div>
+    <h2
+      class="producttitle"
+    >
+      Hiroshima Bugspray
+    </h2>
+     
+    <p>
+      It will nuke your bugs!
+    </p>
+  </div>
+   
+  <div>
+    <h3>
+      120Kr
+    </h3>
+  </div>
+</section>
+`;

@@ -1,13 +1,13 @@
 !<template>
-  
+  <div>
+    <footer>
+      <p>Copyright ⓒ {{ new Date().getFullYear() }}</p>
+    </footer>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
+<style></style>
