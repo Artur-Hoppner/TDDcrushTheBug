@@ -9,6 +9,9 @@ const mutations = {
       );
       state.filteredProducts = foundProducts;
     }
+  },
+  displayEntireArray(state) {
+    state.filteredProducts = state.allProducts;
   }
 };
 

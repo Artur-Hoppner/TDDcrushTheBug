@@ -4,7 +4,7 @@ import actions from './actions.js';
 
 const state = {
   namespaced: true,
-  //TODO: fix placeholder array with actual products!
+  //TODO: placeholder array, remove this array when we have array with actual products!
   state: {
     allProducts: [
       'cat',
