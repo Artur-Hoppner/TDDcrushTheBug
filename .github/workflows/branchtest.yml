@@ -41,5 +41,5 @@ jobs:
           username: arturhoppner
           #secret är ett kommande. Hämtar från github settings secrets.
           password: '${{ secrets.DOCKER_HUB_PASSWORD }}'
-          image_name: arturhoppner/interpret42
+          image_name: arturhoppner/crushthebug
           image_tag: '${{ env.IMAGE_TAGS }}'
