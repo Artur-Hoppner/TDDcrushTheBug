@@ -1,6 +1,6 @@
 const getters = {
-  filteredByKeyword: state => {
-    return state.filteredProducts;
+  filteredByKeyword: (state, getters, rootState) => {
+    return rootState.filteredProducts;
   }
 };
 

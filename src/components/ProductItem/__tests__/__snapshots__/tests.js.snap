@@ -10,21 +10,17 @@ exports[`User navigates to this page, component renders Test so that everything 
     <img />
   </aside>
    
-  <div>
-    <img
-      alt="Hiroshima Bugspray"
-    />
-  </div>
+  <div />
    
   <div>
     <h2
       class="producttitle"
     >
-      Hiroshima Bugspray
+      Regular Bugspray
     </h2>
      
     <p>
-      It will nuke your bugs!
+      It does something
     </p>
   </div>
    

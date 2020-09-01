@@ -12,8 +12,8 @@ describe('User navigates to this page, component renders', () => {
   const product = {
     id: '01',
     tag: 'bugspray',
-    title: 'Hiroshima Bugspray',
-    desc: 'It will nuke your bugs!',
+    title: 'Regular Bugspray',
+    desc: 'It does something',
     price: '120'
   };
 
