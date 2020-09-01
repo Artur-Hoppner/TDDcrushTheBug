@@ -1,22 +1,13 @@
 !<template>
   <div>
-    <p>2020 stop bugging me</p>
     <footer>
-      <p>Copyright ⓒ {{currentYear}}</p>
+      <p>Copyright ⓒ {{ new Date().getFullYear() }}</p>
     </footer>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    currentYear: '';
-  },
-  mounted() {
-    this.currentYear = new Date().getFullYear();
-  }
-};
+export default {};
 </script>
 
-<style>
-</style>
+<style></style>

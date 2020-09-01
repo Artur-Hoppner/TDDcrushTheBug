@@ -15,11 +15,14 @@ describe('test ', () => {
   });
 
   test('Check if static element values exists', () => {
+    //Arrange
     const wrapper = shallowMount(Footer, { localVue });
-    // const paragraph = wrapper.find('p');
-    const paragraph = wrapper.contains('p');
+    const timeStamp = new Date().getFullYear();
+    //Act
+    const paragraph = wrapper.find('p');
     const textContent = wrapper.text();
-    expect(paragraph).toBe(true);
-    expect(textContent).toBe('2020 stop bugging me');
+    //Assert
+    expect(paragraph.exists()).toBe(true);
+    expect(textContent).toBe('Copyright ⓒ ' + timeStamp);
   });
 });
