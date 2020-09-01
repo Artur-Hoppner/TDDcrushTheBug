@@ -12,7 +12,7 @@ describe('User enters a searchword into the searchbar', () => {
   let modules, store;
 
   modules = {
-    searchbar
+    searchbar: searchbar
   };
 
   beforeEach(() => {
