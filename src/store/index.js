@@ -1,13 +1,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import searchbar from './SearchBar/index.js';
-<<<<<<< HEAD
 import actions from './actions.js';
 import mutations from './mutations.js';
 import getters from './SearchBar/getters.js';
-=======
+import actions from './actions.js';
+import mutations from './mutations.js';
+import getters from './SearchBar/getters.js';
 import hamburgerIcon from './HamburgerIcon/index.js'
->>>>>>> fredrik
 
 Vue.use(Vuex);
 
