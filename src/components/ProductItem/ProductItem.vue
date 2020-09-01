@@ -7,7 +7,7 @@
     <div>
       <!-- TODO: :src="require(`@/assets/${product.tag}.png`)" -->
       <!-- :src="getProductImg(product.tag)" -->
-      <img :alt="product.title" />
+      <!-- <img :alt="product.title" /> -->
     </div>
     <div>
       <h2 class="producttitle">{{ product.title }}</h2>
