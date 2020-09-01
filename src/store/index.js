@@ -9,9 +9,23 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    allProducts: [],
+    allProducts: [
+      'cat',
+      'dog',
+      'parrot',
+      'goldfish',
+      'horse',
+      'elephant',
+      'ant',
+      'snake',
+      'crow',
+      'cow',
+      'eagle',
+      'rhinoceros',
+      'chimpanzee'
+    ],
     cart: [],
-    searchedProducts: []
+    filteredProducts: []
   },
   actions: actions,
   mutations: mutations,
