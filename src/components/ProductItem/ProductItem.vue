@@ -1,13 +1,10 @@
 <template>
   <section class="product">
-    <aside class="add" @click="addThisToCart(product.id)">
-      <!--TODO: add image to the click add product functionality -->
-      <img />
-    </aside>
     <div>
-      <!-- TODO: :src="require(`@/assets/${product.tag}.png`)" -->
-      <!-- :src="getProductImg(product.tag)" -->
-      <!-- <img :alt="product.title" /> -->
+      <img
+        :src="`${publicPath}assets/${product.tag}.png`"
+        :alt="product.title"
+      />
     </div>
     <div>
       <h2 class="producttitle">{{ product.title }}</h2>
@@ -16,6 +13,14 @@
     <div>
       <h3>{{ product.price }}Kr</h3>
     </div>
+    <aside
+      v-if="!getProductButtonToggle"
+      class="addProduct"
+      @click="addThisToCart(product.id)"
+    >
+      <!--TODO: add image to the click add product functionality <img /> -->
+      <h1>+</h1>
+    </aside>
   </section>
 </template>
 <script>
@@ -23,10 +28,12 @@ import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'ProductItem',
   data() {
-    return {};
+    return {
+      publicPath: process.env.BASE_URL
+    };
   },
   computed: {
-    ...mapGetters(['getProductImg'])
+    ...mapGetters(['getProductButtonToggle'])
   },
   props: {
     product: Object

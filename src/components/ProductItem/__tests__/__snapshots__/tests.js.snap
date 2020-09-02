@@ -4,13 +4,12 @@ exports[`User navigates to this page, component renders Test so that everything 
 <section
   class="product"
 >
-  <aside
-    class="add"
-  >
-    <img />
-  </aside>
-   
-  <div />
+  <div>
+    <img
+      alt="Regular Bugspray"
+      src="undefinedassets/bugspray.png"
+    />
+  </div>
    
   <div>
     <h2
@@ -29,5 +28,13 @@ exports[`User navigates to this page, component renders Test so that everything 
       120Kr
     </h3>
   </div>
+   
+  <aside
+    class="addProduct"
+  >
+    <h1>
+      +
+    </h1>
+  </aside>
 </section>
 `;
