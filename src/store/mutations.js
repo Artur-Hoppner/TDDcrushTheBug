@@ -38,6 +38,19 @@ const mutations = {
     if (state.cart[index].quantity == 0) {
       state.cart.splice(index, 1);
     }
+  },
+  getByKeyword(state, keyWord) {
+    const search = keyWord.toLowerCase();
+    if (!search.length) {
+      state.filteredProducts = state.allProducts;
+    } else {
+      let foundProducts = [];
+      foundProducts = state.allProducts.filter(item => item.tag.match(search));
+      state.filteredProducts = foundProducts;
+    }
+  },
+  displayEntireArray(state) {
+    state.filteredProducts = state.allProducts;
   }
 };
 
