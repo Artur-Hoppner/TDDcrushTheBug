@@ -1,7 +1,8 @@
 <template>
   <div>
-    <!-- <p>{{cartItem.length}}</p> -->
-    <router-link id="presentedCartItems" to="/cart"></router-link>
+    <!-- <p>{{cartItem}}</p> -->
+    <router-link id="presentedCartItems" to="/cart">testing</router-link>
+    <!-- <p>{{cartItem}}</p> -->
     <!-- change link to hamburge menu later. This is for controlling that the test works -->
   </div>
 </template>
@@ -10,7 +11,7 @@
 export default {
   // computed: {
   //   cartItem() {
-  //     return this.$store.state.cart;
+  //     return this.$store.state.cart.length;
   //   }
   // }
 };

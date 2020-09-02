@@ -4,7 +4,10 @@ import actions from './actions.js';
 
 const state = {
   namespaced: true,
-  state: {},
+
+  state: {
+    isBurgerActive: false
+  },
   mutations: mutations,
   getters: getters,
   actions: actions

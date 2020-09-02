@@ -4,15 +4,10 @@ exports[`User navigates to this page, component renders Test so that everything 
 <section
   class="product"
 >
-  <aside
-    class="add"
-  >
-    <img />
-  </aside>
-   
   <div>
     <img
-      alt="Hiroshima Bugspray"
+      alt="Regular Bugspray"
+      src="undefinedassets/bugspray.png"
     />
   </div>
    
@@ -20,18 +15,30 @@ exports[`User navigates to this page, component renders Test so that everything 
     <h2
       class="producttitle"
     >
-      Hiroshima Bugspray
+      Regular Bugspray
     </h2>
      
     <p>
-      It will nuke your bugs!
+      It does something
     </p>
   </div>
+   
+  <!---->
    
   <div>
     <h3>
       120Kr
     </h3>
   </div>
+   
+  <aside
+    class="addProduct"
+  >
+    <h1>
+      ADD
+    </h1>
+  </aside>
+   
+  <!---->
 </section>
 `;
