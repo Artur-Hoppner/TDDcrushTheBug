@@ -1,12 +1,20 @@
 <template>
   <div>
-    <router-link to="/cart">cartIcon</router-link>
+    
+    <router-link id="presentedCartItems" to="/cart">{{cartItem}}</router-link>
     <!-- change link to hamburge menu later. This is for controlling that the test works -->
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: Cart,
+  computed: {
+    cartItem () {
+      return this.$store.state.cart
+    }
+  }
+}
 </script>
 
 <style>

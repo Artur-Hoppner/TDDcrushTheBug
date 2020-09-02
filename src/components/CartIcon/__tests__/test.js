@@ -4,13 +4,19 @@ import {
   RouterLinkStub,
   createLocalVue
 } from '@vue/test-utils';
+import App from "@/App.vue"
 import Vuex from 'vuex';
 import CartIcon from '@/components/CartIcon/CartIcon.vue';
+import Cart from '@/views/Cart.vue';
+import VueRouter from 'vue-router';
+import routes from '@/router/index.js'
 
 const localVue = createLocalVue();
+localVue.use(VueRouter);
 localVue.use(Vuex);
 
 describe('User can see numbers of selected cart items and on click go to cart', () => {
+  
   const cartItems = {
     id: '01',
     tag: 'bugspray',
@@ -21,23 +27,49 @@ describe('User can see numbers of selected cart items and on click go to cart', 
 
   test('test if link to cartlist works', () => {
     //Act
-    const wrapper = shallowMount(CartIcon, {
-      localVue,
-      propsData: {
+    const moduleA = {
+      state: ()=>({
         cartItems
+      }),
+      mutations: {
+        addCartItem (state, cartItems){
+          state.cartItems.push(cartItems)
+        }
+      }
+    };
+    const store = new Vuex.Store({
+      modules: {
+        moduleA
       }
     });
-    console.log(cartItems.length, 'test length of product should be 1');
-    const iconContent = wrapper.text();
-    //Assert
-    // send item to cart
-    //Assemble
 
-    expect(iconContent).toBe('cartIcon');
-    expect(cartState.state.cart.length).toBeGreaterThan(0);
+    const wrapper = shallowMount(CartIcon, {
+      store,
+      localVue
+    });
+    const cartNumber = wrapper.find('#presentedCartItems').text()
+  
+
+    expect(cartNumber).toBe('1');
+    expect().toBeGreaterThan(0);
   });
 
-  test('test of router-link to /cart exists?', () => {
+  test('test of router-link to /cart exists?', async () => {
+    //Act
+    const router = new VueRouter({ routes })
+    const wrapper = mount(App, { 
+      localVue,
+      router
+    })
+    
+    //Assert & Assemble
+    router.push("/cart")
+    await wrapper.vm.$nextTick()
+    expect(wrapper.findComponent(Cart).exists()).toBe(true);
+  });
+
+
+  test('testing extra for roouter ink?', () => {
     //Act
     const wrapper = mount(CartIcon, {
       stubs: {
