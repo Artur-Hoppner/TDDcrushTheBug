@@ -1,7 +1,7 @@
 import { shallowMount, mount, createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 import store from '../../../store/index.js';
-import CartList from '@/components/CartList/CartList.vue';
+import ProductList from '@/components/ProductList/ProductList.vue';
 
 //create a local instance of our vue
 const localVue = createLocalVue();
@@ -10,7 +10,7 @@ localVue.use(Vuex);
 
 describe('User loads the page', () => {
   test('Test so that everything renders correctly', async () => {
-    const wrapper = shallowMount(CartList, { store, localVue });
+    const wrapper = shallowMount(ProductList, { store, localVue });
     expect(wrapper.element).toMatchSnapshot();
   });
 });

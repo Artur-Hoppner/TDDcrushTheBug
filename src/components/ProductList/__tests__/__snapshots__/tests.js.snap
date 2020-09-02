@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User loads the page Test so that everything renders correctly 1`] = `
+<div
+  class="products"
+/>
+`;

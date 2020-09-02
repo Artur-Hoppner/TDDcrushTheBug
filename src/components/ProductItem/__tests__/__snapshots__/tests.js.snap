@@ -23,6 +23,8 @@ exports[`User navigates to this page, component renders Test so that everything 
     </p>
   </div>
    
+  <!---->
+   
   <div>
     <h3>
       120Kr
@@ -33,8 +35,10 @@ exports[`User navigates to this page, component renders Test so that everything 
     class="addProduct"
   >
     <h1>
-      +
+      ADD
     </h1>
   </aside>
+   
+  <!---->
 </section>
 `;
