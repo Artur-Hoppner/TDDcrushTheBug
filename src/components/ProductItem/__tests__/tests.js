@@ -89,7 +89,11 @@ describe('User navigates to this page, component renders', () => {
     const actions = {
       addThisToCart: jest.fn()
     };
-    const getters = {};
+    const getters = {
+      getProductButtonToggle: tag => {
+        return null;
+      }
+    };
 
     const store = new Vuex.Store({
       actions,
