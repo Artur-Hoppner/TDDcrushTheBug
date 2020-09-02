@@ -48,13 +48,56 @@ describe('User navigates to this page, component renders', () => {
     expect(price.text()).toContain(product.price);
   });
 
+  test('Test so that addthisToCart is displayed when state.productButtonToggle is false', async () => {
+    //Arrange
+    const wrapper = shallowMount(ProductItem, {
+      store,
+      localVue,
+      propsData: {
+        product
+      }
+    });
+    //Act
+    const button = wrapper.find('.addProduct');
+
+    //Assert
+    expect(store.state.productButtonToggle).toBe(false);
+    expect(button.exists()).toBe(true);
+  });
+
+  test('Test so that addthisToCart is NOT displayed when state.productButtonToggle is true', async () => {
+    //Arrange
+    const wrapper = shallowMount(ProductItem, {
+      store,
+      localVue,
+      propsData: {
+        product
+      }
+    });
+    //Act
+    store.state.productButtonToggle = true;
+    await wrapper.vm.$nextTick();
+    const button = wrapper.find('.addProduct');
+
+    //Assert
+    expect(store.state.productButtonToggle).toBe(true);
+    expect(button.exists()).toBe(false);
+  });
+
   test('Test so that addThisToCart in vuex is called on button click from component', async () => {
     // Arrange
     const actions = {
       addThisToCart: jest.fn()
     };
+    const getters = {
+      getProductButtonToggle: tag => {
+        return null;
+      }
+    };
+
     const store = new Vuex.Store({
-      actions
+      actions,
+      getters
     });
     const wrapper = shallowMount(ProductItem, {
       store,
@@ -65,7 +108,7 @@ describe('User navigates to this page, component renders', () => {
     });
 
     // Act
-    const input = wrapper.find('.add');
+    const input = wrapper.find('.addProduct');
     await input.trigger('click');
     await localVue.nextTick();
     // Assert

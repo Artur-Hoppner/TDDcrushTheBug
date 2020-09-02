@@ -3,7 +3,7 @@ import Vuex from 'vuex';
 import searchbar from './SearchBar/index.js';
 import actions from './actions.js';
 import mutations from './mutations.js';
-import getters from './SearchBar/getters.js';
+import getters from './getters.js';
 import hamburgerIcon from './HamburgerIcon/index.js';
 
 Vue.use(Vuex);
@@ -13,8 +13,8 @@ export default new Vuex.Store({
     allProducts: [
       {
         id: '01',
-        tag: 'bugspray',
-        title: 'Bugspray',
+        tag: 'cutezapper',
+        title: 'The Hello Kitty Zapper',
         desc:
           'Barely functions, use this if you have a love/hate relationship with your bugs.',
         price: '67'
@@ -77,13 +77,6 @@ export default new Vuex.Store({
       },
       {
         id: '10',
-        tag: 'flykillingdevice',
-        title: 'Fly Killing Device',
-        desc: 'No more bzzzzz',
-        price: '120'
-      },
-      {
-        id: '11',
         tag: 'zapper',
         title: 'Regular zapper',
         desc: 'It tickles a little bit',
@@ -91,7 +84,8 @@ export default new Vuex.Store({
       }
     ],
     cart: [],
-    filteredProducts: []
+    filteredProducts: [],
+    productButtonToggle: false
   },
   actions: actions,
   mutations: mutations,
