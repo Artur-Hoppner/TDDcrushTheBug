@@ -10,7 +10,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     allProducts: [],
-    cart: [],
+    cart: [
+      {
+        id: '01',
+        tag: 'bugspray',
+        title: 'Hiroshima Bugspray',
+        desc: 'It will nuke your bugs!',
+        price: '120'
+      }
+    ],
     searchedProducts: []
   },
   actions: actions,

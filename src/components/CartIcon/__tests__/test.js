@@ -4,19 +4,18 @@ import {
   RouterLinkStub,
   createLocalVue
 } from '@vue/test-utils';
-import App from "@/App.vue"
+import App from '@/App.vue';
 import Vuex from 'vuex';
 import CartIcon from '@/components/CartIcon/CartIcon.vue';
 import Cart from '@/views/Cart.vue';
 import VueRouter from 'vue-router';
-import routes from '@/router/index.js'
+import routes from '@/router/index.js';
 
 const localVue = createLocalVue();
 localVue.use(VueRouter);
 localVue.use(Vuex);
 
 describe('User can see numbers of selected cart items and on click go to cart', () => {
-  
   const cartItems = {
     id: '01',
     tag: 'bugspray',
@@ -28,12 +27,12 @@ describe('User can see numbers of selected cart items and on click go to cart', 
   test('test if link to cartlist works', () => {
     //Act
     const moduleA = {
-      state: ()=>({
+      state: () => ({
         cartItems
       }),
       mutations: {
-        addCartItem (state, cartItems){
-          state.cartItems.push(cartItems)
+        addCartItem(state, cartItems) {
+          state.cartItems.push(cartItems);
         }
       }
     };
@@ -47,8 +46,7 @@ describe('User can see numbers of selected cart items and on click go to cart', 
       store,
       localVue
     });
-    const cartNumber = wrapper.find('#presentedCartItems').text()
-  
+    const cartNumber = wrapper.find('#presentedCartItems').text();
 
     expect(cartNumber).toBe('1');
     expect().toBeGreaterThan(0);
@@ -56,21 +54,22 @@ describe('User can see numbers of selected cart items and on click go to cart', 
 
   test('test of router-link to /cart exists?', async () => {
     //Act
-    const router = new VueRouter({ routes })
-    const wrapper = mount(App, { 
+    const router = new VueRouter({ routes });
+    const wrapper = mount(App, {
       localVue,
       router
-    })
-    
+    });
+
     //Assert & Assemble
-    router.push("/cart")
-    await wrapper.vm.$nextTick()
+    router.push('/cart');
+    await wrapper.vm.$nextTick();
     expect(wrapper.findComponent(Cart).exists()).toBe(true);
   });
 
-
   test('testing extra for roouter ink?', () => {
     //Act
+
+    const routes = [{ path: '/cart', component: Foo }]
     const wrapper = mount(CartIcon, {
       stubs: {
         RouterLink: RouterLinkStub
