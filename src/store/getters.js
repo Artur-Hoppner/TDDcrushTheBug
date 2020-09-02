@@ -4,6 +4,9 @@ const getters = {
   },
   getCartProducts: state => {
     return state.cart;
+  },
+  filteredByKeyword: state => {
+    return state.filteredProducts;
   }
 };
 
