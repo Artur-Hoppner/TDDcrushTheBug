@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User is sent to view Order after checkout, expecting orderinfo to be displayed Test so that everything renders correctly 1`] = `
+<section
+  class="orderInfo"
+>
+  <h1
+    class="orderNumber"
+  >
+    
+    Thank you for your order! Your order number is:
+    
+  
+  </h1>
+   
+  <h2
+    class="orderCost"
+  >
+    Total price:
+  </h2>
+    
+  <h2
+    class="deliveryETA"
+  >
+    
+    Expected delivery in:  days
+  
+  </h2>
+</section>
+`;
