@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User clicks icon/button Test so that everything renders correctly 1`] = `
+<div
+  id="hamburgerIcon"
+>
+  <hamburgermenu-stub>
+    <ul
+      class="sidebar-panel-nav"
+    >
+      <li>
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/landing"
+        >
+          Home
+        </router-link-stub>
+      </li>
+       
+      <li>
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/shopping"
+        >
+          Our Shop
+        </router-link-stub>
+      </li>
+       
+      <li>
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/cart"
+        >
+          Cart
+        </router-link-stub>
+      </li>
+       
+      <li>
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/order"
+        >
+          Order
+        </router-link-stub>
+      </li>
+    </ul>
+  </hamburgermenu-stub>
+   
+  <nav
+    class="burger-button"
+  >
+    <img
+      alt="hamburgerImage"
+      class="hamburgerImage"
+      src="@/assets/navicon.svg"
+    />
+     
+    <hamburgermenu-stub />
+  </nav>
+</div>
+`;

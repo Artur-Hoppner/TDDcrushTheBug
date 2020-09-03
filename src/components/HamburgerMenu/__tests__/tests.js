@@ -23,8 +23,6 @@ describe('User opens menu', () => {
     });
   });
 
-  // Testa att det blir true när man öppnar, testa länkar
-
   test('Test so that everything renders correctly', () => {
     const hamburgerIcon = {
       namespaced: true,
