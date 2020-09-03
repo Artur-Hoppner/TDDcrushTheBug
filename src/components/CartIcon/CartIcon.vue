@@ -1,14 +1,23 @@
 <template>
   <div>
-    <!-- <p>{{cartItem}}</p> -->
-    <router-link id="presentedCartItems" to="/cart">testing</router-link>
-    <!-- <p>{{cartItem}}</p> -->
-    <!-- change link to hamburge menu later. This is for controlling that the test works -->
+      <section class="cartWrapper">
+      <router-link  to ='/cart'><img src="@/assets/shopping-cart.svg" alt="cart"></router-link> 
+      <section class="lengthWrapper">
+        <span>{{getCartProducts.length}}</span>
+      </section>
+    </section>
   </div>
 </template>
 
-<script>
+<script> 
+import{ mapActions, mapGetters } from 'vuex';
 export default {
+  computed: {
+    ...mapGetters(['getCartProducts'])
+  },
+  methods: {
+    ...mapActions(['showThisCart'])
+  }
   // computed: {
   //   cartItem() {
   //     return this.$store.state.cart.length;
