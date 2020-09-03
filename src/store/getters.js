@@ -11,6 +11,12 @@ const getters = {
   },
   filteredByKeyword: state => {
     return state.filteredProducts;
+  },
+  getOrderInfo: state => {
+    return state.orderInfo;
+  },
+  getOrderItems: state => {
+    return state.orderInfo.orderList;
   }
 };
 

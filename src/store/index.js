@@ -9,11 +9,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    allProducts: [{
+    allProducts: [
+      {
         id: '01',
         tag: 'cutezapper',
         title: 'The Hello Kitty Zapper',
-        desc: 'Barely functions, use this if you have a love/hate relationship with your bugs.',
+        desc:
+          'Barely functions, use this if you have a love/hate relationship with your bugs.',
         price: 67
       },
       {
@@ -84,6 +86,12 @@ export default new Vuex.Store({
     filteredProducts: [],
     productButtonToggle: false,
     showCart: false,
+    orderInfo: {
+      orderNumber: '',
+      orderCost: '',
+      deliveryETA: '',
+      orderList: []
+    }
   },
   actions: actions,
   mutations: mutations,
