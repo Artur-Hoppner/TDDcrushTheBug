@@ -8,17 +8,19 @@
         alt="hamburgerImage"
         @click="changeThisToggle"
       />
+      <HamburgerMenu />
     </nav>
   </div>
 </template>
 
 <script>
-import HamburgerMenu from '@/components/HamburgerIcon/HamburgerIcon.vue';
-
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu.vue';
 import { mapActions } from 'vuex';
 export default {
   name: 'HamburgerIcon',
-  components: { HamburgerMenu },
+  components: {
+    HamburgerMenu
+  },
   methods: {
     ...mapActions('hamburgerIcon', ['changeThisToggle'])
   }
