@@ -1,22 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`User opens menu Test so that everything renders correctly 1`] = `
-<nav
-  id="hamburgerMenu"
+<div
+  class="sidebar"
 >
-  <img
-    alt="close"
-    class="close"
-    src="@/assets/close.svg"
+  <div
+    class="sidebar-backdrop"
   />
    
-  <div>
-    <router-link
-      class="router-link"
-      to="/shopping"
+  <transition-stub
+    name="slide"
+  >
+    <div
+      class="sidebar-panel"
     >
-      Shopping
-    </router-link>
-  </div>
-</nav>
+      <ul
+        class="sidebar-panel-nav"
+      >
+        <li>
+          <router-link-stub
+            ariacurrentvalue="page"
+            event="click"
+            exactactiveclass="active"
+            tag="a"
+            to="/landing"
+          >
+            Home
+          </router-link-stub>
+        </li>
+         
+        <li>
+          <router-link-stub
+            ariacurrentvalue="page"
+            event="click"
+            exactactiveclass="active"
+            tag="a"
+            to="/shopping"
+          >
+            Our Shop
+          </router-link-stub>
+        </li>
+         
+        <li>
+          <router-link-stub
+            ariacurrentvalue="page"
+            event="click"
+            exactactiveclass="active"
+            tag="p"
+            to="/cart"
+          >
+            Cart
+          </router-link-stub>
+        </li>
+         
+        <li>
+          <router-link-stub
+            ariacurrentvalue="page"
+            event="click"
+            exactactiveclass="active"
+            tag="a"
+            to="/order"
+          >
+            Order
+          </router-link-stub>
+        </li>
+      </ul>
+       
+    </div>
+  </transition-stub>
+</div>
 `;

@@ -6,7 +6,8 @@ import VueRouter from "vue-router"
 import routes from '../../../router/routes.js'
 
 const localVue = createLocalVue();
-localVue.use(Vuex, VueRouter);
+localVue.use(Vuex);
+localVue.use(VueRouter);
 
 describe('User clicks icon/button', () => {
   let modules, store, router;
@@ -46,7 +47,11 @@ describe('User clicks icon/button', () => {
       actions: {
         changeThisToggle: jest.fn()
       },
-      getters: {}
+      getters: {
+        showHamburger() {
+          return null;
+        }
+      }
     };
     const store = new Vuex.Store({
       modules: {
@@ -65,20 +70,4 @@ describe('User clicks icon/button', () => {
 
     expect(hamburgerIcon.actions.changeThisToggle).toHaveBeenCalled();
   });
-  test('If router.path = /landing, landing should not exist', async () => {
-    const router = new VueRouter({
-      routes
-    });
-    const wrapper = mount(HamburgerIcon, {
-      router,
-      store,
-      localVue,
-    });
-    // await router.push('/landing');
-    const landingButton = wrapper.find('.landing')
-    await landingButton.trigger('click');
-
-    expect(goTo).toHaveBeenCalled();
-  })
-
 });

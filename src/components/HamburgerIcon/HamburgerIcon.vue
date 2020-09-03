@@ -21,12 +21,8 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import HamburgerMenu from '@/components/HamburgerMenu/HamburgerMenu.vue';
 
-=======
-import HamburgerMenu from '../HamburgerMenu/HamburgerMenu.vue';
->>>>>>> dev
 import { mapActions } from 'vuex';
 export default {
   name: 'HamburgerIcon',
