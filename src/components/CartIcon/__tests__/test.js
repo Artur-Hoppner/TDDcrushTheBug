@@ -6,6 +6,7 @@ import {
 } from '@vue/test-utils';
 import App from "@/App.vue"
 import Vuex from 'vuex';
+import store from '../../../store/index.js';
 import CartIcon from '@/components/CartIcon/CartIcon.vue';
 import Cart from '@/views/Cart.vue';
 import VueRouter from 'vue-router';
@@ -16,7 +17,7 @@ const localVue = createLocalVue();
 localVue.use(VueRouter);
 localVue.use(Vuex);
 
-describe('User can see numbers of selected cart items and on click go to cart', () => {
+/* describe('User can see numbers of selected cart items and on click go to cart', () => {
   
   const cartItems = {
     id: '01',
@@ -24,7 +25,7 @@ describe('User can see numbers of selected cart items and on click go to cart', 
     title: 'Hiroshima Bugspray',
     desc: 'It will nuke your bugs!',
     price: '120'
-  };
+  }; */
 
   // test('test if link to cartlist works', () => {
   //   //Act
@@ -75,6 +76,8 @@ describe('User can see numbers of selected cart items and on click go to cart', 
   test('testing extra for roouter ink?', () => {
     //Act
     const wrapper = mount(CartIcon, {
+      store,
+      localVue,
       stubs: {
         RouterLink: RouterLinkStub
       }
@@ -82,4 +85,4 @@ describe('User can see numbers of selected cart items and on click go to cart', 
     //Assert & Assemble
     expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/cart');
   });
-});
+

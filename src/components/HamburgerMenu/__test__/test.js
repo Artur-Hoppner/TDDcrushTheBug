@@ -31,5 +31,4 @@ describe('User opens menu', () => {
   })
 
 
-
 })
