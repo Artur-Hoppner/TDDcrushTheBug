@@ -3,13 +3,14 @@ import Vuex from 'vuex';
 import store from '../../../store/index.js';
 import SearchBar from '@/components/SearchBar/SearchBar.vue';
 
-//create a local instance of our vue
+//Create a local instance of our vue
 const localVue = createLocalVue();
-//make our instance use vuex
+//Make our instance use vuex
 localVue.use(Vuex);
 
 describe('User enters a searchword into the searchbar', () => {
   test('Test so that everything renders correctly', () => {
+    //Mount component with store & localvue, take snapshot and check so it renders correctly
     const wrapper = shallowMount(SearchBar, { store, localVue });
     expect(wrapper.element).toMatchSnapshot();
   });
@@ -22,6 +23,7 @@ describe('User enters a searchword into the searchbar', () => {
     input.setValue('');
     await input.trigger('keyup');
     //Assert
+    //Check so that filteredProducts.length is greater than 0
     expect(store.state.filteredProducts.length).toBeGreaterThan(0);
   });
 
@@ -35,11 +37,8 @@ describe('User enters a searchword into the searchbar', () => {
     //Assert
     //Find object containing tag: saltgunv3 in array
     expect(store.state.filteredProducts).toEqual(
-      // 1
       expect.arrayContaining([
-        // 2
         expect.objectContaining({
-          // 3
           tag: 'saltgunv3' // 4
         })
       ])
@@ -56,12 +55,9 @@ describe('User enters a searchword into the searchbar', () => {
     //Assert
     //Find object containing tag: saltgunv3 in array
     expect(store.state.filteredProducts).toEqual(
-      // 1
       expect.arrayContaining([
-        // 2
         expect.objectContaining({
-          // 3
-          tag: 'saltgunv3' // 4
+          tag: 'saltgunv3'
         })
       ])
     );
@@ -70,6 +66,7 @@ describe('User enters a searchword into the searchbar', () => {
   test('Test so that action getByThisKeyword in vuex is called on keyup from component', async () => {
     // Arrange
     const actions = {
+      //Spy on getByThisKeyword
       getByThisKeyword: jest.fn(),
       displayThisEntireArray() {
         return false;

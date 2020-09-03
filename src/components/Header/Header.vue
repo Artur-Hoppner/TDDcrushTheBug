@@ -1,13 +1,19 @@
-!<template>
-  
+<template>
+  <nav class="header">
+    <HamburgerIcon />
+  </nav>
 </template>
 
 <script>
-export default {
+import HamburgerIcon from '@/components/HamburgerIcon/HamburgerIcon.vue';
+//TODO: import cartIcon when it's finished
 
-}
+export default {
+  name: 'Header',
+  components: {
+    HamburgerIcon
+  }
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

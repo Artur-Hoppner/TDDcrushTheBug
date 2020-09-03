@@ -3,12 +3,13 @@ import Vuex from 'vuex';
 import store from '../../../store/index.js';
 import ProductItem from '@/components/ProductItem/ProductItem.vue';
 
-//create a local instance of our vue
+//Create a local instance of our vue
 const localVue = createLocalVue();
-//make our instance use vuex
+//Make our instance use vuex
 localVue.use(Vuex);
 
 describe('User navigates to this page, component renders', () => {
+  //Mock product object
   const product = {
     id: '01',
     tag: 'bugspray',
@@ -18,6 +19,7 @@ describe('User navigates to this page, component renders', () => {
   };
 
   test('Test so that everything renders correctly', () => {
+    //Mount with store, local instance of vue and computed prop
     const wrapper = shallowMount(ProductItem, {
       store,
       localVue,
@@ -43,6 +45,7 @@ describe('User navigates to this page, component renders', () => {
     const price = wrapper.find('h3');
 
     //Assert
+    //Check so that product prop is diplayed properly
     expect(h2.text()).toContain(product.title);
     expect(p.text()).toContain(product.desc);
     expect(price.text()).toContain(product.price);
@@ -86,6 +89,7 @@ describe('User navigates to this page, component renders', () => {
 
   test('Test so that addThisToCart in vuex is called on button click from component', async () => {
     // Arrange
+    //Spy on AddThisToCart action
     const actions = {
       addThisToCart: jest.fn()
     };

@@ -10,6 +10,7 @@ localVue.use(Vuex);
 
 describe('User loads the page', () => {
   test('Test so that everything renders correctly', async () => {
+    //Mount component with store & localvue, take snapshot and check so it renders correctly
     const wrapper = shallowMount(CartList, { store, localVue });
     expect(wrapper.element).toMatchSnapshot();
   });

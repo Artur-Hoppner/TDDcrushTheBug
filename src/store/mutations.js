@@ -1,5 +1,14 @@
+//*************************/
+//*** GLOBAL MUTATIONS ***/
+//***********************/
+
 const mutations = {
+  //*************************************/
+  //*** CART ARRAY RELATED MUTATIONS ***/
+  //***********************************/
+  //Add product to cart, takes product object as argument
   addToCart(state, product) {
+    //Check if cart already has existing item so no doublettes will be created, only update quantity & price
     let checkExisting = state.cart.filter(item => item.id == product.id);
     if (checkExisting.length >= 1) {
       let index = state.cart.findIndex(item => item.id === product.id);
@@ -16,21 +25,25 @@ const mutations = {
       });
     }
   },
-  changeProductButtonToggle(state, boolean) {
-    state.productButtonToggle = boolean;
-  },
+  //Remove Product from cart using index
   removeFromCart(state, id) {
     let findIndex = state.cart.find(item => item.id == id);
     let index = state.cart.indexOf(findIndex);
     state.cart.splice(index, 1);
   },
+  //Increase Product Quantity in cart
   increaseQuantity(state, product) {
+    //Check for default values of object in original allProducts array
+    //Increase Product quantity and price
     let adjustPrice = state.allProducts.find(item => item.id == product.id);
     let index = state.cart.findIndex(item => item.id === product.id);
     state.cart[index].quantity++;
     state.cart[index].price += adjustPrice.price;
   },
+  //Decrease Product Quantity in cart
   decreaseQuantity(state, product) {
+    //Check for default values of object in original allProducts array
+    //Decrease Product quantity and price, if 0 then remove from cart array
     let adjustPrice = state.allProducts.find(item => item.id == product.id);
     let index = state.cart.findIndex(item => item.id === product.id);
     state.cart[index].quantity--;
@@ -39,6 +52,10 @@ const mutations = {
       state.cart.splice(index, 1);
     }
   },
+  //*************************************************/
+  //*** FILTEREDPRODUCTS ARRAY RELATED MUTATIONS ***/
+  //***********************************************/
+  //Take input searchword as argument, then use it to filter through allproducts array and match all products including the searchword
   getByKeyword(state, keyWord) {
     const search = keyWord.toLowerCase();
     if (!search.length) {
@@ -49,8 +66,16 @@ const mutations = {
       state.filteredProducts = foundProducts;
     }
   },
+  //Reset the displayArray so it shows all products
   displayEntireArray(state) {
     state.filteredProducts = state.allProducts;
+  },
+  //*********************************/
+  //*** TOGGLE RELATED MUTATIONS ***/
+  //*******************************/
+  //Change the toggle which decides if ProductItem shows AddToCart button or Increment, Decrement & RemoveFromCart depending on if we are viewing cart or shopping page
+  changeProductButtonToggle(state, boolean) {
+    state.productButtonToggle = boolean;
   }
 };
 
