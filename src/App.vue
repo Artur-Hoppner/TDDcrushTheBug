@@ -1,18 +1,22 @@
 <template>
   <div id="app">
     <Header />
-    <router-link to="Shopping">Test me mattias</router-link>
+    <router-link to="Shopping">Shopping</router-link>
+    <router-link to="Landing">Landing</router-link>
+    <router-link to="Cart">Cart</router-link>
+    <router-link to="Order">Order</router-link>
     <router-view />
-    <HamburgerIcon />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HamburgerIcon from '@/components/HamburgerIcon/HamburgerIcon.vue';
 import Header from '@/components/Header/Header.vue';
+import Footer from '@/components/Footer/Footer.vue';
+
 export default {
   name: 'App',
-  components: { HamburgerIcon, Header }
+  components: { Header, Footer }
 };
 </script>
 

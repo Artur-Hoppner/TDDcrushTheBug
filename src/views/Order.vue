@@ -1,16 +1,11 @@
 <template>
-  <div>
-    <Footer />
-  </div>
+  <div></div>
 </template>
 
 <script>
-import Footer from '@/components/Footer/Footer.vue';
 export default {
   name: 'Order',
-  components: {
-    Footer
-  }
+  components: {}
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-link id="presentedCartItems" to="/cart">
-      <p>{{cartItem.length}}</p>
+      <p>Cart Items {{cartItem.length}}</p>
     </router-link>
   </div>
 </template>

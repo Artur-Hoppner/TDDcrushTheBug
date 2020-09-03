@@ -1,5 +1,6 @@
 <template>
   <div id="hamburgerIcon">
+    <HamburgerMenu />
     <nav class="burger-button">
       <img
         class="hamburgerImage"
@@ -12,10 +13,12 @@
 </template>
 
 <script>
-// import HamburgerMenu from "@/components/HamburgerMenu.vue"
+import HamburgerMenu from '@/components/HamburgerIcon/HamburgerIcon.vue';
+
 import { mapActions } from 'vuex';
 export default {
   name: 'HamburgerIcon',
+  components: { HamburgerMenu },
   methods: {
     ...mapActions('hamburgerIcon', ['changeThisToggle'])
   }
