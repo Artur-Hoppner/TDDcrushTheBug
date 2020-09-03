@@ -16,7 +16,7 @@ export default {
     ProductItem
   },
   computed: {
-    ...mapGetters('searchbar', ['filteredByKeyword'], ['getProductToggle'])
+    ...mapGetters(['filteredByKeyword', 'getProductToggle'])
   },
   methods: {
     ...mapActions(['changeThisProductButtonToggle'])

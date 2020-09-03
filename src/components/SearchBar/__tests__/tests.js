@@ -69,22 +69,20 @@ describe('User enters a searchword into the searchbar', () => {
 
   test('Test so that action getByThisKeyword in vuex is called on keyup from component', async () => {
     // Arrange
-    const searchbar = {
-      namespaced: true,
-      state: {},
-      mutations: {},
-      actions: {
-        getByThisKeyword: jest.fn(),
-        displayThisEntireArray() {
-          return false;
-        }
-      },
-      getters: {}
+    const actions = {
+      getByThisKeyword: jest.fn(),
+      displayThisEntireArray() {
+        return false;
+      }
+    };
+    const getters = {
+      filteredByKeyword: state => {
+        return state.filteredProducts;
+      }
     };
     const store = new Vuex.Store({
-      modules: {
-        searchbar
-      }
+      actions,
+      getters
     });
     const wrapper = shallowMount(SearchBar, {
       store,
@@ -96,6 +94,6 @@ describe('User enters a searchword into the searchbar', () => {
     await input.trigger('keyup');
     await localVue.nextTick();
     // Assert
-    expect(searchbar.actions.getByThisKeyword).toHaveBeenCalled();
+    expect(actions.getByThisKeyword).toHaveBeenCalled();
   });
 });

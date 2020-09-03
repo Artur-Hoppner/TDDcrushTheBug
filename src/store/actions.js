@@ -13,6 +13,12 @@ const actions = {
   },
   decreaseThisQuantity(context, product) {
     context.commit('decreaseQuantity', product);
+  },
+  getByThisKeyword(context, keyWord) {
+    context.commit('getByKeyword', keyWord);
+  },
+  displayThisEntireArray(context) {
+    context.commit('displayEntireArray');
   }
 };
 
