@@ -4,6 +4,7 @@
 
 <script>
 import CartIcon from '@/components/CartIcon/CartIcon.vue';
+
 export default {
   components: {
     CartIcon
@@ -11,4 +12,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+</style>
