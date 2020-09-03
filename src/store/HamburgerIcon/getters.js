@@ -1,5 +1,5 @@
 const getters = {
-  showHamburger: state => state.showHamburger
+  showHamburger: state => state.isBurgerActive
 };
 
 export default getters;

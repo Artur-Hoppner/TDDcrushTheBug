@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User opens menu Test so that everything renders correctly 1`] = `
+<nav
+  id="hamburgerMenu"
+>
+  <img
+    alt="close"
+    class="close"
+    src="@/assets/close.svg"
+  />
+   
+  <div>
+    <router-link
+      class="router-link"
+      to="/shopping"
+    >
+      Shopping
+    </router-link>
+  </div>
+</nav>
+`;
