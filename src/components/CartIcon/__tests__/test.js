@@ -34,7 +34,6 @@ describe('User can see numbers of selected cart items and on click go to cart', 
       store
     });
     //Assert
-    console.log(wrapper, 'this is the wrapper');
     const cartNumber = wrapper.find('p').text();
     //Assemble
     expect(cartNumber).toBe('1');
