@@ -1,13 +1,16 @@
-!<template>
-  
+<template>
+  <CartIcon />
 </template>
 
 <script>
-export default {
+import CartIcon from '@/components/CartIcon/CartIcon.vue';
 
-}
+export default {
+  components: {
+    CartIcon
+  }
+};
 </script>
 
 <style>
-
 </style>
