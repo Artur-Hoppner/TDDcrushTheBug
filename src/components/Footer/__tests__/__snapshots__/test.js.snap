@@ -9,13 +9,3 @@ exports[`Test footer rendering and elements check that component is rendered 1`]
   </footer>
 </div>
 `;
-
-exports[`test  check that component is rendered 1`] = `
-<div>
-  <footer>
-    <p>
-      Copyright ⓒ 2020
-    </p>
-  </footer>
-</div>
-`;
