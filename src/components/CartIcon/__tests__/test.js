@@ -10,9 +10,10 @@ import CartIcon from '@/components/CartIcon/CartIcon.vue';
 import Cart from '@/views/Cart.vue';
 import VueRouter from 'vue-router';
 import routes from '@/router/index.js';
+import store from '@/store/index.js';
 
 const localVue = createLocalVue();
-localVue.use(VueRouter);
+localVue.use(VueRouter, Vuex);
 // localVue.use(Vuex);
 
 describe('User can see numbers of selected cart items and on click go to cart', () => {
@@ -23,6 +24,21 @@ describe('User can see numbers of selected cart items and on click go to cart', 
   //   desc: 'It will nuke your bugs!',
   //   price: '120'
   // };
+
+  test('testing if router link exist in component CartIcon', () => {
+    //Act
+    const wrapper = mount(CartIcon, {
+      localVue,
+      store,
+      stubs: {
+        RouterLink: RouterLinkStub
+      }
+    });
+    //Assert
+    const routerLink = wrapper.findComponent(RouterLinkStub).props().to;
+    //Assemble
+    expect(routerLink).toBe('/cart');
+  });
 
   // test('test if link to cartlist works', () => {
   //   //Act
@@ -66,15 +82,21 @@ describe('User can see numbers of selected cart items and on click go to cart', 
   //   expect(wrapper.findComponent(Cart).exists()).toBe(true);
   // });
 
-  test('testing if router link exist in component', () => {
-    //Act
-    const wrapper = mount(CartIcon, {
-      stubs: {
-        RouterLink: RouterLinkStub
-      }
+  describe('User clicks a link to see their cart', () => {
+    it('test so component renders on router.push', async () => {
+      const router = new VueRouter({ routes });
+      const wrapper = mount(App, {
+        localVue,
+        router,
+        store
+      });
+
+      expect(wrapper.findComponent(Cart).exists()).toBe(false);
+
+      router.push('/Cart');
+      await wrapper.vm.$nextTick();
+
+      expect(wrapper.findComponent(Cart).exists()).toBe(true);
     });
-    console.log(wrapper.findComponent(RouterLinkStub).props().to);
-    //Assert & Assemble
-    expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/cart');
   });
 });

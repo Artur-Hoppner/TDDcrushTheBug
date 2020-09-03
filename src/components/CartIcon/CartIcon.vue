@@ -1,19 +1,17 @@
 <template>
   <div>
-    <!-- <p>{{cartItem}}</p> -->
-    <router-link id="presentedCartItems" to="/cart">testing</router-link>
-    <!-- <p>{{cartItem}}</p> -->
-    <!-- change link to hamburge menu later. This is for controlling that the test works -->
+    <p>{{cartItem}}</p>
+    <router-link id="presentedCartItems" to="/cart">Number of CartItems{{cartItem}}</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  // computed: {
-  //   cartItem() {
-  //     return this.$store.state.cart.length;
-  //   }
-  // }
+  computed: {
+    cartItem() {
+      return this.$store.state.cart.length;
+    }
+  }
 };
 </script>
 
