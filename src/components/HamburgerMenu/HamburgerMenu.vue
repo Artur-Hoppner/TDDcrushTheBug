@@ -1,60 +1,58 @@
-<template>
-  <nav id="hamburgerMenu" v-if="showHamburger">
-    <img class="close" src="@/assets/close.svg" alt="close" @click="changeThisToggle" />
-    <!-- testing router link -->
-    <div>
-      <router-link to="/shopping" class="router-link">Shopping</router-link>
+la<template>
+    <div class="sidebar">
+        <div class="sidebar-backdrop" @click="changeThisToggle" v-if="showHamburger"></div>
+        <transition name="slide">
+            <div v-if="showHamburger"
+            class="sidebar-panel">
+        <slot></slot>
+            </div>
+        </transition>
     </div>
-  </nav>
 </template>
-
 <script>
-import { mapGetters, mapActions } from 'vuex';
-export default {
-  name: 'HamburgerMenu',
-  methods: {
-    ...mapActions('hamburgerIcon', ['changeThisToggle'])
-  },
-  computed: {
-    ...mapGetters('hamburgerIcon', ['showHamburger'])
-  }
-};
+import { mapActions, mapGetters } from 'vuex';
+    export default {
+        name: 'HamburgerMenu',
+        computed: {
+            ...mapGetters('hamburgerIcon', ['showHamburger'])
+        },
+        methods: {
+            ...mapActions('hamburgerIcon', ['changeThisToggle'])
+        }
+    }
 </script>
+<style>
+    .slide-enter-active,
+    .slide-leave-active
+    {
+        transition: transform 0.2s ease;
+    }
 
+    .slide-enter,
+    .slide-leave-to {
+        transform: translateX(100%);
+        transition: all 150ms ease-in 0s
+    }
 
-<style scoped>
-/* Placeholder CSS */
-#hamburgerMenu {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0;
-  background: rgb(36, 8, 8);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 9999;
-  cursor: default;
-}
-.router-link {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 3rem;
-  text-decoration: none;
-  color: white;
-}
-.close {
-  position: fixed;
-  top: 1em;
-  left: 1em;
-  cursor: pointer;
-  background: white;
-  width: 1.5em;
-  padding: 1rem;
-  border-radius: 50px;
-}
+    .sidebar-backdrop {
+        background-color: rgba(0,0,0,.5);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+    .sidebar-panel {
+        overflow-y: auto;
+        background-color: #415D48;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 999;
+        padding: 3rem 20px 2rem 20px;
+        width: 300px;
+    }
 </style>

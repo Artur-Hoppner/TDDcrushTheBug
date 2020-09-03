@@ -9,13 +9,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    allProducts: [
-      {
+    allProducts: [{
         id: '01',
         tag: 'cutezapper',
         title: 'The Hello Kitty Zapper',
-        desc:
-          'Barely functions, use this if you have a love/hate relationship with your bugs.',
+        desc: 'Barely functions, use this if you have a love/hate relationship with your bugs.',
         price: 67
       },
       {
@@ -82,23 +80,7 @@ export default new Vuex.Store({
         price: 98
       }
     ],
-    cart: [
-      {
-        id: '01',
-        tag: 'cutezapper',
-        title: 'The Hello Kitty Zapper',
-        desc:
-          'Barely functions, use this if you have a love/hate relationship with your bugs.',
-        price: 67
-      },
-      {
-        id: '02',
-        tag: 'heavydutyzapper',
-        title: 'Heavy Duty Zapper',
-        desc: 'Zap zap zap!',
-        price: 140
-      }
-    ],
+    cart: [],
     filteredProducts: [],
     productButtonToggle: false,
     showCart: false,
