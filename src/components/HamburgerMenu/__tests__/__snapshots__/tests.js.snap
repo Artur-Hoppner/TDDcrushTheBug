@@ -46,7 +46,7 @@ exports[`User opens menu Test so that everything renders correctly 1`] = `
             ariacurrentvalue="page"
             event="click"
             exactactiveclass="active"
-            tag="p"
+            tag="a"
             to="/cart"
           >
             Cart
