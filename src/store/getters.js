@@ -1,10 +1,13 @@
 const getters = {
-  getProductImg:
-    (state,
-    tag => {
-      //require(`@/assets/${tag}.png`)
-      return true;
-    })
+  getProductButtonToggle: state => {
+    return state.productButtonToggle;
+  },
+  getCartProducts: state => {
+    return state.cart;
+  },
+  filteredByKeyword: state => {
+    return state.filteredProducts;
+  }
 };
 
 export default getters;

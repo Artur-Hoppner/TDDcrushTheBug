@@ -13,7 +13,7 @@ import { mapActions } from 'vuex';
 export default {
   name: 'SearchBar',
   methods: {
-    ...mapActions('searchbar', ['getByThisKeyword', 'displayThisEntireArray'])
+    ...mapActions(['getByThisKeyword', 'displayThisEntireArray'])
   },
   mounted() {
     this.displayThisEntireArray();

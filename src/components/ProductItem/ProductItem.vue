@@ -1,21 +1,45 @@
 <template>
   <section class="product">
-    <aside class="add" @click="addThisToCart(product.id)">
-      <!--TODO: add image to the click add product functionality -->
-      <img />
-    </aside>
     <div>
-      <!-- TODO: :src="require(`@/assets/${product.tag}.png`)" -->
-      <!-- :src="getProductImg(product.tag)" -->
-      <img :alt="product.title" />
+      <img
+        :src="`${publicPath}assets/${product.tag}.png`"
+        :alt="product.title"
+      />
     </div>
     <div>
       <h2 class="producttitle">{{ product.title }}</h2>
       <p>{{ product.desc }}</p>
     </div>
+    <section v-if="getProductButtonToggle">
+      <aside class="increaseQuantity">
+        <h1 @click="increaseThisQuantity(product)">+</h1>
+      </aside>
+      <div>
+        <h2>Quantity: {{ product.quantity }}</h2>
+      </div>
+      <aside class="decreaseQuantity">
+        <h1 @click="decreaseThisQuantity(product)">-</h1>
+      </aside>
+    </section>
     <div>
       <h3>{{ product.price }}Kr</h3>
     </div>
+    <aside
+      v-if="!getProductButtonToggle"
+      class="addProduct"
+      @click="addThisToCart(product)"
+    >
+      <!--TODO: add image to the click add product functionality <img /> -->
+      <h1>ADD</h1>
+    </aside>
+    <aside
+      v-if="getProductButtonToggle"
+      class="removeProduct"
+      @click="removeThisFromCart(product)"
+    >
+      <!--TODO: add image to the click add product functionality <img /> -->
+      <h1>REMOVE</h1>
+    </aside>
   </section>
 </template>
 <script>
@@ -23,16 +47,23 @@ import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'ProductItem',
   data() {
-    return {};
+    return {
+      publicPath: process.env.BASE_URL
+    };
   },
   computed: {
-    ...mapGetters(['getProductImg'])
+    ...mapGetters(['getProductButtonToggle'])
   },
   props: {
     product: Object
   },
   methods: {
-    ...mapActions(['addThisToCart'])
+    ...mapActions([
+      'addThisToCart',
+      'removeThisFromCart',
+      'increaseThisQuantity',
+      'decreaseThisQuantity'
+    ])
   }
 };
 </script>
