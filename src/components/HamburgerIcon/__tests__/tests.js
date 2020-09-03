@@ -27,6 +27,11 @@ describe('User clicks icon/button', () => {
     });
   });
 
+  test('Test so that everything renders correctly', () => {
+    const wrapper = shallowMount(HamburgerIcon, { store, localVue });
+    expect(wrapper.element).toMatchSnapshot();
+  });
+
   test('Icon should show when rendered', async () => {
     const wrapper = shallowMount(HamburgerIcon, {
       router,
