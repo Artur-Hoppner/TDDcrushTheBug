@@ -7,7 +7,7 @@ import Shopping from '../views/Shopping.vue';
 
 Vue.use(VueRouter);
 
-const routes = [
+export const routes = [
   {
     path: '/landing',
     name: 'Landing',
@@ -36,4 +36,4 @@ const router = new VueRouter({
   routes
 });
 
-export default routes;
+export default router;
