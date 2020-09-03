@@ -1,16 +1,17 @@
 <template>
   <div>
-    <p>{{cartItem}}</p>
-    <router-link id="presentedCartItems" to="/cart">Number of CartItems{{cartItem}}</router-link>
+    <router-link id="presentedCartItems" to="/cart">
+      <p>{{cartItem.length}}</p>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    cartItem() {
-      return this.$store.state.cart.length;
-    }
+  data() {
+    return {
+      cartItem: this.$store.state.cart
+    };
   }
 };
 </script>
