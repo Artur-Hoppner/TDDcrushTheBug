@@ -1,4 +1,4 @@
-import { shallowMount, mount, createLocalVue, RouterLinkStub } from '@vue/test-utils';
+import { shallowMount, mount, createLocalVue, RouterLinkStub, createWrapper } from '@vue/test-utils';
 import Vuex from 'vuex';
 import HamburgerMenu from '@/components/HamburgerMenu/HamburgerMenu.vue';
 import hamburgerMenu from '../../../store/HamburgerMenu/index.js'
@@ -6,7 +6,8 @@ import hamburgerIcon from '../../../store/HamburgerIcon/index.js'
 import VueRouter from 'vue-router';
 
 const localVue = createLocalVue();
-localVue.use(Vuex, VueRouter);
+localVue.use(Vuex);
+localVue.use(VueRouter);
 
 describe('User opens menu', () => {
   let modules, store;
@@ -60,7 +61,7 @@ describe('User opens menu', () => {
       localVue
     });
 
-    expect(wrapper.find('#hamburgerMenu').exists()).toBe(true);
+    expect(wrapper.find('.sidebar-backdrop').exists()).toBe(true);
   });
 
   test('Check that hamburger menu does not show when isBurgerActive is false', () => {
@@ -82,7 +83,7 @@ describe('User opens menu', () => {
       localVue
     });
 
-    expect(wrapper.find('#hamburgerMenu').exists()).toBe(false);
+    expect(wrapper.find('.sidebar-backdrop').exists()).toBe(false);
   });
 
   test('Check that close button exists', async () => {
@@ -104,9 +105,9 @@ describe('User opens menu', () => {
       localVue
     });
 
-    const closeButton = wrapper.find('.close');
+    const sideBar = wrapper.find('.sidebar-backdrop');
 
-    expect(closeButton.exists()).toBe(true);
+    expect(sideBar.exists()).toBe(true);
   });
 
   test('Check that menu is closed when close button is clicked', async () => {
@@ -129,14 +130,14 @@ describe('User opens menu', () => {
       localVue
     });
 
-    const closeButton = wrapper.find('.close');
+    const sideBar = wrapper.find('.sidebar-backdrop');
 
-    await closeButton.trigger('click');
+    await sideBar.trigger('click');
 
     expect(hamburgerIcon.actions.changeThisToggle).toHaveBeenCalled();
   });
 
-  test('testing if router-link for "/shopping" exists in component HamburgerMenu', () => {
+  test('testing if router-link for "/landing" exists in component HamburgerMenu', () => {
     const hamburgerIcon = {
       namespaced: true,
       state: { isBurgerActive: true },
@@ -156,6 +157,6 @@ describe('User opens menu', () => {
         RouterLink: RouterLinkStub
       }
     });
-    expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/shopping')
+    expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/landing')
   })
 });

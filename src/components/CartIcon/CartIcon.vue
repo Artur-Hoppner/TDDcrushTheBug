@@ -1,28 +1,19 @@
 <template>
   <div>
-      <section class="cartWrapper">
-      <router-link  to ='/cart'><img src="@/assets/shopping-cart.svg" alt="cart"></router-link> 
-      <section class="lengthWrapper">
-        <span>{{getCartProducts.length}}</span>
-      </section>
-    </section>
+    <router-link  id="presentedCartItems" to="/cart">
+      <img src="@/assets/shopping-cart.svg" alt="">
+    </router-link>
+    <p>{{cartItem.length}}</p>
   </div>
 </template>
 
-<script> 
-import{ mapActions, mapGetters } from 'vuex';
+<script>
 export default {
-  computed: {
-    ...mapGetters(['getCartProducts'])
-  },
-  methods: {
-    ...mapActions(['showThisCart'])
+  data() {
+    return {
+      cartItem: this.$store.state.cart
+    };
   }
-  // computed: {
-  //   cartItem() {
-  //     return this.$store.state.cart.length;
-  //   }
-  // }
 };
 </script>
 

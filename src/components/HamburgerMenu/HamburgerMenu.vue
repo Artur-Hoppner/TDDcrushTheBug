@@ -1,9 +1,15 @@
-la<template>
+<template>
     <div class="sidebar">
         <div class="sidebar-backdrop" @click="changeThisToggle" v-if="showHamburger"></div>
         <transition name="slide">
             <div v-if="showHamburger"
             class="sidebar-panel">
+        <ul class="sidebar-panel-nav"><!-- v-if="this.$route.path !== '/landing'" -->
+        <li @click="changeThisToggle"><router-link to="/landing" exact-active-class="active">Home</router-link></li>
+        <li @click="changeThisToggle"><router-link to="/shopping" exact-active-class="active">Our Shop</router-link></li>
+        <li @click="changeThisToggle"><router-link to="/cart" exact-active-class="active">Cart</router-link></li>
+        <li @click="changeThisToggle"><router-link to="/order" exact-active-class="active">Order</router-link></li>
+        </ul>
         <slot></slot>
             </div>
         </transition>
@@ -55,4 +61,30 @@ import { mapActions, mapGetters } from 'vuex';
         padding: 3rem 20px 2rem 20px;
         width: 300px;
     }
+    ul.sidebar-panel-nav {
+  list-style-type: none;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.sidebar-panel-nav > li > a {
+  
+  text-decoration: none;
+  font-size: 3rem;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5em;
+
+}
+
+ul > li > a {
+  color: #fff;
+}
+.active {
+  color: red;
+}
 </style>

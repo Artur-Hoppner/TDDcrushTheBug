@@ -4,85 +4,54 @@ import {
   RouterLinkStub,
   createLocalVue
 } from '@vue/test-utils';
-import App from "@/App.vue"
 import Vuex from 'vuex';
-import store from '../../../store/index.js';
 import CartIcon from '@/components/CartIcon/CartIcon.vue';
-import Cart from '@/views/Cart.vue';
 import VueRouter from 'vue-router';
-import routes from '@/router/index.js';
-import router from '@/router/index.js';
+import store from '@/store/index.js';
 
 const localVue = createLocalVue();
-localVue.use(VueRouter);
-localVue.use(Vuex);
+localVue.use(VueRouter, Vuex);
 
-/* describe('User can see numbers of selected cart items and on click go to cart', () => {
-  
-  const cartItems = {
-    id: '01',
-    tag: 'bugspray',
-    title: 'Hiroshima Bugspray',
-    desc: 'It will nuke your bugs!',
-    price: '120'
-  }; */
+describe('User can see numbers of selected cart items and on click go to cart', () => {
+  test('test if cartIcon can receive  store.state.cart.length', () => {
+    //Act;
+    const store = new Vuex.Store({
+      state: {
+        cart: [
+          {
+            id: '01',
+            tag: 'bugspray',
+            title: 'Hiroshima Bugspray',
+            desc: 'It will nuke your bugs!',
+            price: '120'
+          }
+        ]
+      }
+    });
 
-  // test('test if link to cartlist works', () => {
-  //   //Act
-  //   const moduleA = {
-  //     state: ()=>({
-  //       cartItems
-  //     }),
-  //     mutations: {
-  //       addCartItem (state, cartItems){
-  //         state.cartItems.push(cartItems)
-  //       }
-  //     }
-  //   };
-  //   const store = new Vuex.Store({
-  //     modules: {
-  //       moduleA
-  //     }
-  //   });
+    const wrapper = shallowMount(CartIcon, {
+      localVue,
+      store
+    });
+    //Assert
+    console.log(wrapper, 'this is the wrapper');
+    const cartNumber = wrapper.find('p').text();
+    //Assemble
+    expect(cartNumber).toBe('1');
+  });
 
-  //   const wrapper = shallowMount(CartIcon, {
-  //     store,
-  //     localVue
-  //   });
-  //   const cartNumber = wrapper.find('#presentedCartItems').text()
-  
-
-  //   expect(cartNumber).toBe('1');
-  //   expect().toBeGreaterThan(0);
-  // });
-
-  // test('test of router-link to /cart exists?', async () => {
-  //   //Act 
-  //   const router = new VueRouter({routes});
-  //   const wrapper = mount(App, { 
-  //     localVue,
-  //     router
-  //   });
-
-  //   router.push("/cart")
-  //   await wrapper.vm.$nextTick()
-
-  //   expect(wrapper.findComponent(CartIcon).exists()).toBe(true)
-  //   console.log(wrapper);
-  //   console.log(router.currentRoute);
-  //   console.log(wrapper.findComponent(CartIcon));
-  // });
-
-  test('testing extra for roouter ink?', () => {
+  test('testing if router link exist in component CartIcon', () => {
     //Act
     const wrapper = mount(CartIcon, {
-      store,
       localVue,
+      store,
       stubs: {
         RouterLink: RouterLinkStub
       }
     });
-    //Assert & Assemble
-    expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/cart');
+    //Assert
+    const routerLink = wrapper.findComponent(RouterLinkStub).props().to;
+    //Assemble
+    expect(routerLink).toBe('/cart');
   });
-
+});
