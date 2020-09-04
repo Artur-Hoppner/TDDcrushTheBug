@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`User enters a searchword into the searchbar Test so that everything renders correctly 1`] = `
-<div
-  id="inputWithIcon"
->
-  <input
-    id="input"
-    placeholder="Search..."
-    type="text"
-  />
-   
-  <button>
-    Reset
-  </button>
-</div>
+<section>
+  <div
+    class="container"
+  >
+    <input
+      id="input"
+      placeholder="Search..."
+      type="text"
+    />
+     
+    <div
+      class="search"
+    />
+  </div>
+</section>
 `;
