@@ -32,14 +32,14 @@ describe('User enters a searchword into the searchbar', () => {
     const wrapper = shallowMount(SearchBar, { store, localVue });
     const input = wrapper.find('input');
     //Act
-    input.setValue('saltgunv3');
+    input.setValue('stan');
     await input.trigger('keyup');
     //Assert
-    //Find object containing tag: saltgunv3 in array
+    //Find object containing tag: stan in array
     expect(store.state.filteredProducts).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          tag: 'saltgunv3' // 4
+          tag: 'stan' // 4
         })
       ])
     );
@@ -50,14 +50,14 @@ describe('User enters a searchword into the searchbar', () => {
     const wrapper = shallowMount(SearchBar, { store, localVue });
     const input = wrapper.find('input');
     //Act
-    input.setValue('SALTGUNV3');
+    input.setValue('stan');
     await input.trigger('keyup');
     //Assert
-    //Find object containing tag: saltgunv3 in array
+    //Find object containing tag: stan in array
     expect(store.state.filteredProducts).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          tag: 'saltgunv3'
+          tag: 'stan'
         })
       ])
     );
