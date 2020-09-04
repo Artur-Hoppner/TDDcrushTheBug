@@ -1,17 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`User loads the page Test so that everything renders correctly 1`] = `
-<nav
-  class="header"
->
+<div>
   <img
-    alt=""
-    class="header-icon"
-    src="@/assets/bug-icon.png"
+    alt="buglogo"
+    src=""
   />
    
-  <carticon-stub />
+  <h1>
+    Crush The Bug
+  </h1>
    
-  <hamburgericon-stub />
-</nav>
+  <nav
+    class="header"
+  >
+    <img
+      alt=""
+      class="header-icon"
+      src="@/assets/bug-icon.png"
+    />
+     
+    <carticon-stub />
+     
+    <hamburgericon-stub />
+  </nav>
+</div>
 `;
