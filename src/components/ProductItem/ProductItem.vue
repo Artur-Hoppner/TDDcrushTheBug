@@ -1,10 +1,7 @@
 <template>
   <section class="product">
     <div>
-      <img
-        :src="`${publicPath}assets/${product.tag}.png`"
-        :alt="product.title"
-      />
+      <img :src="`${publicPath}assets/${product.tag}.png`" :alt="product.title" />
     </div>
     <div>
       <h2 class="producttitle">{{ product.title }}</h2>
@@ -24,19 +21,11 @@
     <div>
       <h3>{{ product.price }}Kr</h3>
     </div>
-    <aside
-      v-if="!getProductButtonToggle"
-      class="addProduct"
-      @click="addThisToCart(product)"
-    >
+    <aside v-if="!getProductButtonToggle" class="addProduct" @click="addThisToCart(product)">
       <!--TODO: add image to the click add product functionality <img /> -->
       <h1>ADD</h1>
     </aside>
-    <aside
-      v-if="getProductButtonToggle"
-      class="removeProduct"
-      @click="removeThisFromCart(product)"
-    >
+    <aside v-if="getProductButtonToggle" class="removeProduct" @click="removeThisFromCart(product)">
       <!--TODO: add image to the click add product functionality <img /> -->
       <h1>REMOVE</h1>
     </aside>
@@ -67,4 +56,8 @@ export default {
   }
 };
 </script>
-<style></style>
+<style>
+img {
+  height: 10vw;
+}
+</style>
