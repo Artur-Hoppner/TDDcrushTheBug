@@ -4,10 +4,14 @@
       Thank you for your order! Your order number is:
       {{ getOrderInfo.orderNumber }}
     </h1>
-    <h2 class="orderCost">Total price:{{ getOrderInfo.orderCost }}</h2>
     <h3 class="orderList" :key="item.id" v-for="item in getOrderItems">
-      Items in order: {{ item.title }}{{ item.price }}
+      Product: {{ item.title }}
+      <br />
+      Quantity: {{ item.quantity }}
+      <br />
+      Cost: {{ item.price }}:-
     </h3>
+    <h1 class="orderCost">Total price: {{ getOrderInfo.orderCost }}:-</h1>
     <h2 class="deliveryETA">
       Expected delivery in: {{ getOrderInfo.deliveryETA }} days
     </h2>
