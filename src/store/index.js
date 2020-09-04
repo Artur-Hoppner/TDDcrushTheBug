@@ -6,6 +6,9 @@ import getters from './getters.js';
 import hamburgerIcon from './HamburgerIcon/index.js';
 
 Vue.use(Vuex);
+//*********************/
+//*** GLOBAL STATE ***/
+//*******************/
 
 export default new Vuex.Store({
   state: {

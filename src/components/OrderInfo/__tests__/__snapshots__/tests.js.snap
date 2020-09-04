@@ -12,13 +12,13 @@ exports[`User is sent to view Order after checkout, expecting orderinfo to be di
     
   
   </h1>
-   
-  <h2
+    
+  <h1
     class="orderCost"
   >
-    Total price:
-  </h2>
-    
+    Total price: :-
+  </h1>
+   
   <h2
     class="deliveryETA"
   >
