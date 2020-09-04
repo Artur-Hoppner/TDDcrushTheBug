@@ -4,6 +4,12 @@ exports[`User loads the page Test so that everything renders correctly 1`] = `
 <nav
   class="header"
 >
+  <img
+    alt=""
+    class="header-icon"
+    src="@/assets/bug-icon.png"
+  />
+   
   <carticon-stub />
    
   <hamburgericon-stub />
