@@ -1,7 +1,11 @@
 <template>
   <section class="product">
     <div>
-      <img :src="`${publicPath}assets/${product.tag}.png`" :alt="product.title" />
+      <img
+        class="product-pictures"
+        :src="`${publicPath}assets/${product.tag}.png`"
+        :alt="product.title"
+      />
     </div>
     <div>
       <h2 class="producttitle">{{ product.title }}</h2>
@@ -57,7 +61,7 @@ export default {
 };
 </script>
 <style>
-img {
+.product-pictures {
   height: 10vw;
 }
 </style>
