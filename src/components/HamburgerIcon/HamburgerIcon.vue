@@ -1,12 +1,6 @@
 <template>
   <div id="hamburgerIcon">
     <HamburgerMenu>
-      <ul class="sidebar-panel-nav"><!-- v-if="this.$route.path !== '/landing'" -->
-      <li @click="changeThisToggle"><router-link to="/landing" exact-active-class="active">Home</router-link></li>
-      <li @click="changeThisToggle"><router-link to="/shopping" exact-active-class="active">Our Shop</router-link></li>
-      <li @click="changeThisToggle"><router-link to="/cart" exact-active-class="active">Cart</router-link></li>
-      <li @click="changeThisToggle"><router-link to="/order" exact-active-class="active">Order</router-link></li>
-      </ul>
     </HamburgerMenu>
     <nav class="burger-button">
       <img

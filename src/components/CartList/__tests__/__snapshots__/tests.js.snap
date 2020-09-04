@@ -3,5 +3,16 @@
 exports[`User loads the page Test so that everything renders correctly 1`] = `
 <div
   class="cartProducts"
-/>
+>
+   
+  <section
+    class="checkout"
+  >
+    <li>
+      <a>
+        Create order!
+      </a>
+    </li>
+  </section>
+</div>
 `;
