@@ -1,6 +1,5 @@
 <template>
   <div>
-    <router-link to="/cart">Go to cart!</router-link>
     <SearchBar />
     <ProductList />
   </div>

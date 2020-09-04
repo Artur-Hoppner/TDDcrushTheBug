@@ -3,7 +3,9 @@
     <router-link id="presentedCartItems" to="/cart">
       <img src="@/assets/shopping-cart.svg" alt />
     </router-link>
+    <div>
     <p>{{cartItem.length}}</p>
+    </div>
   </div>
 </template>
 
