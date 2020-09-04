@@ -25,7 +25,7 @@ export default new Vuex.Store({
         id: '02',
         tag: 'bm3-mousetrap',
         title: 'Bm3 Moustrap',
-        desc: 'The moustrap four your middle sizes ratmonsters.',
+        desc: 'The moustrap for your middle sizes ratmonsters.',
         price: 75
       },
       {
@@ -33,7 +33,7 @@ export default new Vuex.Store({
         tag: 'bw-terminator',
         title: 'The BW Terminator',
         desc:
-          'This bad boy will not only take care of your antplroblem in your garden, it will cleanse the whole neighborhood!',
+          'This bad boy will not only take care of your antproblem in your garden, it will cleanse the whole neighborhood!',
         price: 34500
       },
       {
@@ -81,7 +81,7 @@ export default new Vuex.Store({
       {
         id: '10',
         tag: 'plastic-container',
-        title: 'Plastic-Container',
+        title: 'Plastic Container',
         desc: 'A big container for your rat poison',
         price: 179
       },
