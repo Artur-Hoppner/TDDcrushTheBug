@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Landing Test if /Landing is rendered 1`] = `
+<div>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae harum illum nam expedita maxime dignissimos officia. Doloremque ut nobis veritatis illo architecto! Sunt veniam amet sapiente nesciunt doloribus eaque minima!
+  </p>
+</div>
+`;
