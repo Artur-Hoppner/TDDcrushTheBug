@@ -1,7 +1,7 @@
-import Landing from '../views/Landing.vue';
-import Cart from '../views/Cart.vue';
-import Order from '../views/Order.vue';
-import Shopping from '../views/Shopping.vue';
+import Landing from '../views/Landing/Landing.vue';
+import Cart from '../views/Cart/Cart.vue';
+import Order from '../views/Order/Order.vue';
+import Shopping from '../views/Shopping/Shopping.vue';
 
 const routes = [
   {
