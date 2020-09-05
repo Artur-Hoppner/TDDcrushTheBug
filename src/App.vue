@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <Header class="header" />
-    <router-link to="Shopping">Shopping</router-link>
-    <router-link to="Landing">Landing</router-link>
-    <router-link to="Cart">Cart</router-link>
-    <router-link to="Order">Order</router-link>
+
     <router-view />
     <Footer class="footer" />
   </div>
@@ -26,7 +23,6 @@ html {
   min-height: 100%;
 }
 body #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
