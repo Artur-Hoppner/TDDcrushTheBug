@@ -4,17 +4,16 @@
       <img src="@/assets/shopping-cart.svg" alt />
     </router-link>
     <div>
-    <p>{{cartItem.length}}</p>
+      <p>{{cartIconItems}}</p>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
-  data() {
-    return {
-      cartItem: this.$store.state.cart
-    };
+  computed: {
+    ...mapGetters(['cartIconItems'])
   }
 };
 </script>
