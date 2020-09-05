@@ -35,7 +35,7 @@ body #app {
 
 .footer {
   background: #a5d1bc;
-  position: absolute;
+  // position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
