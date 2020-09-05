@@ -24,7 +24,7 @@ export default new Vuex.Store({
       {
         id: '02',
         tag: 'bm3-mousetrap',
-        title: 'Bm3 Moustrap',
+        title: 'Bm3 Mousetrap',
         desc: 'The mousetrap for your middle sized rat-monsters.',
         price: 75
       },
@@ -39,7 +39,7 @@ export default new Vuex.Store({
       {
         id: '04',
         tag: 'c5d-mousetrap',
-        title: 'c5d Moustrap',
+        title: 'c5d Mousetrap',
         desc: 'Buh-Bye, Mickey Mouse!',
         price: 39
       },
