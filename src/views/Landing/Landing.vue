@@ -1,15 +1,20 @@
 <template>
   <div>
-    <h3>Repell, Remove or Blast your bugs. <br>
+    <h3>
+      Repell, Remove or Blast your bugs. <br />
       We have the solution for all your pest problems
     </h3>
-    <img class="ant1" src="" alt="ant 1">
+    <img class="ant1" src="@/assets/backgroundImages/ant-1.png" alt="ant 1" />
     <h3>
-      We are a small family business that have <br>
+      We are a small family business that have <br />
       a long tradition hating insects!
     </h3>
-    <img class="exterminator" src="" alt="exterminator">
-    <img class="ant2" src="" alt="ant 2">
+    <img
+      class="exterminator"
+      src="@/assets/backgroundImages/exterminator-1.png"
+      alt="exterminator"
+    />
+    <img class="ant2" src="@/assets/backgroundImages/ant-2.png" alt="ant 2" />
   </div>
 </template>
 

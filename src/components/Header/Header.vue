@@ -1,6 +1,5 @@
 <template>
   <div>
-    <img src alt="buglogo" />
     <h1>Crush The Bug</h1>
     <nav class="header">
       <img class="header-icon" src="@/assets/bug-icon.png" alt />
