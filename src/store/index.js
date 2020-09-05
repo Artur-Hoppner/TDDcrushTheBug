@@ -25,7 +25,7 @@ export default new Vuex.Store({
         id: '02',
         tag: 'bm3-mousetrap',
         title: 'Bm3 Moustrap',
-        desc: 'The moustrap for your middle sizes ratmonsters.',
+        desc: 'The mousetrap for your middle sized rat-monsters.',
         price: 75
       },
       {
@@ -33,14 +33,14 @@ export default new Vuex.Store({
         tag: 'bw-terminator',
         title: 'The BW Terminator',
         desc:
-          'This bad boy will not only take care of your antproblem in your garden, it will cleanse the whole neighborhood!',
+          'This bad boy will not only take care of your ant-problem in your garden, it will cleanse the whole neighborhood!',
         price: 34500
       },
       {
         id: '04',
         tag: 'c5d-mousetrap',
         title: 'c5d Moustrap',
-        desc: 'Buh-Bye, Mickey Mouse!.',
+        desc: 'Buh-Bye, Mickey Mouse!',
         price: 39
       },
       {
@@ -54,7 +54,7 @@ export default new Vuex.Store({
         id: '06',
         tag: 'fly-stunner',
         title: 'Fly Stunner',
-        desc: 'This will not stun the fly',
+        desc: 'This will not stun the fly.',
         price: 99
       },
       {
@@ -75,7 +75,7 @@ export default new Vuex.Store({
         id: '09',
         tag: 'nepenthes',
         title: 'Nepenthes',
-        desc: 'Natural enemy of smal flies',
+        desc: 'Natural enemy of small flies',
         price: 349
       },
       {
@@ -87,7 +87,7 @@ export default new Vuex.Store({
       },
       {
         id: '11',
-        tag: 'ortable-bugspray',
+        tag: 'portable-bugspray',
         title: 'Portable Bugsprayer',
         desc: 'Carry twice the amount of pest "repellent" ;)',
         price: 500
@@ -103,7 +103,7 @@ export default new Vuex.Store({
         id: '13',
         tag: 'ratpoison-dust',
         title: 'Ratpoison powder',
-        desc: 'doesnt expire, the rat does thou.',
+        desc: 'Does not expire, the rat does though.',
         price: 399
       },
       {
@@ -117,7 +117,7 @@ export default new Vuex.Store({
         id: '15',
         tag: 'sg20-anti-hive',
         title: 'Anti Ant Hive',
-        desc: 'Plugg and play',
+        desc: 'Plug and play',
         price: 2499
       },
       {
@@ -132,7 +132,7 @@ export default new Vuex.Store({
         tag: 'stan',
         title: 'Stan',
         desc:
-          'This is Stan, your friendly raccoon. He loves snails, big small and slimy.',
+          'This is Stan, your friendly raccoon. He loves snails, big, small and slimy.',
         price: 9000
       },
       {
@@ -153,7 +153,7 @@ export default new Vuex.Store({
         id: '20',
         tag: 'Venus-flytrap',
         title: 'Venus Flytrap',
-        desc: 'A beautifull plant that eats banana flies',
+        desc: 'A beautiful plant that eats banana flies',
         price: 220
       }
     ],

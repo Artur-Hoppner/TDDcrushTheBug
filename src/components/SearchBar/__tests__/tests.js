@@ -50,7 +50,7 @@ describe('User enters a searchword into the searchbar', () => {
     const wrapper = shallowMount(SearchBar, { store, localVue });
     const input = wrapper.find('input');
     //Act
-    input.setValue('stan');
+    input.setValue('STAN');
     await input.trigger('keyup');
     //Assert
     //Find object containing tag: stan in array
