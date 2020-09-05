@@ -17,6 +17,13 @@ const getters = {
   },
   getOrderItems: state => {
     return state.orderInfo.orderList;
+  },
+  cartIconItems: state => {
+    let total = 0;
+    state.cart.forEach(cart => {
+      total += cart.quantity;
+    });
+    return total;
   }
 };
 
