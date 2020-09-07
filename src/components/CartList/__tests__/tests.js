@@ -65,7 +65,7 @@ describe('User loads the page', () => {
       }
     });
 
-    const routerLink = wrapper.find('li');
+    const routerLink = wrapper.find('button');
 
     await routerLink.trigger('click');
 
