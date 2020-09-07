@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <img src alt="buglogo" />
+  <div class="wrapper">
+<nav class="header">
     <h1>Crush The Bug</h1>
-    <nav class="header">
       <img class="header-icon" src="@/assets/bug-icon.png" alt />
-      <CartIcon />
       <HamburgerIcon />
+      <CartIcon />
     </nav>
   </div>
 </template>
@@ -22,10 +21,16 @@ export default {
 </script>
 
 <style>
+.header{
+  display: flex;
+  justify-content: space-around;
+}
 .header {
   background: #a5d1bc;
 }
 .header-icon {
-  width: 5%;
+  height: 50px;
+  width: 50px;
 }
+h1{}
 </style>
