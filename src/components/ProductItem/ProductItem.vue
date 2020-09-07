@@ -16,7 +16,10 @@
         <h2>Quantity: {{ product.quantity }}</h2>
       </div>
       <div class="text-center">
-        <button class="icon-btn add-btn green" @click="increaseThisQuantity(product)">
+        <button
+          class="icon-btn add-btn green"
+          @click="increaseThisQuantity(product)"
+        >
           <div class="add-icon"></div>
           <div class="btn-txt">Add</div>
         </button>
@@ -28,7 +31,11 @@
     <div>
       <h3>{{ product.price }}Kr</h3>
     </div>
-    <aside v-if="!getProductButtonToggle" class="addProduct" @click="addThisToCart(product)">
+    <aside
+      v-if="!getProductButtonToggle"
+      class="addProduct"
+      @click="addThisToCart(product)"
+    >
       <img id="addToCart" src="@/assets/buy.png" alt="add to cart" />
     </aside>
     <aside
@@ -36,7 +43,11 @@
       class="removeProduct"
       @click="removeThisFromCart(product.id)"
     >
-      <img id="removeFromCart" src="@/assets/trash.png" alt="remove from cart" />
+      <img
+        id="removeFromCart"
+        src="@/assets/trash.png"
+        alt="remove from cart"
+      />
     </aside>
   </section>
 </template>
@@ -66,11 +77,15 @@ export default {
 };
 </script>
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
 
 h2,
 h3 {
   font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
 }
 
 #removeFromCart,

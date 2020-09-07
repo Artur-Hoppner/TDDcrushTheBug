@@ -1,7 +1,12 @@
 <template>
   <div class="wrapper">
     <nav class="header">
-      <img id="icon" class="header-icon" src="@/assets/bug-icon.png" @click="goTo('/landing')" />
+      <img
+        id="icon"
+        class="header-icon"
+        src="@/assets/bug-icon.png"
+        @click="goTo('/landing')"
+      />
       <h1 id="text">Crush The Bug</h1>
       <section class="icons">
         <CartIcon />
@@ -21,18 +26,17 @@ export default {
   },
   methods: {
     goTo(path) {
-      this.$router
-        .push(path)
-        .then(this.closeMenu())
-        .catch(err => {
-          console.log(err);
-        });
+      this.$router.push(path).catch(err => {
+        console.log(err);
+      });
     }
   }
 };
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
+
 @media (max-width: 600px) {
   .wrapper .header {
     display: flex;
@@ -75,6 +79,7 @@ export default {
   #text {
     justify-content: center;
     font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
   }
   .icons {
     display: flex;
