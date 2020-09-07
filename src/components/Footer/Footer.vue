@@ -11,12 +11,13 @@ export default {};
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
 body {
   position: relative;
 }
 
 footer {
+  font-family: 'Raleway', sans-serif;
   background: #a5d1bc;
   border-width: 1px;
   border-style: solid;
