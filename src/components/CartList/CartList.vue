@@ -6,9 +6,15 @@
       v-bind:product="product"
     />
     <section class="checkout">
-      <li @click="checkoutCreateThisOrder">
-        <router-link to="/order">Create order!</router-link>
-      </li>
+      <div>
+        <router-link
+          to="/order"
+          class="checkoutButton"
+          @click.native="checkoutCreateThisOrder"
+          tag="button"
+          ><span>Purchase items</span></router-link
+        >
+      </div>
     </section>
   </div>
 </template>
@@ -32,4 +38,66 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.checkoutButton {
+  font-family: 'Montserrat', sans-serif;
+  background: #2193b0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #6dd5ed,
+    #2193b0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #6dd5ed,
+    #2193b0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #ffffff;
+  margin: 50px;
+  cursor: pointer;
+  font-size: 2em;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 40px;
+  width: auto;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: '⇨';
+    // content: '👍';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    position: absolute;
+    z-index: 1;
+    left: 85%;
+    top: 27%;
+    right: 5%;
+    bottom: 0;
+    opacity: 0;
+  }
+  &:hover {
+    background: #2193b0; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to left,
+      #6dd5ed,
+      #2193b0
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to left,
+      #6dd5ed,
+      #2193b0
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: all 0.5s;
+    border-radius: 40px;
+    box-shadow: 0px 6px 15px #07070761;
+    padding: 1.5rem 3.5rem 1.5rem 1.5rem;
+    &::after {
+      opacity: 1;
+      transition: all 0.5s;
+    }
+  }
+}
+</style>

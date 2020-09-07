@@ -52,13 +52,16 @@ const mutations = {
       state.cart.splice(index, 1);
     }
   },
+  //Create order object based on state.cart
   checkoutCreateOrder(state) {
+    //Randomize ordernumber and calculate total cost
     let newOrderNumber = Math.floor(Math.random() * 100000 + 1);
     let totalCost = 0;
     for (let i = 0; i < state.cart.length; i++) {
       totalCost += state.cart[i].price;
       console.log(totalCost);
     }
+    //Create Order object
     state.orderInfo = {
       orderNumber: newOrderNumber,
       orderCost: totalCost,
