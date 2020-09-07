@@ -3,10 +3,9 @@
   <div class="boom">
     <h1>Welcome to our store!</h1>
     <h2>scroll down to see contents</h2>
-    <section id="section06">
-    <a href="#funka"><img id="down" src="@/assets/arrow-down.svg" alt=""></a>
-    <span>Scroll</span>
-    </section>
+<section id="section06">
+  <a href="#funka"><span></span>Scroll</a>
+</section>
     </div>
       <div class="boom2" v-scrollanimation>
         <SearchBar id="funka"/>
@@ -39,11 +38,7 @@ html{
   flex-direction: column;
   text-align: center;
 }
-#down{
-  margin-top: 10rem;
-  height: 5rem;
-  width: 5rem;
-}
+
 .before-enter{
   opacity: 0;
   transform: translateY(50vh);
@@ -56,17 +51,32 @@ html{
 #funka{
   padding-bottom: 5rem;
 }
+#section06 {
+  position: relative;
+
+}
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+}
 
 /* ANIMATION */
+#section06 a {
+  padding-top: 10rem;
+}
 #section06 a span {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 24px;
-  height: 24px;
+  width: 2rem;
+  height: 2rem;
   margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
   -webkit-transform: rotateZ(-45deg);
   transform: rotateZ(-45deg);
   -webkit-animation: sdb06 1.5s infinite;
@@ -99,5 +109,4 @@ html{
     opacity: 0;
   }
 }
-
 </style>
