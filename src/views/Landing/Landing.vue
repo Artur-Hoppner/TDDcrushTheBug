@@ -12,9 +12,9 @@
             class="link-to-shop"
             id="link-to-shop"
             href
-            @click="goTo('/')"
-          >Check out our product</a>
-          , and become a professianal exterminatori yourself
+            @click="goTo('/shopping')"
+            >Check out our products</a
+          >, and become a professional exterminator yourself
           <br />
           <br />We are a small family business that have a long tradition of
           hating insects!
@@ -52,7 +52,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-content: center;
-
   .introduction-container {
     margin: 5px 0 0 20px;
     display: flex;
@@ -70,7 +69,6 @@ export default {
         font-family: 'Raleway', sans-serif;
         font-size: 20px;
         line-height: 1.6;
-
         .link-to-shop {
           text-decoration: none;
           color: #a5d1bc;

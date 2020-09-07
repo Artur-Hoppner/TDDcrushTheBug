@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 <div>
   <div class="boom">
     <h1>Welcome to our store!</h1>
@@ -6,14 +7,22 @@
 <section id="section06">
   <a href="#funka"><span id="line"></span>Scroll</a>
 </section>
+=======
+  <div>
+    <div class="boom">
+      <h1>Welcome to our store!</h1>
+      <h2>scroll down to see contents</h2>
+      <section id="section06">
+        <a href="#funka"> <span></span>Scroll </a>
+      </section>
+>>>>>>> 5c43173eb064f1f1d73a67d2dd39b595412a3cb8
     </div>
-      <div class="boom2" v-scrollanimation>
-        <SearchBar id="funka"/>
-        <ProductList />
-      </div>
+    <div class="boom2" v-scrollanimation>
+      <SearchBar id="funka" />
+      <ProductList />
     </div>
+  </div>
 </template>
-
 <script>
 import SearchBar from '@/components/SearchBar/SearchBar.vue';
 import ProductList from '@/components/ProductList/ProductList.vue';
@@ -25,14 +34,30 @@ export default {
   }
 };
 </script>
+<<<<<<< HEAD
 <style lang="scss">
 
 html{
+=======
+<style>
+html {
+>>>>>>> 5c43173eb064f1f1d73a67d2dd39b595412a3cb8
   scroll-behavior: smooth;
 }
-.boom{
+.boom {
   display: flex;
-  background-color: goldenrod;
+  background: #ffe259; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffa751,
+    #ffe259
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffa751,
+    #ffe259
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   height: 100vh;
   justify-content: center;
   align-items: center;
@@ -50,20 +75,21 @@ html{
   }
 }
 
-.before-enter{
+.before-enter {
   opacity: 0;
   transform: translateY(50vh);
   transition: all 1s ease-out;
 }
-.enter{
+.enter {
   opacity: 1;
   transform: translateY(0);
 }
-#funka{
+#funka {
   padding-bottom: 5rem;
 }
 #section06 {
   position: relative;
+<<<<<<< HEAD
 padding-top: 70vh;
 display: flex;
 justify-content: center;
@@ -73,14 +99,26 @@ flex-direction: column;
 #line{
   margin-top: 60vh;
   left: 1rem;
+=======
+>>>>>>> 5c43173eb064f1f1d73a67d2dd39b595412a3cb8
 }
 section::after {
   position: absolute;
   bottom: 0;
   left: 0;
   content: '';
-  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
-  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
 }
 
 /* ANIMATION */

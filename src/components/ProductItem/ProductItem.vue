@@ -112,7 +112,7 @@ p {
 
 .product {
   width: 80%;
-  margin:0 auto;
+  margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
   display: flex;
@@ -120,7 +120,7 @@ p {
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  border:4px solid #a5d1bc ;
+  border: 4px solid #a5d1bc;
   border-radius: 10px;
 }
 
