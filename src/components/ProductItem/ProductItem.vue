@@ -1,6 +1,6 @@
 <template>
   <section class="product">
-    <div>
+    <div class="product-pictures-container">
       <img
         class="product-pictures"
         :src="`${publicPath}assets/${product.tag}.png`"
@@ -16,7 +16,10 @@
         <h2>Quantity: {{ product.quantity }}</h2>
       </div>
       <div class="text-center">
-        <button class="icon-btn add-btn green" @click="increaseThisQuantity(product)">
+        <button
+          class="icon-btn add-btn green"
+          @click="increaseThisQuantity(product)"
+        >
           <div class="add-icon"></div>
           <div class="btn-txt">Add</div>
         </button>
@@ -28,7 +31,11 @@
     <div>
       <h3>{{ product.price }}Kr</h3>
     </div>
-    <aside v-if="!getProductButtonToggle" class="addProduct" @click="addThisToCart(product)">
+    <aside
+      v-if="!getProductButtonToggle"
+      class="addProduct"
+      @click="addThisToCart(product)"
+    >
       <img id="addToCart" src="@/assets/buy.png" alt="add to cart" />
     </aside>
     <aside
@@ -36,7 +43,11 @@
       class="removeProduct"
       @click="removeThisFromCart(product.id)"
     >
-      <img id="removeFromCart" src="@/assets/trash.png" alt="remove from cart" />
+      <img
+        id="removeFromCart"
+        src="@/assets/trash.png"
+        alt="remove from cart"
+      />
     </aside>
   </section>
 </template>
@@ -66,11 +77,17 @@ export default {
 };
 </script>
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
 
 h2,
 h3 {
   font-family: 'Montserrat', sans-serif;
+  margin: 8px;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  margin: 8px;
 }
 
 #removeFromCart,
@@ -78,6 +95,7 @@ h3 {
   width: 3vw;
   height: 3vw;
   transition: all 0.2s ease-in-out;
+  margin: 10px;
 }
 
 #removeFromCart:hover,
@@ -94,8 +112,8 @@ h3 {
 .product {
   width: 40%;
   margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -105,7 +123,7 @@ h3 {
 
 .text-center {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .icon-btn {
@@ -201,6 +219,9 @@ h3 {
 .product-pictures {
   height: 10vw;
   margin-top: 20px;
-  margin-bottom: -3px;
+}
+
+.product-pictures-container {
+  margin: 0;
 }
 </style>

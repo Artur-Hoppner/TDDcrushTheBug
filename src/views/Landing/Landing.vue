@@ -5,17 +5,20 @@
       <div class="paragraph-container">
         <p class="paragraph-introduction">
           Repell, Remove or Blast your bugs!
-          <br />We have the solution for all your pest problems.
-          With our product you will be able to get the same result as a professional exterminator.
+          <br />We have the solution for all your pest problems. With our
+          product you will be able to get the same result as a professional
+          exterminator.
           <a
             class="link-to-shop"
             id="link-to-shop"
             href
             @click="goTo('/landing')"
-          >Check out our product</a>
+            >Check out our product</a
+          >
           , and become a professianal exterminatori yourself
           <br />
-          <br />We are a small family business that have a long tradition hating insects!
+          <br />We are a small family business that have a long tradition hating
+          insects!
         </p>
       </div>
     </div>
@@ -36,12 +39,9 @@ export default {
   name: 'Landing',
   methods: {
     goTo(path) {
-      this.$router
-        .push(path)
-        .then(this.closeMenu())
-        .catch(err => {
-          console.log(err);
-        });
+      this.$router.push(path).catch(err => {
+        console.log(err);
+      });
     }
   }
 };
