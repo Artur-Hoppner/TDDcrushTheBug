@@ -6,6 +6,10 @@ exports[`Test footer rendering and elements check that component is rendered 1`]
     <p>
       Copyright ⓒ 2020
     </p>
+     
+    <p>
+      Heisenberg enterprise
+    </p>
   </footer>
 </div>
 `;

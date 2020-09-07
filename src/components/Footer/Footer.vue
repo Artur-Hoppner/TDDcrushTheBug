@@ -2,6 +2,7 @@
   <div>
     <footer>
       <p>Copyright ⓒ {{ new Date().getFullYear() }}</p>
+      <p>Heisenberg enterprise</p>
     </footer>
   </div>
 </template>
@@ -12,9 +13,6 @@ export default {};
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
-// body {
-//   position: relative;
-// }
 
 footer {
   font-family: 'Raleway', sans-serif;

@@ -32,6 +32,7 @@ body #app {
   color: #2c3e50;
   display: grid;
   grid-template-rows: 20vh auto 10vh;
+  position: relative;
   .header {
     grid-row: 1;
     grid-row-end: 2;
