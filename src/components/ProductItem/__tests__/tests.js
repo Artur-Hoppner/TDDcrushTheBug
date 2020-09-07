@@ -40,7 +40,7 @@ describe('User navigates to this page, component renders', () => {
       }
     });
     //Act
-    const h2 = wrapper.find('.producttitle');
+    const h2 = wrapper.find('.product-title');
     const p = wrapper.find('p');
     const price = wrapper.find('h3');
 

@@ -14,7 +14,7 @@ exports[`User navigates to this page, component renders Test so that everything 
    
   <div>
     <h2
-      class="producttitle"
+      class="product-title"
     >
       Regular Bugspray
     </h2>

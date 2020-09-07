@@ -8,8 +8,8 @@
       />
     </div>
     <div>
-      <h2 class="producttitle">{{ product.title }}</h2>
-      <p id="desc">{{ product.desc }}</p>
+      <h2 class="product-title">{{ product.title }}</h2>
+      <p>{{ product.desc }}</p>
     </div>
     <section v-if="getProductButtonToggle">
       <div>
