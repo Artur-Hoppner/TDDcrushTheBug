@@ -5,7 +5,7 @@
         id="icon"
         class="header-icon"
         src="@/assets/bug-icon.png"
-        @click="goTo('/landing')"
+        @click="goTo('/')"
       />
       <h1 id="text">Crush The Bug</h1>
       <section class="icons">
