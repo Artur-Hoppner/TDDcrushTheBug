@@ -54,20 +54,23 @@ const mutations = {
   },
   //Create order object based on state.cart
   checkoutCreateOrder(state) {
-    //Randomize ordernumber and calculate total cost
-    let newOrderNumber = Math.floor(Math.random() * 100000 + 1);
-    let totalCost = 0;
-    for (let i = 0; i < state.cart.length; i++) {
-      totalCost += state.cart[i].price;
-      console.log(totalCost);
+    if (state.cart != '') {
+      //Randomize ordernumber and calculate total cost
+      let newOrderNumber = Math.floor(Math.random() * 100000 + 1);
+      let totalCost = 0;
+      for (let i = 0; i < state.cart.length; i++) {
+        totalCost += state.cart[i].price;
+      }
+      //Create Order object
+      state.orderInfo = {
+        orderNumber: newOrderNumber,
+        orderCost: totalCost,
+        deliveryETA: '3',
+        orderList: state.cart
+      };
+    } else {
+      return false;
     }
-    //Create Order object
-    state.orderInfo = {
-      orderNumber: newOrderNumber,
-      orderCost: totalCost,
-      deliveryETA: '3',
-      orderList: state.cart
-    };
   },
   //*************************************************/
   //*** FILTEREDPRODUCTS ARRAY RELATED MUTATIONS ***/

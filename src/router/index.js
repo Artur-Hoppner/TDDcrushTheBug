@@ -8,29 +8,6 @@ import routes from './routes.js';
 
 Vue.use(VueRouter);
 
-// export const routes = [
-//   {
-//     path: '/landing',
-//     name: 'Landing',
-//     component: Landing
-//   },
-//   {
-//     path: '/cart',
-//     name: 'Cart',
-//     component: Cart
-//   },
-//   {
-//     path: '/order',
-//     name: 'Order',
-//     component: Order
-//   },
-//   {
-//     path: '/shopping',
-//     name: 'Shopping',
-//     component: Shopping
-//   }
-// ];
-
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,

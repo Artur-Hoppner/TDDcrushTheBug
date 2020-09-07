@@ -21,12 +21,10 @@ const routes = [
     component: Order,
     beforeEnter(to, from, next) {
       // check if vuex store orderInfo is empty. Cant go to order page without checking out//
-      if (store.state.orderInfo !== '') {
+      if (store.state.orderInfo != '') {
         next();
       } else {
-        next({
-          name: 'Shopping' // back to safety route //
-        });
+        next({ name: 'Cart' });
       }
     }
   },
