@@ -20,28 +20,28 @@ exports[`Test Landing Test if /Landing is rendered 1`] = `
         class="paragraph-introduction"
       >
         
-        Repell, Remove or Blast your bugs!
+        Repel, Remove or Blast your bugs!
         
         <br />
-        We have the solution for all your pest problems. With our
-        product you will be able to get the same result as a professional
-        exterminator.
+        We have the solution for all of your pest problems. With our
+        products you will be able to get the same results as if you hired a
+        professional exterminator.
         
         <a
           class="link-to-shop"
           href=""
           id="link-to-shop"
         >
-          Check out our product
+          Check out our products
         </a>
         
-        , and become a professianal exterminatori yourself
+        , and become a professianal exterminator yourself!
         
         <br />
          
         <br />
-        We are a small family business that have a long tradition hating
-        insects!
+        We are a small family business that have a long tradition of
+        hating insects!
       
       </p>
     </div>

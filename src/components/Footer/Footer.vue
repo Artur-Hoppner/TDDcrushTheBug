@@ -18,9 +18,6 @@ body {
 
 footer {
   background: #a5d1bc;
-  border-width: 1px;
-  border-style: solid;
-  border-color: grey;
   padding: 1%;
   position: absolute;
   left: 0;
