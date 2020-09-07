@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Header class="header" />
-
     <router-view class="main" />
     <Footer class="footer" />
   </div>
@@ -48,4 +47,3 @@ body #app {
   }
 }
 </style>
-
