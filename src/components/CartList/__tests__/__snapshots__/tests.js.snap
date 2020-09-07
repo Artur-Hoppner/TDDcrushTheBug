@@ -8,11 +8,15 @@ exports[`User loads the page Test so that everything renders correctly 1`] = `
   <section
     class="checkout"
   >
-    <li>
-      <a>
-        Create order!
-      </a>
-    </li>
+    <div>
+      <button
+        class="checkoutButton"
+      >
+        <span>
+          Purchase items
+        </span>
+      </button>
+    </div>
   </section>
 </div>
 `;
