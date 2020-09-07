@@ -1,16 +1,23 @@
 <template>
   <div class="landing-container">
-    <!-- <img class="ant1" src="@/assets/backgroundImages/ant-3.png" alt="ant 1" /> -->
     <div class="introduction-container">
       <img class="garden-image" src="@/assets/garden.jpg" alt="ant 1" />
-      <p class="p-introduction">
-        Repell, Remove or Blast your bugs.
-        <br />We have the solution for all your pest problems.
-        With our product you will be able to get the same result as a professional exterminator.
-        <router-link class="link-to-shop" to="/cart">Check out our product</router-link>, and become a professianal exterminatori yourself
-        <br />
-        <br />We are a small family business that have a long tradition hating insects!
-      </p>
+      <div class="paragraph-container">
+        <p class="paragraph-introduction">
+          Repell, Remove or Blast your bugs!
+          <br />We have the solution for all your pest problems.
+          With our product you will be able to get the same result as a professional exterminator.
+          <a
+            class="link-to-shop"
+            id="link-to-shop"
+            href
+            @click="goTo('/landing')"
+          >Check out our product</a>
+          , and become a professianal exterminatori yourself
+          <br />
+          <br />We are a small family business that have a long tradition hating insects!
+        </p>
+      </div>
     </div>
 
     <div class="exterminator-container">
@@ -26,7 +33,17 @@
 
 <script>
 export default {
-  name: 'Landing'
+  name: 'Landing',
+  methods: {
+    goTo(path) {
+      this.$router
+        .push(path)
+        .then(this.closeMenu())
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  }
 };
 </script>
 
@@ -35,31 +52,47 @@ export default {
   margin-top: 5px;
   display: flex;
   flex-direction: column;
+  align-content: center;
+
   .introduction-container {
     margin: 5px 0 0 20px;
-
     display: flex;
     flex-direction: row;
-    .p-introduction {
-      font-family: 'Raleway', sans-serif;
-      font-size: 20px;
-
-      margin: 30px 5vw 0 5vw;
-
-      .link-to-shop {
-        text-decoration: none;
-        color: #a5d1bc;
-        font-weight: 900;
+    @media (max-width: 1000px) {
+      flex-direction: column-reverse;
+    }
+    .paragraph-container {
+      display: flex;
+      align-self: center;
+      padding: 1vw;
+      border: #a5d1bc8e solid 1px;
+      margin: 30px 5vw 2vh 5vw;
+      .paragraph-introduction {
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
         line-height: 1.6;
+
+        .link-to-shop {
+          text-decoration: none;
+          color: #a5d1bc;
+          font-weight: 900;
+        }
       }
     }
     .garden-image {
-      height: 25vw;
+      @media (max-width: 1000px) {
+        align-self: center;
+        height: 40vw;
+        width: 60vw;
+        margin-bottom: 1vh;
+      }
+      height: 30vw;
+      width: 40vw;
       opacity: 85%;
+      border-radius: 1%;
     }
   }
 }
-
 .exterminator-container {
   display: flex;
   justify-content: flex-end;

@@ -17,20 +17,22 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-html {
-  position: relative;
-  min-height: 100%;
-  margin: 0%;
-  padding: 0%;
+<style lang="scss">
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
+
 body #app {
+  min-height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   display: grid;
-  grid-template-rows: 50vh auto 10vh;
+  grid-template-rows: 20vh auto 10vh;
   .header {
     grid-row: 1;
     grid-row-end: 2;
@@ -43,11 +45,7 @@ body #app {
   .footer {
     grid-row-start: 3;
     grid-row-end: 4;
-    background: #a5d1bc;
-    // position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
   }
 }
 </style>
+

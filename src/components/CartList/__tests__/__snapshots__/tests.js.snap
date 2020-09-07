@@ -5,18 +5,10 @@ exports[`User loads the page Test so that everything renders correctly 1`] = `
   class="cartProducts"
 >
    
-  <section
-    class="checkout"
-  >
-    <div>
-      <button
-        class="checkoutButton"
-      >
-        <span>
-          Purchase items
-        </span>
-      </button>
-    </div>
-  </section>
+  <h2>
+    No items in cart..
+  </h2>
+   
+  <!---->
 </div>
 `;
