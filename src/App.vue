@@ -21,6 +21,8 @@ export default {
 html {
   position: relative;
   min-height: 100%;
+  margin: 0%;
+  padding: 0%;
 }
 body #app {
   -webkit-font-smoothing: antialiased;
