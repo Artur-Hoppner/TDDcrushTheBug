@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <div class="boom">
-      <h1>Welcome to our store!</h1>
-      <h2>scroll down to see contents</h2>
-      <section id="section06">
-        <a href="#funka"> <span></span>Scroll </a>
-      </section>
+<div>
+  <div class="boom">
+    <h1>Welcome to our store!</h1>
+    <h2>scroll down to see contents</h2>
+<section id="section06">
+  <a href="#funka"><span id="line"></span>Scroll</a>
+</section>
     </div>
     <div class="boom2" v-scrollanimation>
       <SearchBar id="funka" />
@@ -24,8 +24,9 @@ export default {
   }
 };
 </script>
-<style>
-html {
+<style lang="scss">
+
+html{
   scroll-behavior: smooth;
 }
 .boom {
@@ -47,6 +48,16 @@ html {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  position: relative;
+  text-align: center;
+  h1{
+    position: absolute;
+    margin: 5rem;
+  }
+  h2{
+    position: absolute;
+    bottom: 40vh;
+  }
 }
 
 .before-enter {
@@ -63,6 +74,15 @@ html {
 }
 #section06 {
   position: relative;
+padding-top: 70vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+#line{
+  margin-top: 60vh;
+  left: 1rem;
 }
 section::after {
   position: absolute;
@@ -85,12 +105,14 @@ section::after {
 
 /* ANIMATION */
 #section06 a {
-  padding-top: 10rem;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
 }
 #section06 a span {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 45%;
   width: 2rem;
   height: 2rem;
   margin-left: -12px;
