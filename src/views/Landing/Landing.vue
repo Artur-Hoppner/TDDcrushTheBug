@@ -22,6 +22,9 @@ export default {
 </script>
 
 <style>
+p {
+  font-family: 'Raleway', sans-serif;
+}
 .ant1 {
   width: 10vw;
   float: left;

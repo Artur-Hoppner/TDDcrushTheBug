@@ -2,40 +2,40 @@
 
 exports[`Test Landing Test if /Landing is rendered 1`] = `
 <div>
-  <h3>
-    
-    Repell, Remove or Blast your bugs. 
-    <br />
-    
-    We have the solution for all your pest problems
-  
-  </h3>
-   
   <img
     alt="ant 1"
     class="ant1"
-    src="@/assets/backgroundImages/ant-1.png"
+    src="@/assets/backgroundImages/ant-3.png"
   />
    
-  <h3>
+  <p>
     
-    We are a small family business that have 
+    Repell, Remove or Blast your bugs.
+    
     <br />
+    We have the solution for all your pest problems
+  
+  </p>
+   
+  <p>
     
+    We are a small family business that have
+    
+    <br />
     a long tradition hating insects!
   
-  </h3>
+  </p>
    
   <img
     alt="exterminator"
     class="exterminator"
-    src="@/assets/backgroundImages/exterminator-1.png"
+    src="@/assets/backgroundImages/exterminator-5.png"
   />
    
   <img
     alt="ant 2"
     class="ant2"
-    src="@/assets/backgroundImages/ant-2.png"
+    src="@/assets/backgroundImages/ant-1.png"
   />
 </div>
 `;
