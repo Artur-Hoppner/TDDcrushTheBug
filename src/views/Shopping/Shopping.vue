@@ -1,15 +1,14 @@
 <template>
-<div>
-  <div class="boom">
-    <h1>Welcome to our store!</h1>
-    <h2>scroll down to see contents</h2>
-    <section id="section06">
-    <a href="#funka"><img id="down" src="@/assets/arrow-down.svg" alt=""></a>
-    <span>Scroll</span>
-    </section>
-    <div class="boom2" v-scrollanimation>
-      <SearchBar id="funka" />
-      <ProductList />
+  <div>
+    <div class="boom">
+      <h1>Welcome to our store!</h1>
+      <h2>scroll down to see contents</h2>
+      <section id="section06">
+        <a href="#funka">
+          <img id="down" src="@/assets/arrow-down.svg" alt />
+        </a>
+        <span>Scroll</span>
+      </section>
     </div>
   </div>
 </template>
@@ -109,6 +108,3 @@ html {
     opacity: 0;
   }
 }
-
-</style>
-

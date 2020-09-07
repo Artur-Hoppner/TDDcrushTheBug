@@ -8,11 +8,12 @@
           <br />We have the solution for all of your pest problems. With our
           products you will be able to get the same results as if you hired a
           professional exterminator.
-          <a class="link-to-shop" id="link-to-shop" href @click="goTo('/')"
-            >Check out our product</a
-          >
-          , and become a professianal exterminatori yourself
-          <br />
+          <a
+            class="link-to-shop"
+            id="link-to-shop"
+            href
+            @click="goTo('/')"
+          >Check out our product</a>
           <br />We are a small family business that have a long tradition of
           hating insects!
         </p>
