@@ -5,8 +5,17 @@ exports[`User loads the page Test so that everything renders correctly 1`] = `
   class="cartProducts"
 >
    
-  <h2>
+  <h2
+    class="emptyCart"
+  >
+    
     No items in cart..
+    
+    <img
+      alt="emptyCart"
+      class="emptyCartImage"
+      src="@/assets/empty-cart.png"
+    />
   </h2>
    
   <!---->
