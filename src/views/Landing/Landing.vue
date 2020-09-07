@@ -7,7 +7,13 @@
           Repell, Remove or Blast your bugs!
           <br />We have the solution for all your pest problems.
           With our product you will be able to get the same result as a professional exterminator.
-          <router-link class="link-to-shop" to="/cart">Check out our product</router-link>, and become a professianal exterminatori yourself
+          <a
+            class="link-to-shop"
+            id="link-to-shop"
+            href
+            @click="goTo('/landing')"
+          >Check out our product</a>
+          , and become a professianal exterminatori yourself
           <br />
           <br />We are a small family business that have a long tradition hating insects!
         </p>
@@ -27,7 +33,17 @@
 
 <script>
 export default {
-  name: 'Landing'
+  name: 'Landing',
+  methods: {
+    goTo(path) {
+      this.$router
+        .push(path)
+        .then(this.closeMenu())
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  }
 };
 </script>
 
@@ -48,17 +64,18 @@ export default {
     .paragraph-container {
       display: flex;
       align-self: center;
+      padding: 1vw;
+      border: #a5d1bc8e solid 1px;
+      margin: 30px 5vw 2vh 5vw;
       .paragraph-introduction {
         font-family: 'Raleway', sans-serif;
         font-size: 20px;
-        padding: 1vw;
-        border: #a5d1bc8e solid 1px;
-        margin: 30px 5vw 2vh 5vw;
+        line-height: 1.6;
+
         .link-to-shop {
           text-decoration: none;
           color: #a5d1bc;
           font-weight: 900;
-          line-height: 1.6;
         }
       }
     }
