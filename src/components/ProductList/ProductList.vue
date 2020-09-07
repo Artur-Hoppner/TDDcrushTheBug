@@ -1,7 +1,6 @@
 <template>
   <div class="products">
     <ProductItem
-      class="item"
       v-for="product in filteredByKeyword"
       v-bind:key="product.id"
       v-bind:product="product"
@@ -29,12 +28,12 @@ export default {
 </script>
 
 <style>
-@media (min-width: 600px) {
-  .products{
+.products{
   height: 90vh;
-  margin: 2rem;
+  margin: 0rem;
   display: grid;
   grid-template-columns: 1fr 1fr ;
   grid-template-rows: 1fr 1fr ;
-  }
-}</style>
+}
+
+</style>

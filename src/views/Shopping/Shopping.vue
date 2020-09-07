@@ -3,10 +3,10 @@
   <div class="boom">
     <h1>Welcome to our store!</h1>
     <h2>scroll down to see contents</h2>
-    <img id="down" src="@/assets/arrow-down.svg" alt="">
+    <a href="#funka"><img id="down" src="@/assets/arrow-down.svg" alt=""></a>
     </div>
       <div class="boom2" v-scrollanimation>
-        <SearchBar class="funka"/>
+        <SearchBar id="funka"/>
         <ProductList />
       </div>
     </div>
@@ -24,6 +24,9 @@ export default {
 };
 </script>
 <style>
+html{
+  scroll-behavior: smooth;
+}
 .boom{
   display: flex;
   background-color: goldenrod;
@@ -47,7 +50,7 @@ export default {
   opacity: 1;
   transform: translateY(0);
 }
-.funka{
+#funka{
   padding-bottom: 5rem;
 }
 </style>

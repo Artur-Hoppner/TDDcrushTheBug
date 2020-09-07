@@ -10,7 +10,7 @@
         <ul class="sidebar-panel-nav">
           <!-- v-if="this.$route.path !== '/landing'" -->
           <li @click="changeThisToggle">
-            <router-link to="/landing" exact-active-class="active"
+            <router-link to="/" exact-active-class="active"
               >Home</router-link
             >
           </li>

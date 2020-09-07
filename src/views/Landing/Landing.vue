@@ -11,7 +11,7 @@
             class="link-to-shop"
             id="link-to-shop"
             href
-            @click="goTo('/landing')"
+            @click="goTo('/')"
           >Check out our product</a>
           , and become a professianal exterminatori yourself
           <br />

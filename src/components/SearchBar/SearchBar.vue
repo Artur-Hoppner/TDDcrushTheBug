@@ -41,7 +41,7 @@ body {
   background: #252525;
 }
 .container {
-  position:fixed;
+  position:relative;
   margin: auto;
   top: 20px;
   left: 0;
