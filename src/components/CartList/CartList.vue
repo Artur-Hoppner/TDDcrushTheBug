@@ -5,15 +5,12 @@
       v-bind:key="product.id"
       v-bind:product="product"
     />
-    <section class="checkout">
+    <h2 v-if="getCartProducts.length == 0">No items in cart..</h2>
+    <section class="checkout" v-if="!getCartProducts.length == 0">
       <div>
-        <router-link
-          @click.native="asyncCreateOrder"
-          to="/order"
-          class="checkoutButton"
-          tag="button"
-          ><span>Purchase items</span></router-link
-        >
+        <button class="checkoutButton" @click="createOrder('/order')">
+          <span>Purchase items</span>
+        </button>
       </div>
     </section>
   </div>
@@ -21,6 +18,7 @@
 <script>
 import ProductItem from '../ProductItem/ProductItem.vue';
 import { mapGetters, mapActions } from 'vuex';
+import router from '@/router/index.js';
 export default {
   name: 'CartList',
   components: {
@@ -31,11 +29,13 @@ export default {
   },
   methods: {
     ...mapActions(['changeThisProductButtonToggle']),
-    async asyncCreateOrder() {
-      await this.$store.dispatch('checkoutCreateThisOrder');
-      this.$router.push('/order').catch(err => {
+    createOrder() {
+      this.$store.dispatch('checkoutCreateThisOrder');
+      this.goTo('/order');
+    },
+    goTo(path) {
+      router.push({ path: path }).catch(err => {
         err;
-        console.log('No items in cart!');
       });
     }
   },
@@ -47,6 +47,10 @@ export default {
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
 
 .checkoutButton {
   font-family: 'Montserrat', sans-serif;
