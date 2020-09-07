@@ -4,7 +4,9 @@ exports[`User navigates to this page, component renders Test so that everything 
 <section
   class="product"
 >
-  <div>
+  <div
+    class="product-pictures-container"
+  >
     <img
       alt="Regular Bugspray"
       class="product-pictures"

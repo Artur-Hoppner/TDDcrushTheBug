@@ -1,6 +1,6 @@
 <template>
   <section class="product">
-    <div>
+    <div class="product-pictures-container">
       <img
         class="product-pictures"
         :src="`${publicPath}assets/${product.tag}.png`"
@@ -82,10 +82,12 @@ export default {
 h2,
 h3 {
   font-family: 'Montserrat', sans-serif;
+  margin: 8px;
 }
 
 p {
   font-family: 'Raleway', sans-serif;
+  margin: 8px;
 }
 
 #removeFromCart,
@@ -93,6 +95,7 @@ p {
   width: 3vw;
   height: 3vw;
   transition: all 0.2s ease-in-out;
+  margin: 10px;
 }
 
 #removeFromCart:hover,
@@ -109,8 +112,8 @@ p {
 .product {
   width: 40%;
   margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -120,7 +123,7 @@ p {
 
 .text-center {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .icon-btn {
@@ -216,6 +219,9 @@ p {
 .product-pictures {
   height: 10vw;
   margin-top: 20px;
-  margin-bottom: -3px;
+}
+
+.product-pictures-container {
+  margin: 0;
 }
 </style>
