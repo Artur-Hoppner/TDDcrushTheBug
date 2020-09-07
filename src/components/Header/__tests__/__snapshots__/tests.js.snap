@@ -8,8 +8,8 @@ exports[`User loads the page Test so that everything renders correctly 1`] = `
     class="header"
   >
     <img
-      alt=""
       class="header-icon"
+      id="icon"
       src="@/assets/bug-icon.png"
     />
      

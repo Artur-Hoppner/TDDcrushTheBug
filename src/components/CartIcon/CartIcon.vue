@@ -1,6 +1,7 @@
 <template>
   <div id="cartWrapper">
     <div id="iconWrapper">
+
       <img
         id="cartIcon"
         src="@/assets/shopping-cart.svg"
@@ -20,6 +21,7 @@ export default {
   },
   methods: {
     goTo(path) {
+
       this.$router.push(path).catch(err => {
         console.log(err);
       });
@@ -92,4 +94,5 @@ export default {
     }
   }
 }
+
 </style>
