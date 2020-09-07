@@ -60,8 +60,12 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
+.product{
+  border: 3px solid #a5d1bc;
+  margin: 2rem;
+}
 .product-pictures {
-  height: 10vw;
+  height: 10vh;
 }
 </style>
