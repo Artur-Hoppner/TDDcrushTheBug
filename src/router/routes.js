@@ -6,7 +6,7 @@ import store from '@/store/index.js';
 
 const routes = [
   {
-    path: '/landing',
+    path: '/',
     name: 'Landing',
     component: Landing
   },

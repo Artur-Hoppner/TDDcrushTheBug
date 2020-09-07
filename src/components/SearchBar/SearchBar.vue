@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section >
     <div class="container">
       <input
         id="input"
@@ -37,20 +37,19 @@ body {
   width: 100%;
   height: 100%;
 }
-
 body {
   background: #252525;
 }
-
 .container {
-  position: absolute;
+  position:relative;
   margin: auto;
-  top: 20%;
+  top: 20px;
   left: 0;
   right: 0;
-  bottom: 40px;
+  bottom: 600px;
   width: 300px;
   height: 100px;
+  padding:1rem;
   .search {
     position: absolute;
     margin: auto;

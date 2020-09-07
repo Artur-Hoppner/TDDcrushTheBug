@@ -27,4 +27,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.products{
+  height: 90vh;
+  margin: 0rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr ;
+}
+
+</style>
