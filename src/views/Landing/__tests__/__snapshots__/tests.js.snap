@@ -32,9 +32,10 @@ exports[`Test Landing Test if /Landing is rendered 1`] = `
           href=""
           id="link-to-shop"
         >
-          Check out our products
+          Check out our product
         </a>
-        , and become a professional exterminator yourself
+        
+        , and become a professianal exterminatori yourself
         
         <br />
          

@@ -76,7 +76,8 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
 
 h2,
@@ -225,5 +226,60 @@ p {
 
 .product-pictures-container {
   margin: 0;
+}
+.product:hover{
+  .product-pictures{
+    -webkit-animation:wiggle 1.5s linear infinite;
+  animation:wiggle 1.5s linear infinite;
+  }
+}
+/* ANIMATION */
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform:rotateZ(0);
+    transform:rotateZ(0);
+  }
+  10% {
+    -webkit-transform:rotateZ(-15deg);
+    transform:rotateZ(-15deg);
+  }
+  20% {
+    -webkit-transition:rotateZ(10deg);
+    transition:rotateZ(10deg);
+  }
+  25% {
+    -webkit-transition:rotateZ(-10deg);
+    transition:rotateZ(-10deg);
+  }
+  30% {
+    -webkit-transition:rotateZ(6deg);
+    transition:rotateZ(6deg);
+  }
+  35% {
+    -webkit-transform:rotateZ(-4deg);
+    transform:rotateZ(-4deg);
+  }
+  40% {
+    transform:rotateZ(7deg);
+  }
+  50% {
+    transform:rotateZ(-6deg);
+  }
+  60% {
+    transform:rotateZ(10deg);
+  }
+  70% {
+    transform:rotateZ(-14deg);
+  }
+  80% {
+    transform:rotateZ(3deg);
+  }
+  90% {
+    transform:rotateZ(-7deg);
+  }
+  100% {
+    -webkit-transition:rotateZ(0);
+    transition:rotateZ(0);
+  }
 }
 </style>
