@@ -32,7 +32,7 @@ body #app {
   text-align: center;
   color: #2c3e50;
   display: grid;
-  grid-template-rows: 50vh auto 10vh;
+  grid-template-rows: 20vh auto 10vh;
   .header {
     grid-row: 1;
     grid-row-end: 2;
