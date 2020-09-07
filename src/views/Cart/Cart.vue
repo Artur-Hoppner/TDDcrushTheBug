@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cart">
     <CartList />
   </div>
 </template>
@@ -14,4 +14,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+</style>
