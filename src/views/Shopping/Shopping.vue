@@ -1,19 +1,18 @@
 <template>
-<div>
-  <div class="boom">
-    <h1>Welcome to our store!</h1>
-    <h2>scroll down to see contents</h2>
-<section id="section06">
-  <a href="#funka"><span></span>Scroll</a>
-</section>
+  <div>
+    <div class="boom">
+      <h1>Welcome to our store!</h1>
+      <h2>scroll down to see contents</h2>
+      <section id="section06">
+        <a href="#funka"> <span></span>Scroll </a>
+      </section>
     </div>
-      <div class="boom2" v-scrollanimation>
-        <SearchBar id="funka"/>
-        <ProductList />
-      </div>
+    <div class="boom2" v-scrollanimation>
+      <SearchBar id="funka" />
+      <ProductList />
     </div>
+  </div>
 </template>
-
 <script>
 import SearchBar from '@/components/SearchBar/SearchBar.vue';
 import ProductList from '@/components/ProductList/ProductList.vue';
@@ -26,12 +25,23 @@ export default {
 };
 </script>
 <style>
-html{
+html {
   scroll-behavior: smooth;
 }
-.boom{
+.boom {
   display: flex;
-  background-color: goldenrod;
+  background: #ffe259; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffa751,
+    #ffe259
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffa751,
+    #ffe259
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   height: 100vh;
   justify-content: center;
   align-items: center;
@@ -39,29 +49,38 @@ html{
   text-align: center;
 }
 
-.before-enter{
+.before-enter {
   opacity: 0;
   transform: translateY(50vh);
   transition: all 1s ease-out;
 }
-.enter{
+.enter {
   opacity: 1;
   transform: translateY(0);
 }
-#funka{
+#funka {
   padding-bottom: 5rem;
 }
 #section06 {
   position: relative;
-
 }
 section::after {
   position: absolute;
   bottom: 0;
   left: 0;
   content: '';
-  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
-  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
 }
 
 /* ANIMATION */
