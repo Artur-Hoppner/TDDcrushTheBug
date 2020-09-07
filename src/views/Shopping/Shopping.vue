@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
 <div>
   <div class="boom">
     <h1>Welcome to our store!</h1>
@@ -7,15 +6,6 @@
 <section id="section06">
   <a href="#funka"><span id="line"></span>Scroll</a>
 </section>
-=======
-  <div>
-    <div class="boom">
-      <h1>Welcome to our store!</h1>
-      <h2>scroll down to see contents</h2>
-      <section id="section06">
-        <a href="#funka"> <span></span>Scroll </a>
-      </section>
->>>>>>> 5c43173eb064f1f1d73a67d2dd39b595412a3cb8
     </div>
     <div class="boom2" v-scrollanimation>
       <SearchBar id="funka" />
@@ -34,14 +24,9 @@ export default {
   }
 };
 </script>
-<<<<<<< HEAD
 <style lang="scss">
 
 html{
-=======
-<style>
-html {
->>>>>>> 5c43173eb064f1f1d73a67d2dd39b595412a3cb8
   scroll-behavior: smooth;
 }
 .boom {
@@ -89,7 +74,6 @@ html {
 }
 #section06 {
   position: relative;
-<<<<<<< HEAD
 padding-top: 70vh;
 display: flex;
 justify-content: center;
@@ -99,8 +83,6 @@ flex-direction: column;
 #line{
   margin-top: 60vh;
   left: 1rem;
-=======
->>>>>>> 5c43173eb064f1f1d73a67d2dd39b595412a3cb8
 }
 section::after {
   position: absolute;
