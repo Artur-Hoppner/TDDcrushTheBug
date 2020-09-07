@@ -4,18 +4,26 @@
       <img class="garden-image" src="@/assets/garden.jpg" alt="ant 1" />
       <div class="paragraph-container">
         <p class="paragraph-introduction">
-          Repell, Remove or Blast your bugs!
-          <br />We have the solution for all your pest problems.
-          With our product you will be able to get the same result as a professional exterminator.
+          Repel, Remove or Blast your bugs!
+          <br />We have the solution for all of your pest problems. With our
+          products you will be able to get the same results as if you hired a
+          professional exterminator.
           <a
             class="link-to-shop"
             id="link-to-shop"
             href
+<<<<<<< HEAD
             @click="goTo('/')"
           >Check out our product</a>
           , and become a professianal exterminatori yourself
+=======
+            @click="goTo('/shopping')"
+            >Check out our products</a
+          >, and become a professional exterminator yourself!
+>>>>>>> 99eb69d7615f6312741ed4ed827e72a351b5047c
           <br />
-          <br />We are a small family business that have a long tradition hating insects!
+          <br />We are a small family business that have a long tradition of
+          hating insects!
         </p>
       </div>
     </div>
@@ -36,12 +44,9 @@ export default {
   name: 'Landing',
   methods: {
     goTo(path) {
-      this.$router
-        .push(path)
-        .then(this.closeMenu())
-        .catch(err => {
-          console.log(err);
-        });
+      this.$router.push(path).catch(err => {
+        console.log(err);
+      });
     }
   }
 };
