@@ -161,13 +161,12 @@ export default new Vuex.Store({
     filteredProducts: [],
     productButtonToggle: false,
     showCart: false,
-    orderInfo: {
-      orderNumber: '',
-      orderCost: '',
-      deliveryETA: '',
-      orderList: []
-    }
+    orderInfo: ''
   },
+  // orderNumber: '',
+  // orderCost: '',
+  // deliveryETA: '',
+  // orderList: []
   actions: actions,
   mutations: mutations,
   getters: getters,
