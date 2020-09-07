@@ -1,8 +1,14 @@
-import { shallowMount, mount, createLocalVue, RouterLinkStub, createWrapper } from '@vue/test-utils';
+import {
+  shallowMount,
+  mount,
+  createLocalVue,
+  RouterLinkStub,
+  createWrapper
+} from '@vue/test-utils';
 import Vuex from 'vuex';
 import HamburgerMenu from '@/components/HamburgerMenu/HamburgerMenu.vue';
-import hamburgerMenu from '../../../store/HamburgerMenu/index.js'
-import hamburgerIcon from '../../../store/HamburgerIcon/index.js'
+import hamburgerMenu from '../../../store/HamburgerMenu/index.js';
+import hamburgerIcon from '../../../store/HamburgerIcon/index.js';
 import VueRouter from 'vue-router';
 
 const localVue = createLocalVue();
@@ -155,6 +161,6 @@ describe('User opens menu', () => {
         RouterLink: RouterLinkStub
       }
     });
-    expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/landing')
-  })
+    expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/');
+  });
 });

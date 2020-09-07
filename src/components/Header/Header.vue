@@ -61,6 +61,13 @@ export default {
   }
 }
 @media (min-width: 600px) {
+  .wrapper {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.205);
+    z-index: 10;
+  }
+
   .wrapper .header {
     display: flex;
     justify-content: space-around;

@@ -110,23 +110,16 @@ p {
 }
 
 .product {
-<<<<<<< HEAD
   width: 80%;
-  margin:0 auto;
+  margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
-=======
-  width: 40%;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
->>>>>>> 99eb69d7615f6312741ed4ed827e72a351b5047c
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  border:4px solid #a5d1bc ;
+  border: 4px solid #a5d1bc;
   border-radius: 10px;
 }
 

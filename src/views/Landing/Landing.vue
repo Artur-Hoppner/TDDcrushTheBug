@@ -12,15 +12,9 @@
             class="link-to-shop"
             id="link-to-shop"
             href
-<<<<<<< HEAD
-            @click="goTo('/')"
-          >Check out our product</a>
-          , and become a professianal exterminatori yourself
-=======
             @click="goTo('/shopping')"
             >Check out our products</a
-          >, and become a professional exterminator yourself!
->>>>>>> 99eb69d7615f6312741ed4ed827e72a351b5047c
+          >, and become a professional exterminator yourself
           <br />
           <br />We are a small family business that have a long tradition of
           hating insects!

@@ -23,7 +23,7 @@ exports[`User opens menu Test so that everything renders correctly 1`] = `
             event="click"
             exactactiveclass="active"
             tag="a"
-            to="/landing"
+            to="/"
           >
             Home
           </router-link-stub>
