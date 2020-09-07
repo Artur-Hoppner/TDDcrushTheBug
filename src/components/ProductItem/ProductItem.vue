@@ -9,7 +9,7 @@
     </div>
     <div>
       <h2 class="producttitle">{{ product.title }}</h2>
-      <p>{{ product.desc }}</p>
+      <p id="desc">{{ product.desc }}</p>
     </div>
     <section v-if="getProductButtonToggle">
       <div>
@@ -103,7 +103,15 @@ h3 {
 }
 
 .product {
-  margin: 40px;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .text-center {
