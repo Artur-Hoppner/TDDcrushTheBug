@@ -1,18 +1,9 @@
 <template>
   <div id="cartWrapper">
     <div id="iconWrapper">
-    <router-link id="presentedCartItems" to="/cart">
-      <img class="carticon" src="@/assets/shopping-cart.svg" alt />
-    </router-link>
-<<<<<<< HEAD
-    </div>
-    <div class="lengthWrapper">
-    <p>{{cartItem.length}}</p>
-=======
-    <div>
-      <p>{{cartIconItems}}</p>
->>>>>>> 077386d5bd8a6c9baf1fa1e001556c7d63e8bbd0
-    </div>
+      <img id="cartIcon" src="@/assets/shopping-cart.svg" alt="" @click="goTo('/cart')">
+      <p class="amount">{{cartIconItems}}</p>
+      </div>
   </div>
 </template>
 
@@ -21,42 +12,83 @@ import { mapGetters } from 'vuex';
 export default {
   computed: {
     ...mapGetters(['cartIconItems'])
+  },
+  methods: {
+        goTo(path) {
+      this.$router
+        .push(path)
+        .then(this.closeMenu())
+        .catch(err => {console.log(err)});
+        
+    }
   }
 };
 </script>
 
-<style >
-.lengthWrapper {
+<style lang="scss" scoped>
+@media (max-width: 600px){
+#iconWrapper {
+  margin: 0;
+  z-index: 9999;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(236, 114, 70);
-  border-radius: 100%;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.lengthWrapper span {
-  font-size: 20px;
-}
-#iconWrapper{
-  width: 10%;
-  height: 1px;
-}
-.cartWrapper {
-  z-index: 999;
-  display: flex;
-  background: rgb(22, 22, 22);
+  background: #a5d1bc;
+  border: 3px solid white;
   border-radius: 100%;
   margin: 1rem;
-  height: 2rem;
-  width: 2rem;
+  height: 3rem;
+  width: 3rem;
   padding: 1rem;
-  margin-bottom: 5rem;
-  position: absolute;
-  right: 0;
-  cursor: pointer;
-}
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+  }
+  p{
+    position: relative;
+    margin-bottom: 4rem;
+      background: rgb(236, 114, 70);
+  border-radius: 100%;
+  width: 1rem;
+  padding:0.1rem 0.2rem ;
+  color: white;
+
+  }
+  }
+  }
+
+  @media (min-width: 600px){
+    #iconWrapper {
+  margin: 0;
+  z-index: 9999;
+  display: flex;
+  background: #a5d1bc;
+  border: 3px solid white;
+  border-radius: 100%;
+  margin: 1rem;
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+  }
+  p{
+    position: relative;
+    margin-bottom: 4rem;
+      background: rgb(236, 114, 70);
+  border-radius: 100%;
+  width: 1rem;
+  padding:0.1rem 0.2rem ;
+  color: white;
+
+  }
+  }
+  }
 </style>
