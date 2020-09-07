@@ -1,11 +1,13 @@
 <template>
-<div>
-  <div class="boom">
-    <h1>Welcome to our store!</h1>
-    <h2>scroll down to see contents</h2>
-<section id="section06">
-  <a href="#funka"><span id="line"></span>Scroll</a>
-</section>
+  <div>
+    <div class="boom">
+      <h1>Welcome to our store!</h1>
+      <h2>scroll down to see contents</h2>
+      <section id="section06">
+        <a href="#funka">
+          <span id="line"></span>Scroll
+        </a>
+      </section>
     </div>
     <div class="boom2" v-scrollanimation>
       <SearchBar id="funka" />
@@ -24,9 +26,8 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-
-html{
+<style lang="scss" scoped>
+html {
   scroll-behavior: smooth;
 }
 .boom {
@@ -50,11 +51,11 @@ html{
   text-align: center;
   position: relative;
   text-align: center;
-  h1{
+  h1 {
     position: absolute;
     margin: 5rem;
   }
-  h2{
+  h2 {
     position: absolute;
     bottom: 40vh;
   }
@@ -74,13 +75,13 @@ html{
 }
 #section06 {
   position: relative;
-padding-top: 70vh;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+  padding-top: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-#line{
+#line {
   margin-top: 60vh;
   left: 1rem;
 }

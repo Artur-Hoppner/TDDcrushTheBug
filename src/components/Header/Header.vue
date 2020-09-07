@@ -1,12 +1,7 @@
 <template>
   <div class="wrapper">
     <nav class="header">
-      <img
-        id="icon"
-        class="header-icon"
-        src="@/assets/bug-icon.png"
-        @click="goTo('/')"
-      />
+      <img id="icon" class="header-icon" src="@/assets/bug-icon.png" @click="goTo('/')" />
       <h1 id="text">Crush The Bug</h1>
       <section class="icons">
         <CartIcon />
@@ -34,7 +29,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
 
 @media (max-width: 600px) {

@@ -1,33 +1,21 @@
 <template>
   <div class="sidebar">
-    <div
-      class="sidebar-backdrop"
-      @click="changeThisToggle"
-      v-if="showHamburger"
-    ></div>
+    <div class="sidebar-backdrop" @click="changeThisToggle" v-if="showHamburger"></div>
     <transition name="slide">
       <div v-if="showHamburger" class="sidebar-panel">
         <ul class="sidebar-panel-nav">
           <!-- v-if="this.$route.path !== '/landing'" -->
           <li @click="changeThisToggle">
-            <router-link to="/" exact-active-class="active"
-              >Home</router-link
-            >
+            <router-link to="/" exact-active-class="active">Home</router-link>
           </li>
           <li @click="changeThisToggle">
-            <router-link to="/shopping" exact-active-class="active"
-              >Our Shop</router-link
-            >
+            <router-link to="/shopping" exact-active-class="active">Our Shop</router-link>
           </li>
           <li @click="changeThisToggle">
-            <router-link to="/cart" exact-active-class="active"
-              >Cart</router-link
-            >
+            <router-link to="/cart" exact-active-class="active">Cart</router-link>
           </li>
           <li @click="changeThisToggle">
-            <router-link to="/order" exact-active-class="active"
-              >Order</router-link
-            >
+            <router-link to="/order" exact-active-class="active">Order</router-link>
           </li>
         </ul>
         <slot></slot>
@@ -47,7 +35,7 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss" scoped>
 .slide-enter-active,
 .slide-leave-active {
   transition: transform 0.2s ease;
