@@ -51,18 +51,18 @@ describe('User can see numbers of selected cart items and on click go to cart', 
     expect(cartNumber).toBe('1');
   });
 
-  test('testing if router link exist in component CartIcon', () => {
-    //Act
-    const wrapper = mount(CartIcon, {
-      localVue,
-      store,
-      stubs: {
-        RouterLink: RouterLinkStub
-      }
-    });
-    //Assert
-    const routerLink = wrapper.findComponent(RouterLinkStub).props().to;
-    //Assemble
-    expect(routerLink).toBe('/cart');
-  });
+  // test('testing if router link exist in component CartIcon', () => {
+  //   //Act
+  //   const wrapper = mount(CartIcon, {
+  //     localVue,
+  //     store,
+  //     stubs: {
+  //       RouterLink: RouterLinkStub
+  //     }
+  //   });
+  //   //Assert
+  //   const routerLink = wrapper.findComponent(RouterLinkStub).props().to;
+  //   //Assemble
+  //   expect(routerLink).toBe('/cart');
+  // });
 });

@@ -2,20 +2,24 @@
 
 exports[`User clicks icon/button Test so that everything renders correctly 1`] = `
 <div
-  id="hamburgerIcon"
+  class="burgerwrapper"
 >
-  <hamburgermenu-stub />
-   
-  <nav
-    class="burger-button"
+  <div
+    id="hamburgerIcon"
   >
-    <img
-      alt="hamburgerImage"
-      class="hamburgerImage"
-      src="@/assets/navicon.svg"
-    />
-     
     <hamburgermenu-stub />
-  </nav>
+     
+    <nav
+      class="burger-button"
+    >
+      <img
+        alt="hamburgerImage"
+        class="hamburgerImage"
+        src="@/assets/navicon.svg"
+      />
+       
+      <hamburgermenu-stub />
+    </nav>
+  </div>
 </div>
 `;
