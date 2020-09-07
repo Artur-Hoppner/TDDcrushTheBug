@@ -5,7 +5,10 @@
       v-bind:key="product.id"
       v-bind:product="product"
     />
-    <h2 v-if="getCartProducts.length == 0">No items in cart..</h2>
+    <h2 class="emptyCart" v-if="getCartProducts.length == 0">
+      No items in cart..
+      <img class="emptyCartImage" src="@/assets/empty-cart.png" alt="emptyCart" />
+    </h2>
     <section class="checkout" v-if="!getCartProducts.length == 0">
       <div>
         <button class="checkoutButton" @click="createOrder('/order')">
@@ -51,12 +54,18 @@ export default {
 h2 {
   font-family: 'Montserrat', sans-serif;
 }
-.cartProducts{
+
+.cartProducts {
   height: 90vh;
   margin: 0rem;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-rows: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.emptyCartImage {
+  margin-top: 10%;
+  width: 200px;
 }
 
 .checkoutButton {
