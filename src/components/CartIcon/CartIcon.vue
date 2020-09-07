@@ -1,8 +1,14 @@
 <template>
   <div id="cartWrapper">
     <div id="iconWrapper">
-      <img id="cartIcon" src="@/assets/shopping-cart.svg" alt @click="goTo('/cart')" />
-      <p class="amount">{{cartIconItems}}</p>
+
+      <img
+        id="cartIcon"
+        src="@/assets/shopping-cart.svg"
+        alt=""
+        @click="goTo('/cart')"
+      />
+      <p class="amount">{{ cartIconItems }}</p>
     </div>
   </div>
 </template>
@@ -15,12 +21,10 @@ export default {
   },
   methods: {
     goTo(path) {
-      this.$router
-        .push(path)
-        .then(this.closeMenu())
-        .catch(err => {
-          console.log(err);
-        });
+
+      this.$router.push(path).catch(err => {
+        console.log(err);
+      });
     }
   }
 };
@@ -90,4 +94,5 @@ export default {
     }
   }
 }
+
 </style>

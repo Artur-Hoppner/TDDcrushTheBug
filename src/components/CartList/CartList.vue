@@ -8,9 +8,9 @@
     <section class="checkout">
       <div>
         <router-link
+          @click.native="asyncCreateOrder"
           to="/order"
           class="checkoutButton"
-          @click.native="checkoutCreateThisOrder"
           tag="button"
           ><span>Purchase items</span></router-link
         >
@@ -30,7 +30,14 @@ export default {
     ...mapGetters(['getProductToggle', 'getCartProducts'])
   },
   methods: {
-    ...mapActions(['changeThisProductButtonToggle', 'checkoutCreateThisOrder'])
+    ...mapActions(['changeThisProductButtonToggle']),
+    async asyncCreateOrder() {
+      await this.$store.dispatch('checkoutCreateThisOrder');
+      this.$router.push('/order').catch(err => {
+        err;
+        console.log('No items in cart!');
+      });
+    }
   },
   mounted() {
     this.changeThisProductButtonToggle(true);
