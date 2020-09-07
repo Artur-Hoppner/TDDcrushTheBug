@@ -64,8 +64,6 @@ body {
     border-radius: 50%;
     transition: all 1s;
     z-index: 4;
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-    // box-shadow: 0 0 25px 0 crimson;
     &:hover {
       cursor: pointer;
     }
@@ -110,14 +108,11 @@ body {
     height: 50px;
     outline: none;
     border: none;
-    // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background: #a5d1bc;
     color: white;
     text-shadow: 0 0 10px #a5d1bc;
     padding: 0 80px 0 20px;
     border-radius: 30px;
-    box-shadow: 0 0 25px 0 #a5d1bc, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-    // box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5);
     transition: all 1s;
     opacity: 0;
     z-index: 5;

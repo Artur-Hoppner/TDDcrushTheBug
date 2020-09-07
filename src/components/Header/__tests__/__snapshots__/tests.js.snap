@@ -2,11 +2,6 @@
 
 exports[`User loads the page Test so that everything renders correctly 1`] = `
 <div>
-  <img
-    alt="buglogo"
-    src=""
-  />
-   
   <h1>
     Crush The Bug
   </h1>

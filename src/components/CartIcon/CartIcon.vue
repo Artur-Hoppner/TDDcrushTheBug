@@ -4,19 +4,23 @@
     <router-link id="presentedCartItems" to="/cart">
       <img class="carticon" src="@/assets/shopping-cart.svg" alt />
     </router-link>
+<<<<<<< HEAD
     </div>
     <div class="lengthWrapper">
     <p>{{cartItem.length}}</p>
+=======
+    <div>
+      <p>{{cartIconItems}}</p>
+>>>>>>> 077386d5bd8a6c9baf1fa1e001556c7d63e8bbd0
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
-  data() {
-    return {
-      cartItem: this.$store.state.cart
-    };
+  computed: {
+    ...mapGetters(['cartIconItems'])
   }
 };
 </script>
