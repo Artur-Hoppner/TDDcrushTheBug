@@ -14,7 +14,7 @@ exports[`User navigates to this page, component renders Test so that everything 
    
   <div>
     <h2
-      class="producttitle"
+      class="product-title"
     >
       Regular Bugspray
     </h2>
@@ -35,9 +35,11 @@ exports[`User navigates to this page, component renders Test so that everything 
   <aside
     class="addProduct"
   >
-    <h1>
-      ADD
-    </h1>
+    <img
+      alt="add to cart"
+      id="addToCart"
+      src="@/assets/buy.png"
+    />
   </aside>
    
   <!---->
