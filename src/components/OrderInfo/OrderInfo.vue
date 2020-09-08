@@ -1,6 +1,6 @@
 <template>
   <section class="orderInfo">
-    <h1 class="orderN umber">
+    <h1 class="orderNumber">
       Thank you for your order! Your order number is:
       <span>{{ getOrderInfo.orderNumber }}</span>
     </h1>
