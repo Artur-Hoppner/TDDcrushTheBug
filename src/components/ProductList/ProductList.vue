@@ -9,16 +9,29 @@
 </template>
 <script>
 import ProductItem from '../ProductItem/ProductItem.vue';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 export default {
   name: 'ProductList',
   components: {
     ProductItem
   },
   computed: {
-    ...mapGetters(['filteredByKeyword'])
+    ...mapGetters(['filteredByKeyword', 'getProductToggle'])
+  },
+  methods: {
+    ...mapActions(['changeThisProductButtonToggle'])
+  },
+  mounted() {
+    this.changeThisProductButtonToggle(false);
   }
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.products {
+  margin: 0rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+</style>

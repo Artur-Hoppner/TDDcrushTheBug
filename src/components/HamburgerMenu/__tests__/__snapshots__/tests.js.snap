@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User opens menu Test so that everything renders correctly 1`] = `
+<div
+  class="sidebar"
+>
+  <div
+    class="sidebar-backdrop"
+  />
+   
+  <transition-stub
+    name="slide"
+  >
+    <div
+      class="sidebar-panel"
+    >
+      <div
+        class="links"
+      >
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/"
+        >
+          Home
+        </router-link-stub>
+      </div>
+       
+      <div
+        class="links"
+      >
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/shopping"
+        >
+          Our Shop
+        </router-link-stub>
+      </div>
+       
+      <div
+        class="links"
+      >
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/cart"
+        >
+          Cart
+        </router-link-stub>
+      </div>
+       
+      <div
+        class="links"
+      >
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/order"
+        >
+          Order
+        </router-link-stub>
+      </div>
+       
+    </div>
+  </transition-stub>
+</div>
+`;

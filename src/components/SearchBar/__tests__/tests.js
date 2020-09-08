@@ -3,13 +3,14 @@ import Vuex from 'vuex';
 import store from '../../../store/index.js';
 import SearchBar from '@/components/SearchBar/SearchBar.vue';
 
-//create a local instance of our vue
+//Create a local instance of our vue
 const localVue = createLocalVue();
-//make our instance use vuex
+//Make our instance use vuex
 localVue.use(Vuex);
 
 describe('User enters a searchword into the searchbar', () => {
   test('Test so that everything renders correctly', () => {
+    //Mount component with store & localvue, take snapshot and check so it renders correctly
     const wrapper = shallowMount(SearchBar, { store, localVue });
     expect(wrapper.element).toMatchSnapshot();
   });
@@ -22,6 +23,7 @@ describe('User enters a searchword into the searchbar', () => {
     input.setValue('');
     await input.trigger('keyup');
     //Assert
+    //Check so that filteredProducts.length is greater than 0
     expect(store.state.filteredProducts.length).toBeGreaterThan(0);
   });
 
@@ -30,17 +32,14 @@ describe('User enters a searchword into the searchbar', () => {
     const wrapper = shallowMount(SearchBar, { store, localVue });
     const input = wrapper.find('input');
     //Act
-    input.setValue('saltgunv3');
+    input.setValue('stan');
     await input.trigger('keyup');
     //Assert
-    //Find object containing tag: saltgunv3 in array
+    //Find object containing tag: stan in array
     expect(store.state.filteredProducts).toEqual(
-      // 1
       expect.arrayContaining([
-        // 2
         expect.objectContaining({
-          // 3
-          tag: 'saltgunv3' // 4
+          tag: 'stan' // 4
         })
       ])
     );
@@ -51,17 +50,14 @@ describe('User enters a searchword into the searchbar', () => {
     const wrapper = shallowMount(SearchBar, { store, localVue });
     const input = wrapper.find('input');
     //Act
-    input.setValue('SALTGUNV3');
+    input.setValue('STAN');
     await input.trigger('keyup');
     //Assert
-    //Find object containing tag: saltgunv3 in array
+    //Find object containing tag: stan in array
     expect(store.state.filteredProducts).toEqual(
-      // 1
       expect.arrayContaining([
-        // 2
         expect.objectContaining({
-          // 3
-          tag: 'saltgunv3' // 4
+          tag: 'stan'
         })
       ])
     );
@@ -69,22 +65,21 @@ describe('User enters a searchword into the searchbar', () => {
 
   test('Test so that action getByThisKeyword in vuex is called on keyup from component', async () => {
     // Arrange
-    const searchbar = {
-      namespaced: true,
-      state: {},
-      mutations: {},
-      actions: {
-        getByThisKeyword: jest.fn(),
-        displayThisEntireArray() {
-          return false;
-        }
-      },
-      getters: {}
+    const actions = {
+      //Spy on getByThisKeyword
+      getByThisKeyword: jest.fn(),
+      displayThisEntireArray() {
+        return false;
+      }
+    };
+    const getters = {
+      filteredByKeyword: state => {
+        return state.filteredProducts;
+      }
     };
     const store = new Vuex.Store({
-      modules: {
-        searchbar
-      }
+      actions,
+      getters
     });
     const wrapper = shallowMount(SearchBar, {
       store,
@@ -96,6 +91,6 @@ describe('User enters a searchword into the searchbar', () => {
     await input.trigger('keyup');
     await localVue.nextTick();
     // Assert
-    expect(searchbar.actions.getByThisKeyword).toHaveBeenCalled();
+    expect(actions.getByThisKeyword).toHaveBeenCalled();
   });
 });

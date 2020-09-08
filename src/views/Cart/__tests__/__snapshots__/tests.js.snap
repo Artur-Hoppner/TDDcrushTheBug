@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Cart Test if /cart is rendered 1`] = `
+<div
+  class="cart"
+>
+  <cartlist-stub />
+   
+  <!---->
+   
+  <section
+    class="emptyCart"
+  >
+    <h2>
+      
+      No items in cart..
+      
+      <img
+        alt="emptyCart"
+        class="emptyCartImage"
+        src="@/assets/empty-cart.png"
+      />
+    </h2>
+     
+    <a
+      class="link-to-shop"
+      href=""
+      id="link-to-shop"
+    >
+      Check out our products 
+      <u>
+        here
+      </u>
+    </a>
+    ,
+  
+  </section>
+</div>
+`;

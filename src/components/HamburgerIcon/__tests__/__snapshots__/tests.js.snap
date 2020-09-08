@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User clicks icon/button Test so that everything renders correctly 1`] = `
+<div
+  class="burgerwrapper"
+>
+  <div
+    id="hamburgerIcon"
+  >
+    <hamburgermenu-stub />
+     
+    <nav
+      class="burger-button"
+    >
+      <img
+        alt="hamburgerImage"
+        class="hamburgerImage"
+        src="@/assets/navicon.svg"
+      />
+       
+      <hamburgermenu-stub />
+    </nav>
+  </div>
+</div>
+`;

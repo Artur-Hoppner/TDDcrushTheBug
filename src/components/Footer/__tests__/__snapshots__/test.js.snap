@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test  check that component is rendered 1`] = `
+exports[`Test footer rendering and elements check that component is rendered 1`] = `
 <div>
   <footer>
     <p>
       Copyright ⓒ 2020
+    </p>
+     
+    <p>
+      Heisenberg enterprise
     </p>
   </footer>
 </div>

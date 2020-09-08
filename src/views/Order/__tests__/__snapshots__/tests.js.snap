@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Order Test if /Order is rendered 1`] = `
+<div>
+  <orderinfo-stub />
+</div>
+`;

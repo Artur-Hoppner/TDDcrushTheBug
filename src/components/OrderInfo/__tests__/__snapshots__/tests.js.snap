@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User is sent to view Order after checkout, expecting orderinfo to be displayed Test so that everything renders correctly 1`] = `
+<section
+  class="orderInfo"
+>
+  <h1
+    class="orderNumber"
+  >
+    
+    Thank you for your order! Your order number is:
+    
+    <span>
+      
+    </span>
+  </h1>
+   
+  <br />
+    
+  <br />
+   
+  <h1
+    class="orderCost"
+  >
+    
+    Total price: 
+    <span>
+      
+    </span>
+    :-
+  
+  </h1>
+   
+  <h2
+    class="deliveryETA"
+  >
+    
+    Expected delivery in: 
+    <span>
+      
+    </span>
+     days
+  
+  </h2>
+   
+  <img
+    alt="exterminator thumbs up"
+    id="exterminator-thumbsup"
+    src="@/assets/backgroundImages/exterminator-3.png"
+  />
+</section>
+`;

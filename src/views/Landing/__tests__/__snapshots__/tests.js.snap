@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Landing Test if /Landing is rendered 1`] = `
+<div
+  class="landing-container"
+>
+  <div
+    class="introduction-container"
+  >
+    <img
+      alt="ant 1"
+      class="garden-image"
+      src="@/assets/garden.jpg"
+    />
+     
+    <div
+      class="paragraph-container"
+    >
+      <p
+        class="paragraph-introduction"
+      >
+        
+        Repel, Remove or Blast your bugs!
+        
+        <br />
+        We have the solution for all of your pest problems. With our
+        products you will be able to get the same results as if you hired a
+        professional exterminator.
+        
+        <a
+          class="link-to-shop"
+          href=""
+          id="link-to-shop"
+        >
+          Check out our products
+        </a>
+        , and become a professional exterminator yourself
+        
+        <br />
+         
+        <br />
+        We are a small family business that have a long tradition of
+        hating insects!
+      
+      </p>
+    </div>
+  </div>
+   
+  <div
+    class="exterminator-container"
+  >
+    <img
+      alt="exterminator"
+      class="exterminator"
+      src="@/assets/backgroundImages/exterminator-5.png"
+    />
+     
+    <img
+      alt="ant 2"
+      class="ant2"
+      src="@/assets/backgroundImages/ant-1.png"
+    />
+  </div>
+</div>
+`;

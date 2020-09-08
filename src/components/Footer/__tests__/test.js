@@ -6,7 +6,7 @@ const localVue = createLocalVue();
 
 localVue.use(Vuex);
 
-describe('test ', () => {
+describe('Test footer rendering and elements', () => {
   test('check that component is rendered', () => {
     //Arrange
     const wrapper = shallowMount(Footer, { localVue });
@@ -23,6 +23,8 @@ describe('test ', () => {
     const textContent = wrapper.text();
     //Assert
     expect(paragraph.exists()).toBe(true);
-    expect(textContent).toBe('Copyright ⓒ ' + timeStamp);
+    expect(textContent).toBe(
+      'Copyright ⓒ ' + timeStamp + ' Heisenberg enterprise'
+    );
   });
 });
