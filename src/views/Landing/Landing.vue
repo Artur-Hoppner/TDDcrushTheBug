@@ -33,14 +33,11 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 export default {
   name: 'Landing',
   methods: {
-    goTo(path) {
-      this.$router.push(path).catch(err => {
-        console.log(err);
-      });
-    }
+    ...mapActions(['goTo'])
   }
 };
 </script>
