@@ -23,6 +23,8 @@ describe('Test footer rendering and elements', () => {
     const textContent = wrapper.text();
     //Assert
     expect(paragraph.exists()).toBe(true);
-    expect(textContent).toBe('Copyright ⓒ ' + timeStamp);
+    expect(textContent).toBe(
+      'Copyright ⓒ ' + timeStamp + ' Heisenberg enterprise'
+    );
   });
 });

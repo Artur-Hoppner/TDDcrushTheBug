@@ -44,15 +44,7 @@ export default {
   }
 };
 </script>
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
-*,
-body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
+<style lang="scss" scoped>
 .slide-enter-active,
 .slide-leave-active {
   transition: transform 0.2s ease;

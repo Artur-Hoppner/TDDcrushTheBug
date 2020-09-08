@@ -27,13 +27,11 @@ export default {
 };
 </script>
 
-<style>
-.products{
-  height: 90vh;
+<style lang="scss" scoped>
+.products {
   margin: 0rem;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-rows: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
-
 </style>
