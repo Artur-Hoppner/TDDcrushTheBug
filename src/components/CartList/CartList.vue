@@ -59,12 +59,9 @@ h2 {
   font-family: 'Montserrat', sans-serif;
 }
 .cartProducts {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
+  margin: 0rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .emptyCartImage {
