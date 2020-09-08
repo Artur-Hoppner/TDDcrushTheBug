@@ -37,6 +37,14 @@ const actions = {
   },
   showThisCart(context) {
     context.commit('showCart');
+  },
+  //***************************************/
+  //*** Component-link RELATED ACTIONS ***/
+  //*************************************/
+  goTo(path) {
+    this.$router.push(path).catch(err => {
+      console.log(err);
+    });
   }
 };
 

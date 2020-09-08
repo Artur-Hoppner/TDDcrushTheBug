@@ -31,7 +31,7 @@ body #app {
   text-align: center;
   color: #2c3e50;
   display: grid;
-  grid-template-rows: 20vh auto 10vh;
+  grid-template-rows: 15vh auto 10vh;
   position: relative;
   .header {
     grid-row: 1;

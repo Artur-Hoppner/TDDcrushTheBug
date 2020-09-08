@@ -1,7 +1,7 @@
 <template>
   <div class="cart">
     <CartList />
-        <section class="checkout" v-if="!getCartProducts.length == 0">
+    <section class="checkout" v-if="!getCartProducts.length == 0">
       <div>
         <button class="checkoutButton" @click="createOrder('/order')">
           <span>Purchase items</span>
@@ -9,22 +9,18 @@
       </div>
     </section>
     <section class="emptyCart" v-if="getCartProducts.length == 0">
-        <h2 >
-      No items in cart..
-      <img
-        class="emptyCartImage"
-        src="@/assets/empty-cart.png"
-        alt="emptyCart"
-      />
-    </h2>
-              <a
-            class="link-to-shop"
-            id="link-to-shop"
-            href
-            @click="goTo('/shopping')"
-          >Check out our products <u>here</u></a>,
-  </section>
-    
+      <h2>
+        No items in cart..
+        <img
+          class="emptyCartImage"
+          src="@/assets/empty-cart.png"
+          alt="emptyCart"
+        />
+      </h2>
+      <a class="link-to-shop" id="link-to-shop" href @click="goTo('/shopping')"
+        >Check out our products <u>here</u></a
+      >,
+    </section>
   </div>
 </template>
 
@@ -42,7 +38,7 @@ export default {
   },
   methods: {
     ...mapActions(['showThisCart']),
-        createOrder() {
+    createOrder() {
       this.$store.dispatch('checkoutCreateThisOrder');
       this.goTo('/order');
     },
@@ -56,23 +52,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.emptyCart{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
+a {
+  font-family: 'Montserrat', sans-serif;
+}
+.emptyCart {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
 
-h2 {
-  font-family: 'Montserrat', sans-serif;
-}
-.link-to-shop {
-  text-decoration: none;
-  color: #a5d1bc;
-  font-weight: 900;
-  font-size: 2.5rem;
-}
-
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .link-to-shop {
+    text-decoration: none;
+    color: #a5d1bc;
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
 }
 .checkoutButton {
   font-family: 'Montserrat', sans-serif;
