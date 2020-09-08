@@ -1,31 +1,19 @@
 <template>
   <div class="sidebar">
-    <div
-      class="sidebar-backdrop"
-      @click="changeThisToggle"
-      v-if="showHamburger"
-    ></div>
+    <div class="sidebar-backdrop" @click="changeThisToggle" v-if="showHamburger"></div>
     <transition name="slide">
       <div v-if="showHamburger" class="sidebar-panel">
         <div class="links" @click="changeThisToggle">
-          <router-link to="/" exact-active-class="active" tag="a"
-            >Home</router-link
-          >
+          <router-link to="/" exact-active-class="active" tag="a">Home</router-link>
         </div>
         <div class="links" @click="changeThisToggle">
-          <router-link to="/shopping" exact-active-class="active" tag="a"
-            >Our Shop</router-link
-          >
+          <router-link to="/shopping" exact-active-class="active" tag="a">Our Shop</router-link>
         </div>
         <div class="links" @click="changeThisToggle">
-          <router-link to="/cart" exact-active-class="active" tag="a"
-            >Cart</router-link
-          >
+          <router-link to="/cart" exact-active-class="active" tag="a">Cart</router-link>
         </div>
         <div class="links" @click="changeThisToggle">
-          <router-link to="/order" exact-active-class="active" tag="a"
-            >Order</router-link
-          >
+          <router-link to="/order" exact-active-class="active" tag="a">Order</router-link>
         </div>
         <slot></slot>
       </div>
@@ -37,10 +25,10 @@ import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'HamburgerMenu',
   computed: {
-    ...mapGetters('hamburgerIcon', ['showHamburger'])
+    ...mapGetters(['showHamburger'])
   },
   methods: {
-    ...mapActions('hamburgerIcon', ['changeThisToggle'])
+    ...mapActions(['changeThisToggle'])
   }
 };
 </script>

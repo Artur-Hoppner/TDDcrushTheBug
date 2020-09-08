@@ -24,6 +24,9 @@ const getters = {
       total += cart.quantity;
     });
     return total;
+  },
+  showHamburger: state => {
+    return state.isBurgerActive;
   }
 };
 
