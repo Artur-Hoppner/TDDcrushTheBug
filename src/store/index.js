@@ -3,7 +3,6 @@ import Vuex from 'vuex';
 import actions from './actions.js';
 import mutations from './mutations.js';
 import getters from './getters.js';
-import hamburgerIcon from './HamburgerIcon/index.js';
 
 Vue.use(Vuex);
 //*********************/
@@ -161,7 +160,8 @@ export default new Vuex.Store({
     filteredProducts: [],
     productButtonToggle: false,
     showCart: false,
-    orderInfo: ''
+    orderInfo: '',
+    isBurgerActive: false
   },
   // orderNumber: '',
   // orderCost: '',
@@ -169,8 +169,5 @@ export default new Vuex.Store({
   // orderList: []
   actions: actions,
   mutations: mutations,
-  getters: getters,
-  modules: {
-    hamburgerIcon: hamburgerIcon
-  }
+  getters: getters
 });

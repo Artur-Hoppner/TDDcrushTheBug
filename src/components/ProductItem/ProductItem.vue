@@ -35,13 +35,16 @@
       </div>
       <div class="text-center">
         <button
-          class="icon-btn add-btn green"
+          class="icon-btn add-btn green increase"
           @click="increaseThisQuantity(product)"
         >
           <div class="add-icon"></div>
           <div class="btn-txt">Add</div>
         </button>
-        <button class="icon-btn add-btn" @click="decreaseThisQuantity(product)">
+        <button
+          class="icon-btn add-btn decrease"
+          @click="decreaseThisQuantity(product)"
+        >
           <div class="btn-txt">Remove</div>
         </button>
       </div>
@@ -132,7 +135,8 @@ div {
   text-align: center;
   align-items: center;
   flex-direction: row;
-  margin: 0;
+  margin-top: 1px;
+  margin-bottom: 1px;
   border: 1px solid #a5d1bc;
 }
 
@@ -265,7 +269,7 @@ h3 {
 }
 
 .product-pictures-container {
-  margin: 0;
+  margin-top: 5px;
 }
 .product-shopping:hover {
   .product-pictures-shopping {

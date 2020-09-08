@@ -87,6 +87,225 @@ describe('User navigates to this page, component renders', () => {
     expect(button.exists()).toBe(false);
   });
 
+  test('Test that increment button actually increases product quantity in cart by 1', async () => {
+    let state = {
+      cart: [
+        {
+          desc:
+            'Barely functions, use this if you have a love/hate relationship with your bedbugs.',
+          id: '01',
+          price: 378,
+          quantity: 2,
+          tag: 'bed-bug-rid',
+          title: 'Bed Bug Rid'
+        }
+      ],
+      allProducts: [
+        {
+          id: '01',
+          tag: 'bed-bug-rid',
+          title: 'Bed Bug Rid',
+          desc:
+            'Barely functions, use this if you have a love/hate relationship with your bedbugs.',
+          price: 189
+        }
+      ],
+      productButtonToggle: true
+    };
+    const getters = {
+      getProductButtonToggle: state => {
+        return state.productButtonToggle;
+      }
+    };
+    const actions = {
+      addThisToCart() {
+        return null;
+      },
+      removeThisFromCart() {
+        return null;
+      },
+      increaseThisQuantity(context, product) {
+        context.commit('increaseQuantity', product);
+      },
+      decreaseThisQuantity() {
+        return null;
+      }
+    };
+    const mutations = {
+      increaseQuantity(state, product) {
+        //Check for default values of object in original allProducts array
+        //Increase Product quantity and price
+        let adjustPrice = state.allProducts.find(item => item.id == product.id);
+        let index = state.cart.findIndex(item => item.id === product.id);
+        state.cart[index].quantity++;
+        state.cart[index].price += adjustPrice.price;
+      }
+    };
+
+    const store = new Vuex.Store({ state, actions, getters, mutations });
+    const wrapper = shallowMount(ProductItem, {
+      localVue,
+      store,
+      propsData: {
+        product: state.allProducts[0]
+      }
+    });
+
+    expect(state.cart[0].quantity).toBe(2);
+
+    await wrapper.find('.increase').trigger('click');
+
+    expect(state.cart[0].quantity).toBe(3);
+  });
+
+  test('Test that decrease button actually decrease product quantity in cart by 1', async () => {
+    let state = {
+      cart: [
+        {
+          desc:
+            'Barely functions, use this if you have a love/hate relationship with your bedbugs.',
+          id: '01',
+          price: 378,
+          quantity: 2,
+          tag: 'bed-bug-rid',
+          title: 'Bed Bug Rid'
+        }
+      ],
+      allProducts: [
+        {
+          id: '01',
+          tag: 'bed-bug-rid',
+          title: 'Bed Bug Rid',
+          desc:
+            'Barely functions, use this if you have a love/hate relationship with your bedbugs.',
+          price: 189
+        }
+      ],
+      productButtonToggle: true
+    };
+    const getters = {
+      getProductButtonToggle: state => {
+        return state.productButtonToggle;
+      }
+    };
+    const actions = {
+      addThisToCart() {
+        return null;
+      },
+      removeThisFromCart() {
+        return null;
+      },
+      increaseThisQuantity() {
+        return null;
+      },
+      decreaseThisQuantity(context, product) {
+        context.commit('decreaseQuantity', product);
+      }
+    };
+    const mutations = {
+      decreaseQuantity(state, product) {
+        //Check for default values of object in original allProducts array
+        //Decrease Product quantity and price
+        let adjustPrice = state.allProducts.find(item => item.id == product.id);
+        let index = state.cart.findIndex(item => item.id === product.id);
+        state.cart[index].quantity--;
+        state.cart[index].price -= adjustPrice.price;
+        if (state.cart[index].quantity == 0) {
+          state.cart.splice(index, 1);
+        }
+      }
+    };
+
+    const store = new Vuex.Store({ state, actions, getters, mutations });
+    const wrapper = shallowMount(ProductItem, {
+      localVue,
+      store,
+      propsData: {
+        product: state.allProducts[0]
+      }
+    });
+
+    expect(state.cart[0].quantity).toBe(2);
+
+    await wrapper.find('.decrease').trigger('click');
+
+    expect(state.cart[0].quantity).toBe(1);
+  });
+
+  test('Test that decrease button removes product from cart if there is only 1 in quantity', async () => {
+    let state = {
+      cart: [
+        {
+          desc:
+            'Barely functions, use this if you have a love/hate relationship with your bedbugs.',
+          id: '01',
+          price: 378,
+          quantity: 1,
+          tag: 'bed-bug-rid',
+          title: 'Bed Bug Rid'
+        }
+      ],
+      allProducts: [
+        {
+          id: '01',
+          tag: 'bed-bug-rid',
+          title: 'Bed Bug Rid',
+          desc:
+            'Barely functions, use this if you have a love/hate relationship with your bedbugs.',
+          price: 189
+        }
+      ],
+      productButtonToggle: true
+    };
+    const getters = {
+      getProductButtonToggle: state => {
+        return state.productButtonToggle;
+      }
+    };
+    const actions = {
+      addThisToCart() {
+        return null;
+      },
+      removeThisFromCart() {
+        return null;
+      },
+      increaseThisQuantity() {
+        return null;
+      },
+      decreaseThisQuantity(context, product) {
+        context.commit('decreaseQuantity', product);
+      }
+    };
+    const mutations = {
+      decreaseQuantity(state, product) {
+        //Check for default values of object in original allProducts array
+        //Decrease Product quantity and price
+        let adjustPrice = state.allProducts.find(item => item.id == product.id);
+        let index = state.cart.findIndex(item => item.id === product.id);
+        state.cart[index].quantity--;
+        state.cart[index].price -= adjustPrice.price;
+        if (state.cart[index].quantity == 0) {
+          state.cart.splice(index, 1);
+        }
+      }
+    };
+
+    const store = new Vuex.Store({ state, actions, getters, mutations });
+    const wrapper = shallowMount(ProductItem, {
+      localVue,
+      store,
+      propsData: {
+        product: state.allProducts[0]
+      }
+    });
+
+    expect(state.cart[0].quantity).toBe(1);
+
+    await wrapper.find('.decrease').trigger('click');
+
+    expect(state.cart.length).toBe(0);
+  });
+
   test('Test so that addThisToCart in vuex is called on button click from component', async () => {
     // Arrange
     //Spy on AddThisToCart action

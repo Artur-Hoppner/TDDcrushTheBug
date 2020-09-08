@@ -28,7 +28,6 @@ describe('Test Landing', () => {
     });
     // Act
     const input = wrapper.find('#link-to-shop');
-    console.log(input, 'input data');
     await input.trigger('click');
     await localVue.nextTick();
     // Assert

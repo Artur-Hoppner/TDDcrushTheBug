@@ -99,6 +99,9 @@ const mutations = {
   },
   changeCart(state) {
     state.showCart = !state.showCart;
+  },
+  toggle(state) {
+    state.isBurgerActive = !state.isBurgerActive
   }
 };
 

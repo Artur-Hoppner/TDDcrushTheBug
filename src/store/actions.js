@@ -38,6 +38,9 @@ const actions = {
   showThisCart(context) {
     context.commit('showCart');
   },
+  changeThisToggle(context) {
+    context.commit('toggle');
+  },
   //***************************************/
   //*** Component-link RELATED ACTIONS ***/
   //*************************************/
