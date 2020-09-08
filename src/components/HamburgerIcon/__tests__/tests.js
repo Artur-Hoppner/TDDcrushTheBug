@@ -1,32 +1,12 @@
 import { shallowMount, mount, createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
-import hamburgerIcon from '../../../store/HamburgerIcon/index.js';
+import store from '../../../store/index.js';
 import HamburgerIcon from '@/components/HamburgerIcon/HamburgerIcon.vue';
-import VueRouter from "vue-router"
-import routes from '../../../router/routes.js'
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
-localVue.use(VueRouter);
 
 describe('User clicks icon/button', () => {
-  let modules, store, router;
-
-  modules = {
-    hamburgerIcon
-  };
-
-
-  beforeEach(() => {
-    //mock our store
-    store = new Vuex.Store({
-      modules
-    });
-    router = new VueRouter({
-      routes
-    });
-  });
-
   test('Test so that everything renders correctly', () => {
     const wrapper = shallowMount(HamburgerIcon, { store, localVue });
     expect(wrapper.element).toMatchSnapshot();
@@ -34,7 +14,6 @@ describe('User clicks icon/button', () => {
 
   test('Icon should show when rendered', async () => {
     const wrapper = shallowMount(HamburgerIcon, {
-      router,
       store,
       localVue,
     });
@@ -45,34 +24,31 @@ describe('User clicks icon/button', () => {
   });
 
   test('Icon should toggle menu on click', async () => {
-    const hamburgerIcon = {
-      namespaced: true,
-      state: {},
-      mutations: {},
-      actions: {
-        changeThisToggle: jest.fn()
-      },
-      getters: {
-        showHamburger() {
-          return null;
-        }
+    const state = {
+      isBurgerActive: false
+    };
+    const actions = {
+      changeThisToggle: jest.fn()
+    };
+    const getters = {
+      showHamburger() {
+        return state => state.isBurgerActive
       }
     };
     const store = new Vuex.Store({
-      modules: {
-        hamburgerIcon
-      }
+      actions,
+      getters,
+      state
     });
-    const wrapper = mount(HamburgerIcon, {
-      router,
+    const wrapper = shallowMount(HamburgerIcon, {
       store,
-      localVue,
+      localVue
     });
 
     const buttonIcon = wrapper.find('.hamburgerImage');
 
     await buttonIcon.trigger('click');
 
-    expect(hamburgerIcon.actions.changeThisToggle).toHaveBeenCalled();
+    expect(actions.changeThisToggle).toHaveBeenCalled();
   });
 });
