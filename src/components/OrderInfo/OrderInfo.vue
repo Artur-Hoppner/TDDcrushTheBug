@@ -1,6 +1,6 @@
 <template>
   <section class="orderInfo">
-    <h1 class="orderNumber">
+    <h1 class="orderN umber">
       Thank you for your order! Your order number is:
       <span>{{ getOrderInfo.orderNumber }}</span>
     </h1>
@@ -58,6 +58,7 @@ export default {
 
 .orderInfo {
   font-family: 'Raleway', sans-serif;
+  padding-top: 2rem;
 }
 
 span {
@@ -79,8 +80,9 @@ span {
   height: 30vw;
   margin-left: 0;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: -0.25rem;
   margin-right: -60%;
+
 }
 //font-family: 'Montserrat', sans-serif;
 //font-family: 'Raleway', sans-serif;

@@ -7,7 +7,6 @@ import {
 } from '@vue/test-utils';
 import Vuex from 'vuex';
 import HamburgerMenu from '@/components/HamburgerMenu/HamburgerMenu.vue';
-import hamburgerMenu from '../../../store/HamburgerMenu/index.js';
 import hamburgerIcon from '../../../store/HamburgerIcon/index.js';
 import VueRouter from 'vue-router';
 
@@ -19,7 +18,6 @@ describe('User opens menu', () => {
   let modules, store;
 
   modules = {
-    hamburgerMenu,
     hamburgerIcon
   };
 
