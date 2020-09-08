@@ -13,8 +13,8 @@ exports[`Test Cart Test if /cart is rendered 1`] = `
   >
     <h2>
       
-    No items in cart..
-    
+      No items in cart..
+      
       <img
         alt="emptyCart"
         class="emptyCartImage"
@@ -33,7 +33,7 @@ exports[`Test Cart Test if /cart is rendered 1`] = `
       </u>
     </a>
     ,
-
+  
   </section>
 </div>
 `;
