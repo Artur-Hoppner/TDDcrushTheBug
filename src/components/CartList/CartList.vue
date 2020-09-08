@@ -51,12 +51,12 @@ export default {
 h2 {
   font-family: 'Montserrat', sans-serif;
 }
-.cartProducts{
+.cartProducts {
   height: 90vh;
   margin: 0rem;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-rows: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .checkoutButton {

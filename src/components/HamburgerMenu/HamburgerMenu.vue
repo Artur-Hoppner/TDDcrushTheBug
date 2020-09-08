@@ -7,29 +7,26 @@
     ></div>
     <transition name="slide">
       <div v-if="showHamburger" class="sidebar-panel">
-        <ul class="sidebar-panel-nav">
-          <!-- v-if="this.$route.path !== '/landing'" -->
-          <li @click="changeThisToggle">
-            <router-link to="/" exact-active-class="active"
-              >Home</router-link
-            >
-          </li>
-          <li @click="changeThisToggle">
-            <router-link to="/shopping" exact-active-class="active"
-              >Our Shop</router-link
-            >
-          </li>
-          <li @click="changeThisToggle">
-            <router-link to="/cart" exact-active-class="active"
-              >Cart</router-link
-            >
-          </li>
-          <li @click="changeThisToggle">
-            <router-link to="/order" exact-active-class="active"
-              >Order</router-link
-            >
-          </li>
-        </ul>
+        <div class="links" @click="changeThisToggle">
+          <router-link to="/" exact-active-class="active" tag="a"
+            >Home</router-link
+          >
+        </div>
+        <div class="links" @click="changeThisToggle">
+          <router-link to="/shopping" exact-active-class="active" tag="a"
+            >Our Shop</router-link
+          >
+        </div>
+        <div class="links" @click="changeThisToggle">
+          <router-link to="/cart" exact-active-class="active" tag="a"
+            >Cart</router-link
+          >
+        </div>
+        <div class="links" @click="changeThisToggle">
+          <router-link to="/order" exact-active-class="active" tag="a"
+            >Order</router-link
+          >
+        </div>
         <slot></slot>
       </div>
     </transition>
@@ -47,7 +44,15 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
+*,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 .slide-enter-active,
 .slide-leave-active {
   transition: transform 0.2s ease;
@@ -72,37 +77,57 @@ export default {
 
 .sidebar-panel {
   overflow-y: auto;
-  background-color: #415d48;
+  box-shadow: inset 18px 0px rgba(0, 0, 0, 0.205);
+  background: #2c3e50;
   position: fixed;
   right: 0;
   top: 0;
-  height: 100vh;
+  height: 100%;
   z-index: 999;
-  padding: 3rem 20px 2rem 20px;
-  width: 300px;
-}
-ul.sidebar-panel-nav {
-  list-style-type: none;
+  width: 400px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
 }
 
-ul.sidebar-panel-nav > li > a {
+.links {
   text-decoration: none;
-  font-size: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 1.5em;
+  align-content: center;
+  justify-items: center;
+  width: 400px;
+  height: 25%;
 }
 
-ul > li > a {
-  color: #fff;
+a {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  /* padding: 18.5%; */
+  padding: 18.6% 18.6%;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  transition: box-shadow 0.4s ease-in;
 }
+
+a:hover {
+  color: #a5d1bc;
+  box-shadow: inset 18px 0px #a5d1bc;
+}
+
 .active {
-  color: red;
+  color: #a5d1bc5d;
+  box-shadow: inset 18px 0px #a5d1bc5d;
+}
+
+.active:hover {
+  color: #a5d1bc5d;
+  box-shadow: inset 18px 0px #a5d1bc5d;
 }
 </style>
