@@ -24,6 +24,82 @@ describe('User loads the page', () => {
     expect(wrapper.element).toMatchSnapshot();
   });
 
+  test('Test that checkoutButton does not exist if cart is empty', async () => {
+    //Mount with current existing store, cart is empty
+    const wrapper = shallowMount(CartList, {
+      store,
+      localVue
+    });
+
+    const checkoutButton = wrapper.find('.checkoutButton');
+
+    expect(checkoutButton.exists()).toBe(false);
+  });
+
+  test('Test that checkoutButton does exist if cart is not empty', async () => {
+    //Mock store and make cart contain item
+    const state = {
+      cart: [
+        {
+          desc:
+            'Barely functions, use this if you have a love/hate relationship with your bedbugs.',
+          id: '01',
+          price: 378,
+          quantity: 2,
+          tag: 'bed-bug-rid',
+          title: 'Bed Bug Rid'
+        }
+      ],
+      orderInfo: ''
+    };
+    const actions = {
+      checkoutCreateThisOrder(context) {
+        context.commit('checkoutCreateOrder');
+      },
+      changeThisProductButtonToggle() {
+        return null;
+      }
+    };
+    const mutations = {
+      checkoutCreateOrder(state) {
+        if (state.cart != '') {
+          //Randomize ordernumber and calculate total cost
+          let newOrderNumber = Math.floor(Math.random() * 100000 + 1);
+          let totalCost = 0;
+          for (let i = 0; i < state.cart.length; i++) {
+            totalCost += state.cart[i].price;
+          }
+          //Create Order object
+          state.orderInfo = {
+            orderNumber: newOrderNumber,
+            orderCost: totalCost,
+            deliveryETA: '3',
+            orderList: state.cart
+          };
+        } else {
+          return false;
+        }
+      }
+    };
+    const getters = {
+      getCartProducts: state => {
+        return state.cart;
+      },
+      getProductButtonToggle() {
+        return null;
+      }
+    };
+    const store = new Vuex.Store({ state, actions, mutations, getters });
+    const wrapper = shallowMount(CartList, {
+      store,
+      localVue
+    });
+
+    const checkoutButton = wrapper.find('.checkoutButton');
+
+    expect(checkoutButton.exists()).toBe(true);
+  });
+
   test('Test so that order is created on click (if cart is not empty)', async () => {
     //Act
     const state = {
