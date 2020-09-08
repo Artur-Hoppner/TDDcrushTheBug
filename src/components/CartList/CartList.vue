@@ -52,7 +52,6 @@ h2 {
   font-family: 'Montserrat', sans-serif;
 }
 .cartProducts {
-  height: 90vh;
   margin: 0rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
