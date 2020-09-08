@@ -7,7 +7,11 @@
     />
     <h2 class="emptyCart" v-if="getCartProducts.length == 0">
       No items in cart..
-      <img class="emptyCartImage" src="@/assets/empty-cart.png" alt="emptyCart" />
+      <img
+        class="emptyCartImage"
+        src="@/assets/empty-cart.png"
+        alt="emptyCart"
+      />
     </h2>
     <section class="checkout" v-if="!getCartProducts.length == 0">
       <div>
@@ -54,7 +58,6 @@ export default {
 h2 {
   font-family: 'Montserrat', sans-serif;
 }
-
 .cartProducts {
   margin: 0rem;
   display: grid;
