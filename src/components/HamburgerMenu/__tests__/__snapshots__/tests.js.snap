@@ -14,57 +14,61 @@ exports[`User opens menu Test so that everything renders correctly 1`] = `
     <div
       class="sidebar-panel"
     >
-      <ul
-        class="sidebar-panel-nav"
+      <div
+        class="links"
       >
-        <li>
-          <router-link-stub
-            ariacurrentvalue="page"
-            event="click"
-            exactactiveclass="active"
-            tag="a"
-            to="/"
-          >
-            Home
-          </router-link-stub>
-        </li>
-         
-        <li>
-          <router-link-stub
-            ariacurrentvalue="page"
-            event="click"
-            exactactiveclass="active"
-            tag="a"
-            to="/shopping"
-          >
-            Our Shop
-          </router-link-stub>
-        </li>
-         
-        <li>
-          <router-link-stub
-            ariacurrentvalue="page"
-            event="click"
-            exactactiveclass="active"
-            tag="a"
-            to="/cart"
-          >
-            Cart
-          </router-link-stub>
-        </li>
-         
-        <li>
-          <router-link-stub
-            ariacurrentvalue="page"
-            event="click"
-            exactactiveclass="active"
-            tag="a"
-            to="/order"
-          >
-            Order
-          </router-link-stub>
-        </li>
-      </ul>
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/"
+        >
+          Home
+        </router-link-stub>
+      </div>
+       
+      <div
+        class="links"
+      >
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/shopping"
+        >
+          Our Shop
+        </router-link-stub>
+      </div>
+       
+      <div
+        class="links"
+      >
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/cart"
+        >
+          Cart
+        </router-link-stub>
+      </div>
+       
+      <div
+        class="links"
+      >
+        <router-link-stub
+          ariacurrentvalue="page"
+          event="click"
+          exactactiveclass="active"
+          tag="a"
+          to="/order"
+        >
+          Order
+        </router-link-stub>
+      </div>
        
     </div>
   </transition-stub>
