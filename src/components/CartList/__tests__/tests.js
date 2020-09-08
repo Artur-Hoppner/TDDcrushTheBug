@@ -23,6 +23,8 @@ describe('User loads the page', () => {
     });
     expect(wrapper.element).toMatchSnapshot();
   });
+<<<<<<< HEAD
+=======
 
   test('Test that checkoutButton does not exist if cart is empty', async () => {
     //Mount with current existing store, cart is empty
@@ -202,4 +204,5 @@ describe('User loads the page', () => {
 
     expect(actions.checkoutCreateThisOrder).toHaveBeenCalled();
   });
+>>>>>>> 7ee5d82678ba086e83ce054ad276b91b71e3637f
 });
