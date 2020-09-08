@@ -1,49 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`User navigates to this page, component renders Test so that everything renders correctly 1`] = `
-<section
-  class="product"
->
-  <div
-    class="product-pictures-container"
+<div>
+  <section
+    class="product-shopping"
   >
-    <img
-      alt="Regular Bugspray"
-      class="product-pictures"
-      src="undefinedassets/bugspray.png"
-    />
-  </div>
-   
-  <div>
-    <h2
-      class="product-title"
+    <div
+      class="product-pictures-container"
     >
-      Regular Bugspray
-    </h2>
+      <img
+        alt="Regular Bugspray"
+        class="product-pictures-shopping"
+        src="undefinedassets/bugspray.png"
+      />
+    </div>
      
-    <p>
-      It does something
-    </p>
-  </div>
+    <div>
+      <h2
+        class="product-title"
+      >
+        Regular Bugspray
+      </h2>
+       
+      <p>
+        It does something
+      </p>
+    </div>
+     
+    <div>
+      <h3>
+        120Kr
+      </h3>
+    </div>
+     
+    <aside
+      class="addProduct"
+    >
+      <img
+        alt="add to cart"
+        id="addToCart"
+        src="@/assets/buy.png"
+      />
+    </aside>
+  </section>
    
   <!---->
-   
-  <div>
-    <h3>
-      120Kr
-    </h3>
-  </div>
-   
-  <aside
-    class="addProduct"
-  >
-    <img
-      alt="add to cart"
-      id="addToCart"
-      src="@/assets/buy.png"
-    />
-  </aside>
-   
-  <!---->
-</section>
+</div>
 `;
