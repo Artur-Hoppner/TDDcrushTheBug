@@ -69,6 +69,11 @@ span {
 .product-pictures {
   width: 6vw;
   height: 6vw;
+  margin-top: 5px;
+}
+
+.orderList {
+  margin: 20px;
 }
 
 .deliveryETA {
@@ -82,7 +87,6 @@ span {
   margin-top: 0;
   margin-bottom: -0.25rem;
   margin-right: -60%;
-
 }
 //font-family: 'Montserrat', sans-serif;
 //font-family: 'Raleway', sans-serif;

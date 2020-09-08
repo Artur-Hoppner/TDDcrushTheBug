@@ -45,7 +45,7 @@ h2 {
 }
 
 .cartProducts {
-  margin: 0;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
