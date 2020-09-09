@@ -1,7 +1,7 @@
 <template>
   <div class="landing-container">
     <div class="introduction-container">
-      <img class="garden-image" src="@/assets/garden.jpg" alt="ant 1" />
+      <img class="garden-image" src="@/assets/garden.jpg" alt="Garden Image" />
       <div class="paragraph-container">
         <p class="paragraph-introduction">
           Repel, Remove or Blast your bugs!
@@ -73,16 +73,16 @@ export default {
       }
     }
     .garden-image {
+      // opacity: 85%;
+      height: 25vw;
+      width: 40vw;
+      border-radius: 1%;
       @media (max-width: 1000px) {
         align-self: center;
         height: 40vw;
         width: 60vw;
         margin-bottom: 1vh;
       }
-      height: 30vw;
-      width: 40vw;
-      opacity: 85%;
-      border-radius: 1%;
     }
   }
 }
