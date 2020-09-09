@@ -73,16 +73,16 @@ export default {
       }
     }
     .garden-image {
+      // opacity: 85%;
+      height: 25vw;
+      width: 40vw;
+      border-radius: 1%;
       @media (max-width: 1000px) {
         align-self: center;
         height: 40vw;
         width: 60vw;
         margin-bottom: 1vh;
       }
-      height: 30vw;
-      width: 40vw;
-      opacity: 85%;
-      border-radius: 1%;
     }
   }
 }
