@@ -1,7 +1,7 @@
 <template>
   <div class="landing-container">
     <div class="introduction-container">
-      <img class="garden-image" src="@/assets/garden.jpg" alt="ant 1" />
+      <img class="garden-image" src="@/assets/garden.jpg" alt="Garden Image" />
       <div class="paragraph-container">
         <p class="paragraph-introduction">
           Repel, Remove or Blast your bugs!
