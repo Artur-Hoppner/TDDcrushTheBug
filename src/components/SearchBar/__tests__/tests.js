@@ -39,7 +39,7 @@ describe('User enters a searchword into the searchbar', () => {
     expect(store.state.filteredProducts).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          tag: 'stan' // 4
+          tag: 'stan'
         })
       ])
     );

@@ -14,7 +14,7 @@ export default {};
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Raleway&display=swap%27');
 div {
-  background-color:#a5d1bc ;
+  background-color: #a5d1bc;
   text-align: center;
 }
 footer {

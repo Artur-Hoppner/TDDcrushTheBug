@@ -1,7 +1,12 @@
 <template>
   <div class="wrapper">
     <nav class="header">
-      <img id="icon" class="header-icon" src="@/assets/bug-icon.png" @click="goTo('/')" />
+      <img
+        id="icon"
+        class="header-icon"
+        src="@/assets/bug-icon.png"
+        @click="goTo('/')"
+      />
       <h1 id="text">Crush The Bug</h1>
       <section class="icons">
         <CartIcon />

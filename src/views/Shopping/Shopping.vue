@@ -4,9 +4,7 @@
       <h1>Welcome to our store!</h1>
       <h2>scroll down to see contents</h2>
       <section id="section06">
-        <a href="#funka">
-          <span id="line"></span>Scroll
-        </a>
+        <a href="#funka"> <span id="line"></span>Scroll </a>
       </section>
     </div>
     <div class="boom2" v-scrollanimation>
