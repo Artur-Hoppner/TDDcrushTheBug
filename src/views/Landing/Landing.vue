@@ -82,6 +82,7 @@ export default {
         height: 40vw;
         width: 60vw;
         margin-bottom: 1vh;
+        margin-top: 5vh;
       }
     }
   }
