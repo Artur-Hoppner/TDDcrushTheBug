@@ -101,7 +101,7 @@ const mutations = {
     state.showCart = !state.showCart;
   },
   toggle(state) {
-    state.isBurgerActive = !state.isBurgerActive
+    state.isBurgerActive = !state.isBurgerActive;
   }
 };
 

@@ -9,7 +9,6 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 
 describe('Test Cart', () => {
-
   test('Test if /cart is rendered', () => {
     //Arrange
     const wrapper = shallowMount(Cart, { localVue, store });
@@ -121,4 +120,3 @@ describe('Test Cart', () => {
     expect(actions.checkoutCreateThisOrder).toHaveBeenCalled();
   });
 });
-

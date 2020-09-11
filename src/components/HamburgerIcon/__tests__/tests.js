@@ -15,7 +15,7 @@ describe('User clicks icon/button', () => {
   test('Icon should show when rendered', async () => {
     const wrapper = shallowMount(HamburgerIcon, {
       store,
-      localVue,
+      localVue
     });
 
     const buttonIcon = wrapper.find('.hamburgerImage');
@@ -32,7 +32,7 @@ describe('User clicks icon/button', () => {
     };
     const getters = {
       showHamburger() {
-        return state => state.isBurgerActive
+        return state => state.isBurgerActive;
       }
     };
     const store = new Vuex.Store({

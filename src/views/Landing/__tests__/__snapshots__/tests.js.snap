@@ -8,7 +8,7 @@ exports[`Test Landing Test if /Landing is rendered 1`] = `
     class="introduction-container"
   >
     <img
-      alt="ant 1"
+      alt="Garden Image"
       class="garden-image"
       src="@/assets/garden.jpg"
     />
